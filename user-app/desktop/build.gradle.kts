@@ -9,6 +9,12 @@ version = libs.versions.userApp.desktop.version.get()
 
 kotlin {
     jvm()
+
+    sourceSets {
+        jvmMain.dependencies {
+            implementation(compose.desktop.currentOs)
+        }
+    }
 }
 
 compose.desktop {
