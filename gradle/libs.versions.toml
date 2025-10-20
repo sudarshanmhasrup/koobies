@@ -1,6 +1,7 @@
 [versions]
 # Library and plugin versions
 kotlin = "2.2.20"
+androidGradlePlugin = "8.13.0"
 compsoseMultiplatform = "1.9.1"
 hotReload = "1.0.0-rc02"
 
@@ -13,6 +14,7 @@ userApp-desktop-mainClass = "com.koobies.desktop.MainAppKt"
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compsoseMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "hotReload" }
