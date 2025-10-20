@@ -15,6 +15,9 @@ android {
         versionCode = libs.versions.userApp.android.versionCode.get().toInt()
         versionName = libs.versions.userApp.android.versionName.get()
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
