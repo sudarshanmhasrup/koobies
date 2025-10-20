@@ -3,7 +3,7 @@
 kotlin = "2.2.20"
 
 # user-app:desktop module's configuration information
-userApp-desktop-groupId = "com.koobies.desktop"
+userApp-desktop-group = "com.koobies.desktop"
 userApp-desktop-version = "0.0.1-alpha"
 userApp-desktop-mainClass = "com.koobies.desktop.MainAppKt"
 
