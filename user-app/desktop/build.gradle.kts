@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
 }
 
+group = libs.versions.userApp.desktop.group.get()
+version = libs.versions.userApp.desktop.version.get()
+
 kotlin {
     jvm()
 }
