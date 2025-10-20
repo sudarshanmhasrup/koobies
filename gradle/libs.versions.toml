@@ -2,6 +2,7 @@
 # Library and plugin versions
 kotlin = "2.2.20"
 compsoseMultiplatform = "1.9.1"
+hotReload = "1.0.0-rc02"
 
 # user-app:desktop module's configuration information
 userApp-desktop-group = "com.koobies.desktop"
@@ -14,3 +15,4 @@ userApp-desktop-mainClass = "com.koobies.desktop.MainAppKt"
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compsoseMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "hotReload" }
