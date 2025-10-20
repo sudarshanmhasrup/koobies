@@ -5,6 +5,15 @@ androidGradlePlugin = "8.12.3"
 compsoseMultiplatform = "1.9.1"
 hotReload = "1.0.0-rc02"
 
+# user-app:android module's android app package information
+userApp-android-namespace = "com.koobies.android"
+userApp-android-compileSdk = "36"
+userApp-android-applicationId = "com.koobies.android"
+userApp-android-minSdk = "24"
+userApp-android-targetSdk = "36"
+userApp-android-versionCode = "1"
+userApp-android-versionName = "1.0.0"
+
 # user-app:desktop module's configuration information
 userApp-desktop-group = "com.koobies.desktop"
 userApp-desktop-version = "0.0.1-alpha"
