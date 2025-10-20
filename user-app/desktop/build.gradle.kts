@@ -11,5 +11,11 @@ kotlin {
     jvm()
 }
 
+compose.desktop {
+    application {
+        mainClass = libs.versions.userApp.desktop.mainClass.get()
+    }
+}
+
 // Custom build directory
 layout.buildDirectory.set(file("$rootDir/.build/user-app/Desktop"))
