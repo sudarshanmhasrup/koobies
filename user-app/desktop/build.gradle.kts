@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.multiplatform)
@@ -8,7 +10,21 @@ group = libs.versions.userApp.desktop.group.get()
 version = libs.versions.userApp.desktop.version.get()
 
 kotlin {
-    jvm()
+    jvm {
+        java {
+            @Suppress("UnstableApiUsage")
+            toolchain {
+                languageVersion.set(JavaLanguageVersion.of("21"))
+                vendor.set(JvmVendorSpec.JETBRAINS)
+            }
+            sourceCompatibility = JavaVersion.VERSION_21
+            targetCompatibility = JavaVersion.VERSION_21
+        }
+
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_21
+        }
+    }
 
     sourceSets {
         jvmMain.dependencies {
