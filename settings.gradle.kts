@@ -33,3 +33,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
+setOf(
+    "android",
+).forEach { userAppModule ->
+    include(":user-app:$userAppModule")
+}
