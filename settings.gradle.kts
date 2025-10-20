@@ -36,6 +36,7 @@ dependencyResolutionManagement {
 
 setOf(
     "android",
+    "desktop"
 ).forEach { userAppModule ->
     include(":user-app:$userAppModule")
 }
