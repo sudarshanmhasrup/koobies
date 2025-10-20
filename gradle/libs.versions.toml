@@ -3,7 +3,7 @@
 kotlin = "2.2.20"
 androidGradlePlugin = "8.12.3"
 activity = "1.11.0"
-compsoseMultiplatform = "1.9.1"
+composeMultiplatform = "1.9.1"
 hotReload = "1.0.0-rc02"
 
 # user-app:android module's android app package information
@@ -28,6 +28,6 @@ kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref 
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "androidGradlePlugin" }
-compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compsoseMultiplatform" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "hotReload" }
