@@ -2,6 +2,7 @@
 # Library and plugin versions
 kotlin = "2.2.20"
 androidGradlePlugin = "8.12.3"
+activity = "1.11.0"
 compsoseMultiplatform = "1.9.1"
 hotReload = "1.0.0-rc02"
 
@@ -20,6 +21,7 @@ userApp-desktop-version = "0.0.1-alpha"
 userApp-desktop-mainClass = "com.koobies.desktop.MainAppKt"
 
 [libraries]
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
