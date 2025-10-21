@@ -36,6 +36,8 @@ userApp-compose-androidLibrary-minSdk = "24"
 
 [libraries]
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+# Compose Mutliplatform dependencies
+compose-multiplatform-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 # Koin dependencies
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
