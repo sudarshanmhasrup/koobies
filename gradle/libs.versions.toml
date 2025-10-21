@@ -25,6 +25,11 @@ userApp-desktop-mainClass = "com.koobies.desktop.MainAppKt"
 userApp-compose-group = "koobies.compose.app"
 userApp-compose-version = "1.0.0"
 
+# user-app:compose module's android library package information
+userApp-compose-androidLibrary-namespace = "koobies.compose.app"
+userApp-compose-androidLibrary-compileSdk = "36"
+userApp-compose-androidLibrary-minSdk = "24"
+
 [libraries]
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 # Koin dependencies
