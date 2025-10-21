@@ -30,6 +30,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.bundles.koin.android)
     implementation(libs.activity.compose)
     implementation(projects.userApp.compose)
 }
