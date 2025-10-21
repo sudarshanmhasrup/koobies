@@ -30,6 +30,7 @@ kotlin {
 
     sourceSets {
         jvmMain.dependencies {
+            implementation(libs.compose.multiplatform.runtime)
             implementation(compose.desktop.currentOs)
             implementation(projects.userApp.compose)
         }
