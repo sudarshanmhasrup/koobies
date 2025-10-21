@@ -31,6 +31,7 @@ koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", ver
 
 [bundles]
 koin-multiplatform = ["koin-core", "koin-compose", "koin-compose-viewmodel"]
+koin-android = ["koin-core", "koin-android"]
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
