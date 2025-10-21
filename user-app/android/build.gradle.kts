@@ -31,6 +31,7 @@ android {
 
 dependencies {
     implementation(libs.activity.compose)
+    implementation(projects.userApp.compose)
 }
 
 // Custom build directory
