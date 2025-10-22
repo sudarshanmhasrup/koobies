@@ -25,6 +25,8 @@ To solve this problem, I decided to build this platform. It’s an open-source, 
 Kotlin Multiplatform that helps Kotlin developers find internships and job opportunities requiring Kotlin knowledge,
 upskill through community-curated courses, and learn by building projects.
 
+</div>
+
 ### Technologies Used
 
 <!-- Rehase later -->
