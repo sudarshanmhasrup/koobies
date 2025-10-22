@@ -22,7 +22,7 @@ and job opportunities, upskill through community-curated courses, and learn by b
 
 ### 💜 About this project
 
-> [!SUPPORT Koobies]
+> [!IMPORTANT]
 > Star us to show your love and support for Koobies. ⭐️
 
 Learning Kotlin opens many career opportunities for developers. You can build native and cross-platform mobile apps,
