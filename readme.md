@@ -1,0 +1,5 @@
+[![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
+[![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-1.9.0-4285F4?style=flat&logo=jetpackcompose&logoColor=original)](https://www.jetbrains.com/compose-multiplatform/)
+![Android](https://img.shields.io/badge/Android-5CB85C?style=flat&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=apple&logoColor=original)
+![Desktop](https://img.shields.io/badge/Desktop-4285F4?style=flat&logo=windows&logoColor=original)
