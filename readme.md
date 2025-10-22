@@ -16,3 +16,10 @@ adoption rate grows.
 To solve this problem, I decided to build this platform. It’s an open-source, community-driven platform built with
 Kotlin Multiplatform that helps Kotlin developers find internships and job opportunities requiring Kotlin knowledge,
 upskill through community-curated courses, and learn by building projects.
+
+### Thank you! 🙌
+
+Thank you so much for checking out this repository. I understand the challenges one faces when learning Kotlin, and I’ve
+been there too. This is the core motivation behind this project. I created it to participate in the Kotlin Conf 2026
+challenge, but I believe it has the potential to grow beyond just another contest project. If you love the project,
+please consider starring this repository.
