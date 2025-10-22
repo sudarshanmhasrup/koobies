@@ -3,6 +3,7 @@
 ![Android](https://img.shields.io/badge/Android-5CB85C?style=flat&logo=android&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=apple&logoColor=original)
 ![Desktop](https://img.shields.io/badge/Desktop-4285F4?style=flat&logo=windows&logoColor=original)
+![Web](https://img.shields.io/badge/Web-HTML5-orange?style=flat&logo=html5&logoColor=white)
 
 ### About this project
 
