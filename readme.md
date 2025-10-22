@@ -17,6 +17,16 @@ To solve this problem, I decided to build this platform. It’s an open-source, 
 Kotlin Multiplatform that helps Kotlin developers find internships and job opportunities requiring Kotlin knowledge,
 upskill through community-curated courses, and learn by building projects.
 
+### Technologies Used
+
+1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The platform is built using Kotlin
+   Multiplatform, allowing it to run on multiple platforms like Android, iOS, Desktop, and Web from a single codebase.
+2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI is built using Compose
+   Multiplatform, providing a modern and declarative way to create user interfaces across different platforms. Compose 
+   Multiplatform is powering the UI for Android, iOS and Desktop versions of the platform.
+3) [Ktor](https://ktor.io/): The backend of the platform is built using Ktor, a Kotlin framework for building
+   asynchronous servers and clients. It provides a robust and scalable backend to handle user requests and data storage.
+
 ### Thank you! 🙌
 
 Thank you so much for checking out this repository. I understand the challenges one faces when learning Kotlin, and I’ve
