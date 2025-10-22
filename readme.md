@@ -22,6 +22,9 @@ and job opportunities, upskill through community-curated courses, and learn by b
 
 ### 💜 About this project
 
+> [!SUPPORT Koobies]
+> Star us to show your support and love for Koobies. ⭐️
+
 Learning Kotlin opens many career opportunities for developers. You can build native and cross-platform mobile apps,
 desktop apps, backend services, AI agents, and many more, all with Kotlin. But the adoption rate of Kotlin outside the
 Android development space is still very low compared to other technologies. The core reasons are the lack of good and
