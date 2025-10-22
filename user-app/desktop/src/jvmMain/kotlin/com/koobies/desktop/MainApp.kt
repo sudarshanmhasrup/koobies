@@ -14,7 +14,7 @@ fun main() {
     // Initialize the Koin dependency injection framework
     initKoin()
 
-    // Start the Compose desktop application
+    // Launch the Compose desktop application
     application {
 
     }
