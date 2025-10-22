@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 setOf(
     "android",
     "desktop",
-    "compose"
+    "compose" // Umbrella module
 ).forEach { userAppModule ->
     include(":user-app:$userAppModule")
 }
