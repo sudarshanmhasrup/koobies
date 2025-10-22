@@ -1,4 +1,4 @@
-package com.koobies.desktop
+package org.koobies.desktop
 
 import androidx.compose.ui.window.application
 import koobies.compose.app.di.initKoin
