@@ -34,6 +34,7 @@ dependencyResolutionManagement {
     }
 }
 
+// Include entry point modules for the user application (Android, Desktop, and Compose shared module)
 setOf(
     "android",
     "desktop",
