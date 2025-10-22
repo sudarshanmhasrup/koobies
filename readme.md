@@ -5,7 +5,15 @@
 ![Desktop](https://img.shields.io/badge/Desktop-4285F4?style=flat&logo=windows&logoColor=original)
 ![Web](https://img.shields.io/badge/Web-HTML5-orange?style=flat&logo=html5&logoColor=white)
 
-### About this project
+<div align="center">
+   <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="/assets/koobies-logo-type-github-dark.svg" />
+       <source media="(prefers-color-scheme: light)" srcset="/assets/kotlin-multiplatform-logo-light.svg" />
+       <img alt="Kotlin Multiplatform Logo" height="60" src="/assets/koobies-logo-type-github-dark.svg" />
+   </picture>  
+<br>
+
+# Welcome to the Koobies repository
 
 Learning Kotlin opens many career opportunities for developers. You can build native and cross-platform mobile apps,
 desktop apps, backend services, AI agents, and many more, all with Kotlin. But the adoption rate of Kotlin outside the
@@ -19,10 +27,12 @@ upskill through community-curated courses, and learn by building projects.
 
 ### Technologies Used
 
+<!-- Rehase later -->
+
 1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The platform is built using Kotlin
    Multiplatform, allowing it to run on multiple platforms like Android, iOS, Desktop, and Web from a single codebase.
 2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI is built using Compose
-   Multiplatform, providing a modern and declarative way to create user interfaces across different platforms. Compose 
+   Multiplatform, providing a modern and declarative way to create user interfaces across different platforms. Compose
    Multiplatform is powering the UI for Android, iOS and Desktop versions of the platform.
 3) [Ktor](https://ktor.io/): The backend of the platform is built using Ktor, a Kotlin framework for building
    asynchronous servers and clients. It provides a robust and scalable backend to handle user requests and data storage.
