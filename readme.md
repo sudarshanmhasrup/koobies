@@ -20,7 +20,7 @@ and job opportunities, upskill through community-curated courses, and learn by b
 
 </div>
 
-### 💜 About this project
+### About this project 💜
 
 > [!IMPORTANT]
 > Star us to show your love and support for Koobies. ⭐️
