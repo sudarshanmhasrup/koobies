@@ -29,10 +29,12 @@ kotlin {
     }
 
     sourceSets {
-        jvmMain.dependencies {
+        commonMain.dependencies {
             implementation(libs.bundles.compose.multiplatform)
-            implementation(compose.desktop.currentOs)
             implementation(projects.userApp.compose)
+        }
+        jvmMain.dependencies {
+            implementation(compose.desktop.currentOs)
         }
     }
 }
