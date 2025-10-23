@@ -35,5 +35,9 @@ kotlin {
     }
 }
 
+compose.resources {
+    packageOfResClass = libs.versions.shared.packageOfResClass.get()
+}
+
 // Custom build directory
 layout.buildDirectory.set(file("$rootDir/.build/Shared"))
