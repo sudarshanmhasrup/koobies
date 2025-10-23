@@ -32,6 +32,7 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.userApp.compose)
+            implementation(projects.shared)
         }
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -39,14 +40,19 @@ kotlin {
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = libs.versions.userApp.desktop.mainClass.get()
+compose{
+    resources {
+        generateResClass = never
+    }
+    desktop {
+        application {
+            mainClass = libs.versions.userApp.desktop.mainClass.get()
 
-        nativeDistributions {
-            targetFormats = setOf(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = libs.versions.userApp.desktop.distributionPackageName.get()
-            packageVersion = libs.versions.userApp.desktop.distributionPackageVersion.get()
+            nativeDistributions {
+                targetFormats = setOf(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+                packageName = libs.versions.userApp.desktop.distributionPackageName.get()
+                packageVersion = libs.versions.userApp.desktop.distributionPackageVersion.get()
+            }
         }
     }
 }
