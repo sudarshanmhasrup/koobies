@@ -33,6 +33,12 @@ kotlin {
             isStatic = true
         }
     }
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(libs.bundles.compose.multiplatform)
+        }
+    }
 }
 
 compose.resources {
