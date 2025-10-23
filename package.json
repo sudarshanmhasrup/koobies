@@ -1,0 +1,10 @@
+{
+    "name": "koobies",
+    "version": "1.0.0",
+    "private": true,
+    "author": "Sudarshan Mhasrup",
+    "scripts": {
+        "userDesktopTasks": "gradlew :user-app:desktop:tasks",
+        "userDesktopPackage": "gradlew :user-app:desktop:packageDistributionForCurrentOS"
+    }
+}

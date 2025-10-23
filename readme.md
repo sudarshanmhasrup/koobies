@@ -37,13 +37,15 @@ upskill through community-curated courses, and learn by building projects.
 
 ### Technologies Used
 
-<!-- Rehase later -->
+<!-- Rephase later -->
 
-1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The platform is built using Kotlin
-   Multiplatform, allowing it to run on multiple platforms like Android, iOS, Desktop, and Web from a single codebase.
+1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The platform is powered by Kotlin
+   Multiplatform and shares code between Android, iOS, Desktop (JVM), Web, and Server.
 2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI is built using Compose
    Multiplatform, providing a modern and declarative way to create user interfaces across different platforms. Compose
    Multiplatform is powering the UI for Android, iOS and Desktop versions of the platform.
+3) [SvelteKit](https://kit.svelte.dev/): The web version of the platform is built using SvelteKit, a framework for
+   building web applications with Svelte. It offers a fast and efficient way to create dynamic web pages.
 3) [Ktor](https://ktor.io/): The backend of the platform is built using Ktor, a Kotlin framework for building
    asynchronous servers and clients. It provides a robust and scalable backend to handle user requests and data storage.
 
