@@ -36,6 +36,7 @@ kotlin {
 }
 
 compose.resources {
+    publicResClass = true
     packageOfResClass = libs.versions.shared.packageOfResClass.get()
 }
 
