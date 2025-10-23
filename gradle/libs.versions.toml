@@ -3,6 +3,7 @@
 kotlin = "2.2.20"
 androidGradlePlugin = "8.12.3"
 activity = "1.11.0"
+splashScreen = "1.0.1"
 composeMultiplatform = "1.9.1"
 hotReload = "1.0.0-rc02"
 koin = "4.1.1"
@@ -35,7 +36,9 @@ userApp-compose-androidLibrary-compileSdk = "36"
 userApp-compose-androidLibrary-minSdk = "24"
 
 [libraries]
+# Android dependencies
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
 # Compose Mutliplatform dependencies
 compose-multiplatform-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 # Koin dependencies
