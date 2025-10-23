@@ -37,6 +37,7 @@ android {
 
 dependencies {
     implementation(libs.bundles.koin.android)
+    implementation(libs.core.splashscreen)
     implementation(libs.activity.compose)
     implementation(projects.userApp.compose)
 }
