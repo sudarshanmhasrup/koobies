@@ -35,6 +35,10 @@ userApp-compose-androidLibrary-namespace = "koobies.compose.app"
 userApp-compose-androidLibrary-compileSdk = "36"
 userApp-compose-androidLibrary-minSdk = "24"
 
+# shared module's configuration information
+shared-group = "koobies.shared.app"
+shared-version = "1.0.0"
+
 [libraries]
 # Android dependencies
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
