@@ -42,3 +42,6 @@ setOf(
 ).forEach { userAppModule ->
     include(":user-app:$userAppModule")
 }
+
+// Shared module for all platforms
+include(":shared")
