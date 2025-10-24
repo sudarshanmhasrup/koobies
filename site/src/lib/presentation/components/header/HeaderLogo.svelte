@@ -1,5 +1,5 @@
 <a href="/">
-    <img src="/koobies-logo.svg" alt="Koobies"/>
+    <img src="/assets/koobies-logo.svg" alt="Koobies"/>
 </a>
 <style>
     a {
