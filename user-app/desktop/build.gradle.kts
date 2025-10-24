@@ -31,6 +31,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.bundles.koin.multiplatform)
+            implementation(libs.bundles.compose.multiplatform.lifecycle)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.userApp.compose)
             implementation(projects.shared)
