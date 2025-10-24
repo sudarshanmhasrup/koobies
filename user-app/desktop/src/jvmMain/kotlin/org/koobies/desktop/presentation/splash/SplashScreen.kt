@@ -12,10 +12,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.rememberWindowState
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import koobies.shared.app.resources.Res
 import koobies.shared.app.resources.koobies_logo
 import org.jetbrains.compose.resources.painterResource
-import org.koobies.desktop.presentation.extensions.splashScreenContentModifier
+import org.koin.compose.viewmodel.koinViewModel
 import org.koobies.desktop.presentation.extensions.splashScreenLogoAndContainerModifier
 import org.koobies.desktop.presentation.extensions.splashScreenLogoModifier
 import org.koobies.desktop.presentation.extensions.splashScreenProgressBarModifier
@@ -24,7 +25,7 @@ private val windowWidth = 860.dp
 private val windowHeight = 540.dp
 
 @Composable
-fun SplashScreen() {
+internal fun SplashScreen(modifier: Modifier = Modifier) {
     val windowState = rememberWindowState(
         width = windowWidth,
         height = windowHeight,
@@ -39,7 +40,7 @@ fun SplashScreen() {
         state = windowState,
         onCloseRequest = {}
     ) {
-        SplashScreenContent(modifier = Modifier.splashScreenContentModifier())
+        SplashScreenContent(modifier = modifier)
     }
 }
 
@@ -64,5 +65,9 @@ private fun SplashScreenLogoAndContainer(modifier: Modifier = Modifier) {
 
 @Composable
 private fun SplashScreenProgressBar(modifier: Modifier = Modifier) {
-    LinearProgressIndicator(progress = 0.5f, backgroundColor = Color.Gray, color = Color.White, modifier = modifier)
+    val splashScreenViewModel = koinViewModel<SplashScreenViewModel>()
+    val splashScreenUiState = splashScreenViewModel.uiState.collectAsStateWithLifecycle()
+    val progress = splashScreenUiState.value.progress
+
+    LinearProgressIndicator(progress = progress, backgroundColor = Color.Gray, color = Color.White, modifier = modifier)
 }
