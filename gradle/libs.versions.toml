@@ -51,6 +51,11 @@ shared-androidLibrary-minSdk = "24"
 designSystem-compose-group = "compose.design.system"
 designSystem-compose-version = "1.0.0"
 
+# design-system:compose module's android library package information
+designSystem-compose-androidLibrary-namespace = "compose.design.system"
+designSystem-compose-androidLibrary-compileSdk = "36"
+designSystem-compose-androidLibrary-minSdk = "24"
+
 [libraries]
 # Android dependencies
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
