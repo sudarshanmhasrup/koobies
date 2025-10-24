@@ -16,7 +16,7 @@ and job opportunities, upskill through community-curated courses, and learn by b
 ![Android](https://img.shields.io/badge/Android-5CB85C?style=flat&logo=android&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=apple&logoColor=original)
 ![Desktop](https://img.shields.io/badge/Desktop-4285F4?style=flat&logo=windows&logoColor=original)
-![Web](https://img.shields.io/badge/Web-HTML5-orange?style=flat&logo=html5&logoColor=white)
+![Web](https://img.shields.io/badge/Web-Svelte-orange?style=flat&logo=svelte&logoColor=white)
 
 </div>
 
