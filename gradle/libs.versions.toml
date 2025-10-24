@@ -7,6 +7,7 @@ splashScreen = "1.0.1"
 composeMultiplatform = "1.9.1"
 hotReload = "1.0.0-rc02"
 lifecycle = "2.9.5"
+coroutines = "1.10.2"
 koin = "4.1.1"
 
 # user-app:android module's android app package information
@@ -54,6 +55,7 @@ core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = 
 compose-multiplatform-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 compose-multiplatform-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-multiplatform-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
 compose-multiplatform-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle"}
 compose-multiplatform-lifecycle-runtime = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle"}
 # Koin dependencies
