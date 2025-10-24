@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 internal fun Modifier.splashScreenContentModifier(): Modifier {
     return this
         .clip(shape = RoundedCornerShape(size = 12.dp))
-        .background(color = Color(0xFF3262C0))
+        .background(color = Color.Black)
         .fillMaxSize()
 }
 
