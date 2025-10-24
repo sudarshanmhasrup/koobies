@@ -4,5 +4,10 @@
     "private": true,
     "type": "module",
     "author": "Sudarshan Mhasrup",
-    "description": "Marketing website for Koobies written in Svelte and SvelteKit."
+    "description": "Marketing website for Koobies written in Svelte and SvelteKit.",
+    "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "preview": "svelte-kit preview"
+    }
 }
