@@ -1,0 +1,8 @@
+{
+    "name": "koobies.org",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "author": "Sudarshan Mhasrup",
+    "description": "Marketing website for Koobies written in Svelte and SvelteKit."
+}
