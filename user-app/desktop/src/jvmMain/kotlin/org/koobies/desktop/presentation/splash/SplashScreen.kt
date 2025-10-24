@@ -73,5 +73,10 @@ private fun SplashScreenProgressBar(modifier: Modifier = Modifier) {
     val splashScreenUiState = splashScreenViewModel.uiState.collectAsStateWithLifecycle()
     val progress = splashScreenUiState.value.progress
 
-    LinearProgressIndicator(progress = progress, backgroundColor = Color.Gray, color = Color.White, modifier = modifier)
+    LinearProgressIndicator(
+        progress = progress,
+        backgroundColor = Color(0xFF757780),
+        color = Color.White,
+        modifier = modifier
+    )
 }
