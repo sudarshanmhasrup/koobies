@@ -45,3 +45,4 @@ setOf(
 
 // Shared module for all platforms
 include(":shared")
+include(":design-system:compose")
