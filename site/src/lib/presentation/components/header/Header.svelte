@@ -6,9 +6,9 @@
 </header>
 <style>
     header {
-        padding: 0 80px;
         z-index: 1;
         width: 100%;
+        padding: 0 80px;
         position: fixed;
         background-color: #19191c;
     }
