@@ -14,10 +14,10 @@ internal class SplashScreenViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             // Simulate loading progress
-            for (i in 1..100) {
-                delay(timeMillis = 100)
+            for (i in 1..10) {
+                delay(48)
                 uiState.update { state ->
-                    state.copy(progress = i / 100f)
+                    state.copy(progress = i.toFloat() / 10f)
                 }
             }
 
