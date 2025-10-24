@@ -1,4 +1,3 @@
-
 <a href="/">
     <img src="/koobies-logo.svg" alt="Koobies"/>
 </a>
