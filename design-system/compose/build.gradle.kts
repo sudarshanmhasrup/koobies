@@ -1,4 +1,4 @@
-import com.android.build.api.dsl.androidLibrary
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -11,14 +11,21 @@ group = libs.versions.designSystem.compose.group.get()
 version = libs.versions.designSystem.compose.version.get()
 
 kotlin {
-    @Supress("UnstableApiUsage")
     androidLibrary {
         namespace = libs.versions.designSystem.compose.androidLibrary.namespace.get()
         compileSdk = libs.versions.designSystem.compose.androidLibrary.compileSdk.get().toInt()
         minSdk = libs.versions.designSystem.compose.androidLibrary.minSdk.get().toInt()
     }
 
-    jvm()
+    jvm {
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_21
+        }
+    }
+
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
 }
 
 // Custom build directory
