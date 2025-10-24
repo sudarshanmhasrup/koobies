@@ -3,12 +3,11 @@ package org.koobies.desktop.presentation.splash
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
+import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPosition
@@ -17,7 +16,9 @@ import koobies.shared.app.resources.Res
 import koobies.shared.app.resources.koobies_logo
 import org.jetbrains.compose.resources.painterResource
 import org.koobies.desktop.presentation.extensions.splashScreenContentModifier
+import org.koobies.desktop.presentation.extensions.splashScreenLogoAndContainerModifier
 import org.koobies.desktop.presentation.extensions.splashScreenLogoModifier
+import org.koobies.desktop.presentation.extensions.splashScreenProgressBarModifier
 
 private val windowWidth = 860.dp
 private val windowHeight = 540.dp
@@ -30,7 +31,14 @@ fun SplashScreen() {
         position = WindowPosition(alignment = Alignment.Center)
     )
 
-    Window(alwaysOnTop = false, undecorated = true, transparent = true, state = windowState, onCloseRequest = {}) {
+    Window(
+        resizable = false,
+        alwaysOnTop = true,
+        undecorated = true,
+        transparent = true,
+        state = windowState,
+        onCloseRequest = {}
+    ) {
         SplashScreenContent(modifier = Modifier.splashScreenContentModifier())
     }
 }
@@ -38,7 +46,8 @@ fun SplashScreen() {
 @Composable
 private fun SplashScreenContent(modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
-        SplashScreenLogoAndContainer(modifier = Modifier.fillMaxSize())
+        SplashScreenLogoAndContainer(modifier = splashScreenLogoAndContainerModifier())
+        SplashScreenProgressBar(modifier = Modifier.splashScreenProgressBarModifier())
     }
 }
 
@@ -51,4 +60,9 @@ private fun SplashScreenLogoAndContainer(modifier: Modifier = Modifier) {
             modifier = splashScreenLogoModifier()
         )
     }
+}
+
+@Composable
+private fun SplashScreenProgressBar(modifier: Modifier = Modifier) {
+    LinearProgressIndicator(progress = 0.5f, backgroundColor = Color.Gray, color = Color.White, modifier = modifier)
 }
