@@ -11,8 +11,8 @@
 An open-source, community-driven platform built with Kotlin Multiplatform that helps Kotlin developers find internship
 and job opportunities, upskill through community-curated courses, and learn by building projects.
 
-[![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-blue.svg?logo=kotlin&logoColor=original)](http://kotlinlang.org)
-[![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-1.9.1-4285F4?style=flat&logo=jetpackcompose&logoColor=original)](https://www.jetbrains.com/compose-multiplatform/)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-blue.svg?logo=kotlin&logoColor=white)](http://kotlinlang.org)
+[![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-1.9.1-4285F4?style=flat&logo=jetpackcompose&logoColor=white)](https://www.jetbrains.com/compose-multiplatform/)
 ![Android](https://img.shields.io/badge/Android-5CB85C?style=flat&logo=android&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=apple&logoColor=original)
 ![Desktop](https://img.shields.io/badge/Desktop-4285F4?style=flat&logo=windows&logoColor=original)
@@ -37,7 +37,7 @@ upskill through community-curated courses, and learn by building projects.
 
 ### Technologies Used
 
-<!-- Rephase later -->
+<!-- Rep hase later -->
 
 1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The platform is powered by Kotlin
    Multiplatform and shares code between Android, iOS, Desktop (JVM), Web, and Server.
