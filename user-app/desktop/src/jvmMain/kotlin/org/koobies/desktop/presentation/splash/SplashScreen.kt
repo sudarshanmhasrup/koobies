@@ -14,12 +14,14 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.rememberWindowState
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import koobies.shared.app.resources.Res
+import koobies.shared.app.resources.ic_koobies_desktop
 import koobies.shared.app.resources.koobies_logo
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koobies.desktop.presentation.extensions.splashScreenLogoAndContainerModifier
 import org.koobies.desktop.presentation.extensions.splashScreenLogoModifier
 import org.koobies.desktop.presentation.extensions.splashScreenProgressBarModifier
+import kotlin.system.exitProcess
 
 private val windowWidth = 860.dp
 private val windowHeight = 540.dp
@@ -33,12 +35,14 @@ internal fun SplashScreen(modifier: Modifier = Modifier) {
     )
 
     Window(
+        title = "Koobies",
         resizable = false,
         alwaysOnTop = true,
         undecorated = true,
         transparent = true,
         state = windowState,
-        onCloseRequest = {}
+        icon = painterResource(resource = Res.drawable.ic_koobies_desktop),
+        onCloseRequest = { exitProcess(0) }
     ) {
         SplashScreenContent(modifier = modifier)
     }
