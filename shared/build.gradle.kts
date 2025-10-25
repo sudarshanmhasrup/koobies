@@ -35,6 +35,8 @@ kotlin {
 }
 
 compose.resources {
+    val directoryProvider = provider { layout.projectDirectory.dir("src/commonMain/resources") }
+    customDirectory(sourceSetName = "commonMain", directoryProvider = directoryProvider)
     publicResClass = true
     packageOfResClass = libs.versions.shared.packageOfResClass.get()
 }
