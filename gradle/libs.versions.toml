@@ -1,6 +1,6 @@
 [versions]
 # Library and plugin versions
-kotlin = "2.2.20"
+kotlin = "2.2.21"
 androidGradlePlugin = "8.12.3"
 activity = "1.11.0"
 splashScreen = "1.0.1"
