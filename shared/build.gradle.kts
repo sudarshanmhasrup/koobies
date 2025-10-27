@@ -30,6 +30,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.bundles.compose.multiplatform)
+            implementation(projects.designSystem)
         }
     }
 }
