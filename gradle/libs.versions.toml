@@ -11,9 +11,9 @@ coroutines = "1.10.2"
 koin = "4.1.1"
 
 # user-app:android module's android app package information
-userApp-android-namespace = "com.koobies.android"
+userApp-android-namespace = "org.koobies.android"
 userApp-android-compileSdk = "36"
-userApp-android-applicationId = "com.koobies.android"
+userApp-android-applicationId = "org.koobies.android"
 userApp-android-minSdk = "24"
 userApp-android-targetSdk = "36"
 userApp-android-versionCode = "1"
