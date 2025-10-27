@@ -34,5 +34,9 @@ kotlin {
     }
 }
 
+compose.resources {
+    generateResClass = never
+}
+
 // Custom build directory
 layout.buildDirectory.set(file("$rootDir/.build/design-system/Compose"))
