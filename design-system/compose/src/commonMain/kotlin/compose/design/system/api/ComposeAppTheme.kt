@@ -5,7 +5,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import compose.design.system.core.ColorScheme
 import compose.design.system.core.Typography
 
-
 /**
  * Theme object that provides access to the app's color scheme and typography.
  * Use this to get current theme values in your composable functions.
