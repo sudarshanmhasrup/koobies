@@ -1,4 +1,4 @@
-package com.koobies.android
+package org.koobies.android
 
 import android.app.Application
 import koobies.compose.app.di.initKoin

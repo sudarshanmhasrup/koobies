@@ -1,4 +1,4 @@
-package com.koobies.android
+package org.koobies.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
