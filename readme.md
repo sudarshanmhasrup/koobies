@@ -36,15 +36,14 @@ To solve this problem, I decided to build this platform. It’s an open-source, 
 Kotlin Multiplatform that helps Kotlin developers find internships and job opportunities requiring Kotlin knowledge,
 upskill through community-curated courses, and learn by building projects.
 
-### Technologies Used
+### Technologies used
 
 <!-- Rep hase later -->
 
-1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The platform is powered by Kotlin
-   Multiplatform and shares code between Android, iOS, Desktop (JVM), Web, and Server.
-2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI is built using Compose
-   Multiplatform, providing a modern and declarative way to create user interfaces across different platforms. Compose
-   Multiplatform is powering the UI for Android, iOS and Desktop versions of the platform.
+1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The entire platform is powered by Kotlin
+   Multiplatform, allowing code sharing across Android, iOS, JVM (Desktop and Server), and Web.
+2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI for Android, iOS, and Desktop
+   targets is powered by Compose Multiplatform, and occasionally for the Web.
 3) [SvelteKit](https://kit.svelte.dev/): The web version of the platform is built using SvelteKit, a framework for
    building web applications with Svelte. It offers a fast and efficient way to create dynamic web pages.
 3) [Ktor](https://ktor.io/): The backend of the platform is built using Ktor, a Kotlin framework for building
