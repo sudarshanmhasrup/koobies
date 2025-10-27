@@ -33,8 +33,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.compose.multiplatform.runtime)
             implementation(libs.koin.core)
+            implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
         }
     }
