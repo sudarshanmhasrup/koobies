@@ -16,7 +16,7 @@ import org.koobies.desktop.presentation.splash.SplashScreenViewModel
 import kotlin.system.exitProcess
 
 @Composable
-fun MainScreen() {
+internal fun MainScreen() {
     val splashScreenViewModel = koinViewModel<SplashScreenViewModel>()
     val splashScreenUiState = splashScreenViewModel.uiState.collectAsStateWithLifecycle()
     val isFinished = splashScreenUiState.value.isFinished
