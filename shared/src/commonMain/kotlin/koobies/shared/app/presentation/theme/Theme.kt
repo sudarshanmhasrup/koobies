@@ -6,10 +6,10 @@ import compose.design.system.core.ColorScheme
 import compose.design.system.core.Typography
 
 // Light mode color scheme
-internal val lightModeColors = ColorScheme(backgroundColor = backgroundColor)
+internal val lightModeColors = ColorScheme(backgroundColor = backgroundColorLight)
 
 // Dark mode color scheme
-internal val darkModeColors = ColorScheme()
+internal val darkModeColors = ColorScheme(backgroundColor = backgroundColorDark)
 
 @Composable
 fun KoobiesAppTheme(
