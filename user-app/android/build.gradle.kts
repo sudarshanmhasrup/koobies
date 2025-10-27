@@ -6,6 +6,9 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
+group = libs.versions.userApp.android.group.get()
+version = libs.versions.userApp.android.version.get()
+
 android {
     namespace = libs.versions.userApp.android.namespace.get()
     compileSdk = libs.versions.userApp.android.compileSdk.get().toInt()
@@ -17,12 +20,12 @@ android {
         versionCode = libs.versions.userApp.android.versionCode.get().toInt()
         versionName = libs.versions.userApp.android.versionName.get()
     }
+
     buildTypes {
         release {
             isMinifyEnabled = true
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
