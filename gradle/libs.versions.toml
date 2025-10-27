@@ -60,6 +60,11 @@ designSystem-compose-androidLibrary-namespace = "compose.design.system"
 designSystem-compose-androidLibrary-compileSdk = "36"
 designSystem-compose-androidLibrary-minSdk = "24"
 
+# features:user-onboarding module's android library package information
+features-userOnboarding-androidLibrary-namespace = "user.onboarding.feature"
+features-userOnboarding-androidLibrary-compileSdk = "36"
+features-userOnboarding-androidLibrary-minSdk = "24"
+
 [libraries]
 # Android dependencies
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
