@@ -42,8 +42,8 @@ upskill through community-curated courses, and learn by building projects.
 
 1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The entire platform is powered by Kotlin
    Multiplatform, allowing code sharing across Android, iOS, JVM (Desktop and Server), and Web.
-2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI for Android, iOS, and Desktop
-   targets is powered by Compose Multiplatform, and occasionally for the Web.
+2) [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/): The UI for Android, iOS, Desktop, and
+   occasionally Web targets is powered by Compose Multiplatform.
 3) [SvelteKit](https://kit.svelte.dev/): The web version of the platform is built using SvelteKit, a framework for
    building web applications with Svelte. It offers a fast and efficient way to create dynamic web pages.
 3) [Ktor](https://ktor.io/): The backend of the platform is built using Ktor, a Kotlin framework for building
