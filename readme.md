@@ -36,9 +36,7 @@ To solve this problem, I decided to build this platform. It’s an open-source, 
 Kotlin Multiplatform that helps Kotlin developers find internships and job opportunities requiring Kotlin knowledge,
 upskill through community-curated courses, and learn by building projects.
 
-### Technologies used
-
-<!-- Rep hase later -->
+### Technologies used 🛠️
 
 1) [Kotlin Multiplatform](https://www.jetbrains.com/kotlin-multiplatform/): The entire platform is powered by Kotlin
    Multiplatform, allowing code sharing across Android, iOS, JVM (Desktop and Server), and Web.
