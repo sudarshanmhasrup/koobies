@@ -10,6 +10,10 @@ lifecycle = "2.9.5"
 coroutines = "1.10.2"
 koin = "4.1.1"
 
+# user-app:android module's configuration information
+userApp-android-group = "org.koobies.android"
+userApp-android-version = "1.0.0"
+
 # user-app:android module's android app package information
 userApp-android-namespace = "org.koobies.android"
 userApp-android-compileSdk = "36"
