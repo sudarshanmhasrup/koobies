@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 @Immutable
-internal data class Typography(
+data class Typography(
     val bodyLargeRegular: TextStyle = TextStyle(
         fontWeight = FontWeight.Normal,
         fontSize = 15.sp,
