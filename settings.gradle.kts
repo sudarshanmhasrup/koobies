@@ -46,3 +46,10 @@ setOf(
 // Shared module for all platforms
 include(":shared")
 include(":design-system:compose")
+
+// Feature modules
+setOf(
+    "user-onboarding"
+).forEach { module ->
+    include(":features:$module")
+}
