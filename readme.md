@@ -11,7 +11,7 @@
 An open-source, community-driven platform built with Kotlin Multiplatform that helps Kotlin developers find internship
 and job opportunities, upskill through community-curated courses, and learn by building projects.
 
-[![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-blue.svg?logo=kotlin&logoColor=white)](http://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.2.21-blue.svg?logo=kotlin&logoColor=white)](http://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-1.9.1-4285F4?style=flat&logo=jetpackcompose&logoColor=white)](https://www.jetbrains.com/compose-multiplatform/)
 ![Android](https://img.shields.io/badge/Android-5CB85C?style=flat&logo=android&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=apple&logoColor=original)
