@@ -7,9 +7,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
-group = libs.versions.userApp.compose.group.get()
-version = libs.versions.userApp.compose.version.get()
-
 kotlin {
     androidLibrary {
         namespace = libs.versions.userApp.compose.androidLibrary.namespace.get()
@@ -38,6 +35,7 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.compose.multiplatform.runtime)
             implementation(libs.koin.core)
+            implementation(projects.designSystem.compose)
         }
     }
 }
