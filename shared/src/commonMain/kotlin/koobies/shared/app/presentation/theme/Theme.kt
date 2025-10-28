@@ -17,10 +17,5 @@ fun KoobiesAppTheme(
 ) {
     val colorScheme = if (isDarkMode) darkModeColors else lightModeColors
     val typography = getTypography()
-
-    ComposeAppTheme(
-        colorScheme = colorScheme,
-        typography = typography,
-        content = content
-    )
+    ComposeAppTheme(colorScheme = colorScheme, typography = typography, content = content)
 }
