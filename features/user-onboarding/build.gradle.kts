@@ -26,6 +26,9 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
+        androidMain.dependencies {
+            println(libs.compose.multiplatform.ui.tooling.preview)
+        }
         commonMain.dependencies {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.bundles.compose.multiplatform)
