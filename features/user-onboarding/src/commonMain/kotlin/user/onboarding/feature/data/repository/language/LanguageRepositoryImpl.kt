@@ -10,7 +10,7 @@ internal class LanguageRepositoryImpl(private val localLanguageDataSource: Local
         return localLanguageDataSource.getLanguages()
     }
 
-    override fun updateSelectedLanguage(language: Language) {
+    override suspend fun updateSelectedLanguage(language: Language) {
         localLanguageDataSource.updateSelectedLanguage(language = language)
     }
 }
