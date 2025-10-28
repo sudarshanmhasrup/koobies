@@ -1,4 +1,4 @@
-package koobies.shared.app.domain.preferences
+package koobies.shared.app.data.preferences
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -14,14 +14,14 @@ internal actual class DataStoreManager {
     actual fun getDataStore(): DataStore<Preferences> {
         return createDataStore(
             producePath = {
-                val documentDirectory: NSURL? = NSFileManager.defaultManager.URLForDirectory(
+                val documentDirectory: NSURL? = NSFileManager.Companion.defaultManager.URLForDirectory(
                     directory = NSDocumentDirectory,
                     inDomain = NSUserDomainMask,
                     appropriateForURL = null,
                     create = false,
                     error = null,
                 )
-                requireNotNull(documentDirectory).path + "/$dataStoreFileName"
+                requireNotNull(documentDirectory).path + "/${dataStoreFileName}"
             }
         )
     }
