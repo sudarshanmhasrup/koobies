@@ -28,7 +28,7 @@ userApp-android-versionName = "1.0.0"
 # user-app:desktop module's configuration information
 userApp-desktop-group = "org.koobies.desktop"
 userApp-desktop-version = "1.0.0"
-userApp-desktop-mainClass = "org.koobies.desktop.MainAppKt"
+userApp-desktop-mainClass = "org.koobies.desktop.MainKt"
 
 # user-app:desktop module's distribution information
 userApp-desktop-distributionPackageName = "Koobies"
