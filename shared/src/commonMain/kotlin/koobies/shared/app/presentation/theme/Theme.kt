@@ -7,6 +7,7 @@ import compose.design.system.core.ColorScheme
 // Light mode color scheme
 internal val lightModeColors = ColorScheme(
     backgroundColor = backgroundColorLight,
+    primaryColor = primaryColor,
     primaryFontColor = primaryFontColorLight,
     secondaryFontColor = secondaryFontColorLight
 )
