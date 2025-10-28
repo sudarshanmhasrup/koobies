@@ -81,7 +81,7 @@ koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", ver
 # Compose multiplatform bundles
 compose-multiplatform = [
     "compose-multiplatform-runtime", "compose-multiplatform-resources", "compose-multiplatform-navigation",
-    "compose-multiplatform-foundation",
+    "compose-multiplatform-ui-tooling-preview", "compose-multiplatform-foundation",
 ]
 compose-multiplatform-lifecycle = ["compose-multiplatform-viewmodel", "compose-multiplatform-lifecycle-runtime"]
 # Koin bundles
