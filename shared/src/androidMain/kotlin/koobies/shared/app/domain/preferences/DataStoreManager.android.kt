@@ -3,9 +3,11 @@ package koobies.shared.app.domain.preferences
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import org.koin.java.KoinJavaComponent.inject
 
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
-actual class DataStoreManager(private val context: Context) {
+internal actual class DataStoreManager {
+    private val context: Context by inject(Context::class.java)
     actual fun getDataStore(): DataStore<Preferences> {
         return createDataStore(
             producePath = { context.filesDir.resolve(dataStoreFileName).absolutePath }

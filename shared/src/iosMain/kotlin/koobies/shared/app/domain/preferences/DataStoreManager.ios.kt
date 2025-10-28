@@ -10,7 +10,7 @@ import platform.Foundation.NSUserDomainMask
 
 @OptIn(ExperimentalForeignApi::class)
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
-actual class DataStoreManager {
+internal actual class DataStoreManager {
     actual fun getDataStore(): DataStore<Preferences> {
         return createDataStore(
             producePath = {
