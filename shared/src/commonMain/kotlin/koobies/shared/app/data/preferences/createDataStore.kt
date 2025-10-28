@@ -1,4 +1,4 @@
-package koobies.shared.app.domain.preferences
+package koobies.shared.app.data.preferences
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
