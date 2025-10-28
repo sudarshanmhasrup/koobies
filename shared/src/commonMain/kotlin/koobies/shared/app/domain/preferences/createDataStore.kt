@@ -11,4 +11,4 @@ internal fun createDataStore(producePath: () -> String): DataStore<Preferences> 
     )
 }
 
-internal const val DATA_STORE = "prefs.preferences_pb"
+internal const val dataStoreFileName = "prefs.preferences_pb"
