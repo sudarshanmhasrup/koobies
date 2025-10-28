@@ -12,7 +12,7 @@ group = libs.versions.userApp.desktop.group.get()
 version = libs.versions.userApp.desktop.version.get()
 
 kotlin {
-    jvm {
+    jvm("desktop") {
         java {
             @Suppress("UnstableApiUsage")
             toolchain {
@@ -29,6 +29,7 @@ kotlin {
     }
 
     sourceSets {
+        val desktopMain by getting
         commonMain.dependencies {
             implementation(libs.bundles.koin.multiplatform)
             implementation(libs.bundles.compose.multiplatform.lifecycle)
@@ -36,7 +37,7 @@ kotlin {
             implementation(projects.userApp.compose)
             implementation(projects.shared)
         }
-        jvmMain.dependencies {
+        desktopMain.dependencies {
             implementation(libs.kotlinx.coroutines.swing)
             implementation(compose.desktop.currentOs)
         }
