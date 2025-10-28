@@ -31,6 +31,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.kotlinx.serialization.json)
+            implementation(libs.bundles.koin.multiplatform)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
         }
