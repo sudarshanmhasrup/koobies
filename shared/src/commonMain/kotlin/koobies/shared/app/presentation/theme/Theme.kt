@@ -5,7 +5,11 @@ import compose.design.system.api.ComposeAppTheme
 import compose.design.system.core.ColorScheme
 
 // Light mode color scheme
-internal val lightModeColors = ColorScheme(backgroundColor = backgroundColorLight)
+internal val lightModeColors = ColorScheme(
+    backgroundColor = backgroundColorLight,
+    primaryFontColor = primaryFontColorLight,
+    secondaryFontColor = secondaryFontColorLight
+)
 
 // Dark mode color scheme
 internal val darkModeColors = ColorScheme(backgroundColor = backgroundColorDark)
