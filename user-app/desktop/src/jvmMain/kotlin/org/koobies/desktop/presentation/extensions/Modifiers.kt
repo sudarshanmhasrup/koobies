@@ -30,15 +30,15 @@ internal fun ColumnScope.splashScreenLogoAndContainerModifier(): Modifier {
 }
 
 @Composable
-internal fun BoxScope.splashScreenLogoModifier(): Modifier {
-    return Modifier
-        .height(68.dp)
-        .align(alignment = Alignment.Center)
-}
-
-@Composable
 internal fun Modifier.splashScreenProgressBarModifier(): Modifier {
     return this
         .fillMaxWidth()
         .height(6.dp)
+}
+
+@Composable
+internal fun BoxScope.splashScreenLogoModifier(): Modifier {
+    return Modifier
+        .height(68.dp)
+        .align(alignment = Alignment.Center)
 }
