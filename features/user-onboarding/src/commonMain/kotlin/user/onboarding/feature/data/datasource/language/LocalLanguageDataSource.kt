@@ -1,4 +1,4 @@
-package user.onboarding.feature.data.datasource
+package user.onboarding.feature.data.datasource.language
 
 import kotlinx.coroutines.flow.Flow
 import user.onboarding.feature.domain.model.language.Language
