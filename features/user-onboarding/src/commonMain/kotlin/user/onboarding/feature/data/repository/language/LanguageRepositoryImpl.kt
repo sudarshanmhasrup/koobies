@@ -1,7 +1,7 @@
 package user.onboarding.feature.data.repository.language
 
 import kotlinx.coroutines.flow.Flow
-import user.onboarding.feature.data.datasource.language.LocalLanguageDataSource
+import user.onboarding.feature.data.datasource.local.language.LocalLanguageDataSource
 import user.onboarding.feature.domain.model.language.Language
 import user.onboarding.feature.domain.repository.language.LanguageRepository
 
