@@ -98,3 +98,4 @@ android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "hotReload" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
