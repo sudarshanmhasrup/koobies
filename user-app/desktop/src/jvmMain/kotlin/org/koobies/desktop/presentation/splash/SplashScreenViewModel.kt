@@ -13,7 +13,6 @@ internal class SplashScreenViewModel : ViewModel() {
 
     init {
         viewModelScope.launch {
-            // Simulate loading progress
             for (i in 1..20) {
                 delay(20)
                 uiState.update { state ->
@@ -21,7 +20,6 @@ internal class SplashScreenViewModel : ViewModel() {
                 }
             }
 
-            // Update splash screen as finished
             uiState.update { state ->
                 state.copy(isFinished = true)
             }
