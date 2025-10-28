@@ -33,7 +33,7 @@ internal class LocalLanguageDataSourceImpl : LocalLanguageDataSource {
         return languageList
     }
 
-    override fun updateSelectedLanguage(language: Language) {
+    override suspend fun updateSelectedLanguage(language: Language) {
         languageList.update { value ->
             value.map {
                 if (it.locale == language.locale) {
