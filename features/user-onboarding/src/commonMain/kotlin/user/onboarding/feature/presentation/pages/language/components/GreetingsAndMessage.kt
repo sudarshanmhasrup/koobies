@@ -30,7 +30,7 @@ internal fun GreetingsAndMessage(
     val commonModifier = Modifier.fillMaxWidth()
 
     val primaryFontColor = ComposeAppTheme.colorScheme.primaryFontColor
-    val greetingsTextStyle = ComposeAppTheme.typography.displayMediumBold.copy(color = primaryFontColor)
+    val greetingsTextStyle = ComposeAppTheme.typography.displaySmallBold.copy(color = primaryFontColor)
 
     val secondaryFontColor = ComposeAppTheme.colorScheme.secondaryFontColor
     val messageTextStyle = ComposeAppTheme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
@@ -42,7 +42,7 @@ internal fun GreetingsAndMessage(
             painter = koodeeWelcomingIllustration,
             contentDescription = null,
             contentScale = ContentScale.Fit,
-            modifier = Modifier.height(120.dp)
+            modifier = Modifier.height(100.dp)
         )
         Spacer(modifier = Modifier.height(8.dp))
         BasicText(text = greetings, style = greetingsTextStyle, modifier = commonModifier)
