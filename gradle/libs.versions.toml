@@ -67,7 +67,8 @@ core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = 
 compose-multiplatform-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 compose-multiplatform-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-multiplatform-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation" }
-compose-multiplatform-ui-tooling-preview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-multiplatform-components-ui-tooling-preview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-multiplatform-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 compose-multiplatform-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
@@ -83,7 +84,7 @@ koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", ver
 # Compose multiplatform bundles
 compose-multiplatform = [
     "compose-multiplatform-runtime", "compose-multiplatform-resources", "compose-multiplatform-navigation",
-    "compose-multiplatform-ui-tooling-preview", "compose-multiplatform-foundation",
+    "compose-multiplatform-components-ui-tooling-preview", "compose-multiplatform-foundation",
 ]
 compose-multiplatform-lifecycle = ["compose-multiplatform-viewmodel", "compose-multiplatform-lifecycle-runtime"]
 # Koin bundles
