@@ -1,4 +1,4 @@
-package org.koobies.desktop.presentation.splash
+package org.koobies.desktop.presentation.screens.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box

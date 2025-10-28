@@ -1,4 +1,4 @@
-package org.koobies.desktop.presentation.splash
+package org.koobies.desktop.presentation.screens.splash
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
