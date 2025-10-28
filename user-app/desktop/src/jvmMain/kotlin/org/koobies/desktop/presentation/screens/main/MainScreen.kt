@@ -1,4 +1,4 @@
-package org.koobies.desktop.presentation.main
+package org.koobies.desktop.presentation.screens.main
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -6,13 +6,14 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPlacement
 import androidx.compose.ui.window.rememberWindowState
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import koobies.compose.app.DesktopApp
 import koobies.shared.app.resources.Res
 import koobies.shared.app.resources.ic_koobies_desktop
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
-import org.koobies.desktop.presentation.extensions.splashScreenContentModifier
-import org.koobies.desktop.presentation.splash.SplashScreen
-import org.koobies.desktop.presentation.splash.SplashScreenViewModel
+import org.koobies.desktop.presentation.extensions.splashScreenModifier
+import org.koobies.desktop.presentation.screens.splash.SplashScreen
+import org.koobies.desktop.presentation.screens.splash.SplashScreenViewModel
 import kotlin.system.exitProcess
 
 @Composable
@@ -24,7 +25,7 @@ internal fun MainScreen() {
     if (isFinished) {
         MainWindow()
     } else {
-        SplashScreen(modifier = Modifier.splashScreenContentModifier())
+        SplashScreen(modifier = Modifier.splashScreenModifier())
     }
 }
 
@@ -41,6 +42,6 @@ private fun MainWindow() {
         icon = painterResource(resource = Res.drawable.ic_koobies_desktop),
         onCloseRequest = { exitProcess(0) }
     ) {
-
+        DesktopApp()
     }
 }
