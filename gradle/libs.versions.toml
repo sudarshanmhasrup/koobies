@@ -97,6 +97,8 @@ compose-multiplatform-lifecycle = ["compose-multiplatform-viewmodel", "compose-m
 # Koin bundles
 koin-multiplatform = ["koin-core", "koin-compose", "koin-compose-viewmodel"]
 koin-android = ["koin-core", "koin-android"]
+# Persitent storage bundles
+datastore = ["datastore", "datastore-preferences"]
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
