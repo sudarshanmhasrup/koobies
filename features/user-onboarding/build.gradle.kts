@@ -30,6 +30,7 @@ kotlin {
             implementation(libs.compose.multiplatform.ui.tooling.preview)
         }
         commonMain.dependencies {
+            implementation(libs.localina)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
