@@ -1,7 +1,7 @@
 [versions]
 # Library and plugin versions
 kotlin = "2.2.21"
-androidGradlePlugin = "8.12.3"
+androidGradlePlugin = "8.13.0"
 activity = "1.11.0"
 splashScreen = "1.0.1"
 composeMultiplatform = "1.9.1"
