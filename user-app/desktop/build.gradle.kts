@@ -62,4 +62,4 @@ compose{
 }
 
 // Custom build directory
-layout.buildDirectory.set(file("$rootDir/.build/user-app/Desktop"))
+layout.buildDirectory.set(file("$rootDir/.build/user-app/desktop"))
