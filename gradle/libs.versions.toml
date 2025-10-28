@@ -5,6 +5,7 @@ androidGradlePlugin = "8.12.3"
 activity = "1.11.0"
 splashScreen = "1.0.1"
 composeMultiplatform = "1.9.1"
+navigation = "2.9.1"
 hotReload = "1.0.0-rc02"
 lifecycle = "2.9.5"
 coroutines = "1.10.2"
@@ -64,10 +65,11 @@ core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = 
 # Compose Multiplatform dependencies
 compose-multiplatform-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 compose-multiplatform-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-multiplatform-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation" }
 compose-multiplatform-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
 kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
-compose-multiplatform-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle"}
-compose-multiplatform-lifecycle-runtime = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle"}
+compose-multiplatform-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+compose-multiplatform-lifecycle-runtime = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
 # Koin dependencies
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
