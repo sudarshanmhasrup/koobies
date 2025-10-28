@@ -16,6 +16,10 @@ kotlin {
         namespace = libs.versions.shared.androidLibrary.namespace.get()
         compileSdk = libs.versions.shared.androidLibrary.compileSdk.get().toInt()
         minSdk = libs.versions.shared.androidLibrary.minSdk.get().toInt()
+        
+        androidResources {
+            enable = true
+        }
     }
 
     jvm {
