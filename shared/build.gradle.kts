@@ -16,13 +16,13 @@ kotlin {
         namespace = libs.versions.shared.androidLibrary.namespace.get()
         compileSdk = libs.versions.shared.androidLibrary.compileSdk.get().toInt()
         minSdk = libs.versions.shared.androidLibrary.minSdk.get().toInt()
-        
+
         androidResources {
             enable = true
         }
     }
 
-    jvm {
+    jvm("desktop") {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_21
         }
@@ -34,6 +34,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.bundles.datastore)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.bundles.koin.multiplatform)
             implementation(libs.bundles.compose.multiplatform)
