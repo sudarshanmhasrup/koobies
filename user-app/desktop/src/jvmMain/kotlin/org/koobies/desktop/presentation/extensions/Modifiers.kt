@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-internal fun Modifier.splashScreenContentModifier(): Modifier {
+internal fun Modifier.splashScreenModifier(): Modifier {
     return this
         .clip(shape = RoundedCornerShape(size = 12.dp))
         .background(color = Color.Black)
