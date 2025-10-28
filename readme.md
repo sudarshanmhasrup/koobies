@@ -1,7 +1,8 @@
+<!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
    <picture>
        <source media="(prefers-color-scheme: dark)" srcset="/assets/koobies-logo-type-github-dark.svg" />
-       <source media="(prefers-color-scheme: light)" srcset="/assets/kotlin-multiplatform-logo-light.svg" />
+       <source media="(prefers-color-scheme: light)" srcset="/assets/koobies-logo-type-github-light.svg" />
        <img alt="Kotlin Multiplatform Logo" height="60" src="/assets/koobies-logo-type-github-dark.svg" />
    </picture>  
 <br>
