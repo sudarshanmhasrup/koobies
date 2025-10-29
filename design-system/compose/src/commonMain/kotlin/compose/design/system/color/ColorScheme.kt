@@ -1,4 +1,4 @@
-package compose.design.system.core
+package compose.design.system.color
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
