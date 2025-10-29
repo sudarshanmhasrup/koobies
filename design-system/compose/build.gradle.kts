@@ -14,7 +14,7 @@ kotlin {
         minSdk = libs.versions.designSystem.compose.androidLibrary.minSdk.get().toInt()
     }
 
-    jvm {
+    jvm("desktop") {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_21
         }
