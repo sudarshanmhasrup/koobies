@@ -47,7 +47,7 @@ setOf(
 include(":shared")
 include(":design-system:compose")
 
-// Feature modules
+// Feature-specific modules
 setOf(
     "user-onboarding"
 ).forEach { module ->
