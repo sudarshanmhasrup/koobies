@@ -43,7 +43,7 @@ setOf(
     include(":user-app:$userAppModule")
 }
 
-// Shared module for all platforms
+// Shared modules used across all client platforms
 include(":shared")
 include(":design-system:compose")
 
