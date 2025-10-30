@@ -9,8 +9,9 @@ import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import compose.design.system.api.ComposeAppTheme
+import compose.design.system.api.Theme
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import koobies.shared.app.resources.Res
 import koobies.shared.app.resources.kodee_welcoming_illustration
@@ -29,11 +30,12 @@ internal fun GreetingsAndMessage(
 ) {
     val commonModifier = Modifier.fillMaxWidth()
 
-    val primaryFontColor = ComposeAppTheme.colorScheme.primaryFontColor
-    val greetingsTextStyle = ComposeAppTheme.typography.displaySmallBold.copy(color = primaryFontColor)
+    val primaryFontColor = Theme.colorScheme.primaryFontColor
+    val greetingsTextStyle =
+        Theme.typography.displaySmallBold.copy(color = primaryFontColor, fontWeight = FontWeight.ExtraBold)
 
-    val secondaryFontColor = ComposeAppTheme.colorScheme.secondaryFontColor
-    val messageTextStyle = ComposeAppTheme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
+    val secondaryFontColor = Theme.colorScheme.secondaryFontColor
+    val messageTextStyle = Theme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
 
     val koodeeWelcomingIllustration = painterResource(resource = Res.drawable.kodee_welcoming_illustration)
 
