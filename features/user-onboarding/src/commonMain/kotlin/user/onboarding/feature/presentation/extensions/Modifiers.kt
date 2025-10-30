@@ -12,7 +12,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import compose.design.system.api.ComposeAppTheme
+import compose.design.system.api.Theme
 
 internal fun Modifier.greetingsAndMessageModifier(): Modifier {
     return this
@@ -35,6 +35,6 @@ internal fun BoxScope.userOnboardingNavigationCardModifier(): Modifier {
             spotColor = Color.Black.copy(alpha = 0.12f)
         )
         .clip(shape = cardShape)
-        .background(color = ComposeAppTheme.colorScheme.backgroundColor)
+        .background(color = Theme.colorScheme.backgroundColor)
         .padding(all = 12.dp)
 }
