@@ -25,6 +25,48 @@ internal class LocalLanguageDataSourceImpl : LocalLanguageDataSource {
                 message = "हे अ‍ॅप मराठीत वापरा.",
                 locale = "mr",
                 isSelected = false
+            ),
+            Language(
+                name = "Spanish",
+                message = "Usa esta aplicación en español.",
+                locale = "es",
+                isSelected = false
+            ),
+            Language(
+                name = "French",
+                message = "Utilisez cette application en français.",
+                locale = "fr",
+                isSelected = false
+            ),
+            Language(
+                name = "German",
+                message = "Verwenden Sie diese App auf Deutsch.",
+                locale = "de",
+                isSelected = false
+            ),
+            Language(
+                name = "Russian",
+                message = "Используйте это приложение на русском.",
+                locale = "ru",
+                isSelected = false
+            ),
+            Language(
+                name = "Chinese (Simplified)",
+                message = "使用简体中文。",
+                locale = "zh",
+                isSelected = false
+            ),
+            Language(
+                name = "Japanese",
+                message = "このアプリを日本語で使う。",
+                locale = "ja",
+                isSelected = false
+            ),
+            Language(
+                name = "Korean",
+                message = "이 앱을 한국어로 사용하세요.",
+                locale = "ko",
+                isSelected = false
             )
         )
     )
