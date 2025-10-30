@@ -17,7 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import compose.design.system.api.ComposeAppTheme
+import compose.design.system.api.Theme
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.domain.model.language.Language
@@ -30,20 +30,20 @@ internal fun LanguageCard(
 ) {
     val commonModifier = Modifier.fillMaxWidth()
     val backgroundModifier = modifier
-        .background(color = ComposeAppTheme.colorScheme.backgroundColor)
+        .background(color = Theme.colorScheme.backgroundColor)
         .clickable(onClick = onClick, indication = null, interactionSource = null)
         .padding(vertical = 12.dp, horizontal = 8.dp)
 
     val radioButtonColors = RadioButtonDefaults.colors(
-        selectedColor = ComposeAppTheme.colorScheme.primaryColor,
+        selectedColor = Theme.colorScheme.primaryColor,
         unselectedColor = Color(0xFFc7c5d0)
     )
 
-    val primaryFontColor = ComposeAppTheme.colorScheme.primaryFontColor
-    val nameTextStyle = ComposeAppTheme.typography.titleMediumSemiBold.copy(color = primaryFontColor)
+    val primaryFontColor = Theme.colorScheme.primaryFontColor
+    val nameTextStyle = Theme.typography.titleMediumSemiBold.copy(color = primaryFontColor)
 
-    val secondaryFontColor = ComposeAppTheme.colorScheme.secondaryFontColor
-    val messageTextStyle = ComposeAppTheme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
+    val secondaryFontColor = Theme.colorScheme.secondaryFontColor
+    val messageTextStyle = Theme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
 
     Row(verticalAlignment = Alignment.CenterVertically, modifier = backgroundModifier) {
         RadioButton(selected = language.isSelected, colors = radioButtonColors, onClick = onClick)
