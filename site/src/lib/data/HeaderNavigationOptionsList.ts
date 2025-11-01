@@ -12,12 +12,12 @@ const headerNavigationOptionsList: HeaderNavigationOption[] = [
         endpoint: "/jobs"
     },
     {
-        label: "Blogs",
-        endpoint: "/blogs"
-    },
-    {
         label: "Courses",
         endpoint: "/courses"
+    },
+    {
+        label: "Blogs",
+        endpoint: "/blogs"
     },
     {
         label: "Contributors",
