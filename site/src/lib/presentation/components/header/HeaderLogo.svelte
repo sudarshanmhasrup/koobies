@@ -3,7 +3,7 @@
 </a>
 <style>
     a {
-        padding: 28px 40px;
+        padding: 40px;
         display: inline-block;
     }
 
