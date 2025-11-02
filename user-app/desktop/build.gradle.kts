@@ -35,6 +35,7 @@ kotlin {
             implementation(libs.bundles.compose.multiplatform.lifecycle)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.userApp.compose)
+            implementation(projects.designSystem.compose)
             implementation(projects.shared)
         }
         desktopMain.dependencies {
@@ -44,7 +45,7 @@ kotlin {
     }
 }
 
-compose{
+compose {
     resources {
         generateResClass = never
     }
