@@ -90,7 +90,8 @@ localina = { module = "io.github.sudarshanmhasrup.localina:localina", version.re
 [bundles]
 compose-multiplatform = [
     "compose-multiplatform-runtime", "compose-multiplatform-resources", "compose-multiplatform-components-ui-tooling-preview",
-    "compose-multiplatform-foundation", "compose-multiplatform-material3-adaptive", "compose-multiplatform-navigation"
+    "compose-multiplatform-foundation", "compose-multiplatform-material3", "compose-multiplatform-material3-adaptive",
+    "compose-multiplatform-navigation"
 ]
 compose-multiplatform-lifecycle = ["compose-multiplatform-viewmodel", "compose-multiplatform-lifecycle-runtime"]
 koin-multiplatform = ["koin-core", "koin-compose", "koin-compose-viewmodel"]
