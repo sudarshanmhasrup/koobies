@@ -20,6 +20,7 @@ import androidx.window.core.layout.WindowSizeClass.Companion.WIDTH_DP_MEDIUM_LOW
 import compose.design.system.components.RoundButton
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import koobies.shared.app.resources.Res
+import koobies.shared.app.resources.continue_button_label
 import koobies.shared.app.resources.language_page_greetings
 import koobies.shared.app.resources.language_page_message
 import org.jetbrains.compose.resources.stringResource
@@ -83,7 +84,7 @@ private fun LanguagePageLayout(
         // Continue button background
         Box(modifier = continueButtonBackgroundModifier()) {
             RoundButton(
-                label = "Continue",
+                label = stringResource(resource = Res.string.continue_button_label),
                 onClick = {}
             )
         }
