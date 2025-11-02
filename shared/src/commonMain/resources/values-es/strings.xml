@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="language_page_greetings">¡Bienvenido a Koobies!</string>
+    <string name="language_page_message">Estimado usuario de Kotlin, nos alegra verte aquí. Comencemos seleccionando tu idioma preferido para usar la aplicación. Puedes cambiarlo en cualquier momento más tarde desde la configuración de la aplicación.</string>
+</resources>
