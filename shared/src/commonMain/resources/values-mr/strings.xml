@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-    <string name="language_page_greetings">Koobies मध्ये आपले स्वागत आहे!</string>
+    <string name="language_page_greetings">Koobies मध्ये \nआपले स्वागत आहे!</string>
     <string name="language_page_message">प्रिय Kotlin वापरकर्ता, आपण येथे आहात याचा आम्हाला आनंद आहे. चला, ॲप वापरण्यासाठी आपली आवडती भाषा निवडून सुरुवात करूया. आपण ती नंतर कधीही ॲपच्या सेटिंग्जमधून बदलू शकता.</string>
     <string name="continue_button_label">सुरु ठेवा</string>
 </resources>
