@@ -49,6 +49,7 @@ compose {
     resources {
         generateResClass = never
     }
+
     desktop {
         application {
             mainClass = libs.versions.userApp.desktop.mainClass.get()
