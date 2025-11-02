@@ -121,7 +121,7 @@ data class Typography(
     val bodyMediumRegular: TextStyle = TextStyle(
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp,
-        lineHeight = 20.sp,
+        lineHeight = 24.sp,
         letterSpacing = 0.25.sp
     ),
     val bodyMediumMedium: TextStyle = bodyMediumRegular.copy(fontWeight = FontWeight.Medium),
