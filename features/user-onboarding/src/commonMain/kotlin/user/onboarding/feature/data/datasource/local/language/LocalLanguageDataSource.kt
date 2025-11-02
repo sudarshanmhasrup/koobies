@@ -5,5 +5,5 @@ import user.onboarding.feature.domain.model.language.Language
 
 internal interface LocalLanguageDataSource {
     fun getLanguages(): Flow<List<Language>>
-    suspend fun updateSelectedLanguage(language: Language)
+    suspend fun updateSelectedLanguage(locale: String)
 }

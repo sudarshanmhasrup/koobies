@@ -35,7 +35,7 @@ internal class LocalLanguageDataSourceImpl : LocalLanguageDataSource {
             Language(
                 name = "French",
                 message = "Utilisez cette application en français.",
-                locale = "fr",
+                    locale = "fr",
                 isSelected = false
             ),
             Language(
@@ -75,10 +75,10 @@ internal class LocalLanguageDataSourceImpl : LocalLanguageDataSource {
         return languageList
     }
 
-    override suspend fun updateSelectedLanguage(language: Language) {
+    override suspend fun updateSelectedLanguage(locale: String) {
         languageList.update { value ->
             value.map {
-                if (it.locale == language.locale) {
+                if (it.locale == locale) {
                     it.copy(isSelected = true)
                 } else {
                     it.copy(isSelected = false)
