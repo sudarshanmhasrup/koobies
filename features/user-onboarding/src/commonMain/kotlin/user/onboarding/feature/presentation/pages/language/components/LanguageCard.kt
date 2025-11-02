@@ -50,7 +50,7 @@ internal fun LanguageCard(
         Spacer(modifier = Modifier.width(8.dp))
         Column(modifier = Modifier.fillMaxWidth()) {
             BasicText(text = language.name, style = nameTextStyle, modifier = commonModifier)
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(6.dp))
             BasicText(text = language.message, style = messageTextStyle, modifier = commonModifier)
         }
     }
