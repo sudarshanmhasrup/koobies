@@ -98,7 +98,7 @@ private fun LanguageList(
     val uiState = languagePageViewModel.uiState.collectAsStateWithLifecycle()
     val languages = uiState.value.languages
 
-    LazyColumn(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    LazyColumn(modifier = modifier.padding(vertical = 20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         items(items = languages) { language ->
             LanguageCard(
                 language = language,
