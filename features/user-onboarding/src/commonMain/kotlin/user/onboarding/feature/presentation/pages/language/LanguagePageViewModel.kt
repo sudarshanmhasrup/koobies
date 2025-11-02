@@ -2,6 +2,7 @@ package user.onboarding.feature.presentation.pages.language
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import io.github.sudarshanmhasrup.localina.api.LocaleUpdater
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -20,6 +21,9 @@ internal class LanguagePageViewModel(
         viewModelScope.launch {
             getLanguagesUseCase.invoke().collect { languages ->
                 _uiState.value = _uiState.value.copy(languages = languages)
+
+                val selectedLanguage = languages.find { it.isSelected }
+                LocaleUpdater.updateLocale(locale = selectedLanguage?.locale ?: "en")
             }
         }
     }
