@@ -2,4 +2,5 @@
 <resources>
     <string name="language_page_greetings">¡Bienvenido a \nKoobies!</string>
     <string name="language_page_message">Estimado usuario de Kotlin, nos alegra verte aquí. Comencemos seleccionando tu idioma preferido para usar la aplicación. Puedes cambiarlo en cualquier momento más tarde desde la configuración de la aplicación.</string>
+    <string name="continue_button_label">Continuar</string>
 </resources>
