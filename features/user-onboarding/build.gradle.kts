@@ -38,6 +38,9 @@ kotlin {
             implementation(projects.designSystem.compose)
             implementation(projects.shared)
         }
+        commonTest.dependencies {
+            implementation(libs.kotlin.test)
+        }
     }
 }
 
