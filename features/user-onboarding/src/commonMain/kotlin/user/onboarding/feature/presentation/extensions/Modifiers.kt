@@ -39,3 +39,10 @@ internal fun BoxScope.userOnboardingNavigationCardModifier(): Modifier {
         .background(color = Theme.colorScheme.backgroundColor)
         .padding(all = 12.dp)
 }
+
+@Composable
+internal fun BoxScope.continueButtonBackgroundModifier(): Modifier {
+    return Modifier
+        .padding(all = 20.dp)
+        .align(alignment = Alignment.BottomEnd)
+}
