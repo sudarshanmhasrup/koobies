@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="language_page_greetings">ようこそ\nKoobiesへ！</string>
+    <string name="language_page_message">親愛なるKotlinユーザーの皆さん、ここにお越しいただきありがとうございます。まずは、アプリを使用するためにお好みの言語を選択しましょう。後でアプリの設定からいつでも変更できます。</string>
+</resources>
