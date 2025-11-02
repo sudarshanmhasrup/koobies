@@ -3,10 +3,11 @@ package koobies.shared.app.presentation.theme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import compose.design.system.api.ComposeAppTheme
-import compose.design.system.core.Typography
+import compose.design.system.api.Theme
+import compose.design.system.typography.Typography
 import koobies.shared.app.resources.Res
 import koobies.shared.app.resources.bold
+import koobies.shared.app.resources.extra_bold
 import koobies.shared.app.resources.medium
 import koobies.shared.app.resources.regular
 import koobies.shared.app.resources.semibold
@@ -18,10 +19,11 @@ internal fun getTypography(): Typography {
         Font(resource = Res.font.regular, weight = FontWeight.Normal),
         Font(resource = Res.font.medium, weight = FontWeight.Medium),
         Font(resource = Res.font.semibold, weight = FontWeight.SemiBold),
-        Font(resource = Res.font.bold, weight = FontWeight.Bold)
+        Font(resource = Res.font.bold, weight = FontWeight.Bold),
+        Font(resource = Res.font.extra_bold, weight = FontWeight.ExtraBold)
     )
 
-    return with(ComposeAppTheme.typography) {
+    return with(Theme.typography) {
         copy(
             displayLargeRegular = displayLargeRegular.copy(fontFamily = fontFamily),
             displayLargeMedium = displayLargeMedium.copy(fontFamily = fontFamily),
