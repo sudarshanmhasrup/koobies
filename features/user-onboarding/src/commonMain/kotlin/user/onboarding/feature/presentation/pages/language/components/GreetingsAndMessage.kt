@@ -19,22 +19,22 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.presentation.extensions.greetingsAndMessageModifier
 
 @Composable
-internal fun GreetingAndMessage(
-    greeting: String,
+internal fun GreetingsAndMessage(
+    greetings: String,
     message: String,
     modifier: Modifier = Modifier
 ) {
     val commonModifier = Modifier.fillMaxWidth()
 
     val primaryFontColor = Theme.colorScheme.primaryFontColor
-    val greetingTextStyle =
+    val greetingsTextStyle =
         Theme.typography.displaySmallBold.copy(color = primaryFontColor, fontWeight = FontWeight.ExtraBold)
 
     val secondaryFontColor = Theme.colorScheme.secondaryFontColor
     val messageTextStyle = Theme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
 
     Column(modifier = modifier) {
-        BasicText(text = greeting, style = greetingTextStyle, modifier = commonModifier)
+        BasicText(text = greetings, style = greetingsTextStyle, modifier = commonModifier)
         Spacer(modifier = Modifier.height(12.dp))
         BasicText(text = message, style = messageTextStyle, modifier = commonModifier)
     }
@@ -42,10 +42,10 @@ internal fun GreetingAndMessage(
 
 @Preview(showBackground = true)
 @Composable
-private fun GreetingAndMessagePreview() {
+private fun GreetingsAndMessagePreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        GreetingAndMessage(
-            greeting = stringResource(resource = Res.string.language_page_greetings),
+        GreetingsAndMessage(
+            greetings = stringResource(resource = Res.string.language_page_greetings),
             message = stringResource(resource = Res.string.language_page_message),
             modifier = Modifier.greetingsAndMessageModifier()
         )
