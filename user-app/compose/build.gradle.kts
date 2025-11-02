@@ -7,6 +7,9 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
+group = libs.versions.userApp.compose.group.get()
+version = libs.versions.userApp.compose.version.get()
+
 kotlin {
     androidLibrary {
         namespace = libs.versions.userApp.compose.androidLibrary.namespace.get()
