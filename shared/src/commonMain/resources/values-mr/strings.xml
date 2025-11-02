@@ -3,4 +3,6 @@
     <string name="language_page_greetings">Koobies मध्ये \nआपले स्वागत आहे!</string>
     <string name="language_page_message">प्रिय Kotlin वापरकर्ता, आपण येथे आहात याचा आम्हाला आनंद आहे. चला, ॲप वापरण्यासाठी आपली आवडती भाषा निवडून सुरुवात करूया. आपण ती नंतर कधीही ॲपच्या सेटिंग्जमधून बदलू शकता.</string>
     <string name="continue_button_label">सुरु ठेवा</string>
+    <string name="theme_page_heading">ॲप थीम निवडा</string>
+    <string name="theme_page_message">ॲप आपल्या पद्धतीने वापरण्यासाठी आपली आवडती थीम निवडा. आपण नंतर कधीही ॲपच्या सेटिंग्जमधून लाईट, डार्क किंवा सिस्टम डीफॉल्ट थीममध्ये स्विच करू शकता.</string>
 </resources>

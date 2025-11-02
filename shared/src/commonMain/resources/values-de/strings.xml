@@ -3,4 +3,6 @@
     <string name="language_page_greetings">Willkommen bei\nKoobies!</string>
     <string name="language_page_message">Lieber Kotlin-Benutzer, wir freuen uns, dich hier zu sehen. Lass uns damit beginnen, deine bevorzugte Sprache für die App auszuwählen. Du kannst sie später jederzeit in den App-Einstellungen ändern.</string>
     <string name="continue_button_label">Weiter</string>
+    <string name="theme_page_heading">App-Theme auswählen</string>
+    <string name="theme_page_message">Wähle dein bevorzugtes Theme, um die App nach deinen Wünschen zu nutzen. Du kannst jederzeit später in den App-Einstellungen zwischen hellen, dunklen oder systemeigenen Themes wechseln.</string>
 </resources>

@@ -3,4 +3,6 @@
     <string name="language_page_greetings">欢迎来到\nKoobies！</string>
     <string name="language_page_message">亲爱的 Kotlin 用户，我们很高兴见到您。让我们先选择您喜欢的语言来使用此应用。您可以稍后随时在应用设置中更改。</string>
     <string name="continue_button_label">继续</string>
+    <string name="theme_page_heading">选择应用主题</string>
+    <string name="theme_page_message">选择您喜欢的主题以您的方式使用该应用。您可以稍后随时在应用的设置中切换浅色、深色或系统默认主题。</string>
 </resources>
