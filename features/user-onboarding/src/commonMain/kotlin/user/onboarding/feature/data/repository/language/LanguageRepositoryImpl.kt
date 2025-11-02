@@ -5,7 +5,9 @@ import user.onboarding.feature.data.datasource.local.language.LocalLanguageDataS
 import user.onboarding.feature.domain.model.language.Language
 import user.onboarding.feature.domain.repository.language.LanguageRepository
 
-internal class LanguageRepositoryImpl(private val localLanguageDataSource: LocalLanguageDataSource) : LanguageRepository {
+internal class LanguageRepositoryImpl(
+    private val localLanguageDataSource: LocalLanguageDataSource
+) : LanguageRepository {
     override fun getLanguages(): Flow<List<Language>> {
         return localLanguageDataSource.getLanguages()
     }
