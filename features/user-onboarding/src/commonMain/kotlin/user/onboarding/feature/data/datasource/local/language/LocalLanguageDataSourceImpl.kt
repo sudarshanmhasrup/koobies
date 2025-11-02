@@ -43,7 +43,7 @@ internal class LocalLanguageDataSourceImpl(
             Language(
                 name = "French",
                 message = "Utilisez cette application en français.",
-                    locale = "fr",
+                locale = "fr",
                 isSelected = false
             ),
             Language(
@@ -82,10 +82,10 @@ internal class LocalLanguageDataSourceImpl(
     init {
         CoroutineScope(Dispatchers.IO).launch {
             val selectedLanguage = userPreferencesManager.getSelectedLanguage().first()
-
             if (selectedLanguage.isEmpty()) {
                 return@launch
             }
+
             updateSelectedLanguage(locale = selectedLanguage)
         }
     }
