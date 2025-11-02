@@ -60,12 +60,7 @@ internal fun LanguageCard(
 @Composable
 private fun LanguageCardPreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        val language = Language(
-            name = "English",
-            message = "Use this app in English",
-            locale = "en",
-            isSelected = true
-        )
+        val language = Language(name = "English", message = "Use this app in English", locale = "en", isSelected = true)
         LanguageCard(language = language, modifier = Modifier.fillMaxWidth(), onClick = {})
     }
 }
