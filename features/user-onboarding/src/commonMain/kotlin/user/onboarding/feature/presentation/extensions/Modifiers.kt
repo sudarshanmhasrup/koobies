@@ -14,10 +14,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import compose.design.system.api.Theme
 
-internal fun Modifier.greetingsAndMessageModifier(): Modifier {
+internal fun Modifier.greetingsAndMessageModifier(isLandscapeMode: Boolean = false): Modifier {
+    val topPadding = if (isLandscapeMode) 20.dp else 80.dp
     return this
         .fillMaxWidth()
-        .padding(top = 80.dp, bottom = 0.dp, start = 20.dp, end = 20.dp)
+        .padding(top = topPadding, bottom = 0.dp, start = 20.dp, end = 20.dp)
 }
 
 @Composable
