@@ -1,11 +1,19 @@
 package user.onboarding.feature.data.datasource.local.language
 
+import koobies.shared.app.domain.preferences.PreferencesManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import user.onboarding.feature.domain.model.language.Language
 
-internal class LocalLanguageDataSourceImpl : LocalLanguageDataSource {
+internal class LocalLanguageDataSourceImpl(
+    private val userPreferencesManager: PreferencesManager
+) : LocalLanguageDataSource {
     private val languageList = MutableStateFlow(
         value = listOf(
             Language(
@@ -70,6 +78,17 @@ internal class LocalLanguageDataSourceImpl : LocalLanguageDataSource {
             )
         )
     )
+
+    init {
+        CoroutineScope(Dispatchers.IO).launch {
+            val selectedLanguage = userPreferencesManager.getSelectedLanguage().first()
+
+            if (selectedLanguage.isEmpty()) {
+                return@launch
+            }
+            updateSelectedLanguage(locale = selectedLanguage)
+        }
+    }
 
     override fun getLanguages(): Flow<List<Language>> {
         return languageList
