@@ -10,7 +10,7 @@ internal class ThemeRepositoryImpl(private val dataSource: LocalThemeDataSource)
         return dataSource.getSupportedAppThemes()
     }
 
-    override fun updateSelectedAppTheme(theme: AppTheme) {
+    override suspend fun updateSelectedAppTheme(theme: AppTheme) {
         dataSource.updateSelectedAppTheme(theme = theme)
     }
 }
