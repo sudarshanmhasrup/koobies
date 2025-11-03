@@ -48,18 +48,13 @@ fun LanguagePage(modifier: Modifier = Modifier) {
                 .align(alignment = Alignment.CenterVertically)
             LanguagePageLayout(
                 isLandscapeMode = isLandscapeMode,
-                languagePageViewModel = languagePageViewModel,
                 modifier = layoutModifier,
                 modifier2 = Modifier.weight(1f),
             )
         }
     } else {
         Column(modifier = modifier) {
-            LanguagePageLayout(
-                languagePageViewModel = languagePageViewModel,
-                modifier = Modifier.fillMaxWidth(),
-                modifier2 = Modifier.fillMaxWidth()
-            )
+            LanguagePageLayout(modifier = Modifier.fillMaxWidth(), modifier2 = Modifier.fillMaxWidth())
         }
     }
 }
@@ -67,7 +62,6 @@ fun LanguagePage(modifier: Modifier = Modifier) {
 @Composable
 private fun LanguagePageLayout(
     isLandscapeMode: Boolean = false,
-    languagePageViewModel: LanguagePageViewModel,
     modifier: Modifier = Modifier,
     modifier2: Modifier = Modifier
 ) {
@@ -81,10 +75,7 @@ private fun LanguagePageLayout(
         )
     }
     Box(modifier = modifier2) {
-        LanguageList(
-            languagePageViewModel = languagePageViewModel,
-            modifier = modifier2
-        )
+        LanguageList(modifier = modifier2)
         // Continue button background
         Box(modifier = continueButtonBackgroundModifier()) {
             RoundButton(
@@ -98,20 +89,18 @@ private fun LanguagePageLayout(
 }
 
 @Composable
-private fun LanguageList(
-    languagePageViewModel: LanguagePageViewModel,
-    modifier: Modifier = Modifier
-) {
+private fun LanguageList(modifier: Modifier = Modifier) {
+    val languagePageViewModel = koinViewModel<LanguagePageViewModel>()
     val uiState = languagePageViewModel.uiState.collectAsStateWithLifecycle()
-    val languages = uiState.value.languages
+    val supportedAppLanguages = uiState.value.supportedAppLanguages
 
     LazyColumn(modifier = modifier.padding(vertical = 20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        items(items = languages) { language ->
+        items(items = supportedAppLanguages) { language ->
             LanguageCard(
                 language = language,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = {
-                    languagePageViewModel.updateSelectedLanguage(language = language)
+                    languagePageViewModel.updateSelectedAppLanguage(language = language)
                 }
             )
         }
