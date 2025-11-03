@@ -4,9 +4,10 @@ import androidx.compose.runtime.Composable
 import kotlinx.coroutines.flow.Flow
 import user.onboarding.feature.domain.model.theme.AppTheme
 
+@Suppress("ComposableNaming")
 internal interface LocalThemeDataSource {
     @Composable
     fun getSupportedAppThemes(): Flow<List<AppTheme>>
     @Composable
-    suspend fun updateSelectedAppTheme(theme: AppTheme)
+    fun updateSelectedAppTheme(theme: AppTheme)
 }
