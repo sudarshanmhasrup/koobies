@@ -7,15 +7,15 @@ import user.onboarding.feature.domain.model.language.AppLanguage
 import user.onboarding.feature.domain.repository.language.LanguageRepository
 
 internal class LanguageRepositoryImpl(
-    private val localLanguageDataSource: LocalLanguageDataSource,
+    private val dataSource: LocalLanguageDataSource,
     private val userPreferencesManager: PreferencesManager
 ) : LanguageRepository {
     override fun getSupportedAppLanguages(): Flow<List<AppLanguage>> {
-        return localLanguageDataSource.getSupportedAppLanguages()
+        return dataSource.getSupportedAppLanguages()
     }
 
     override suspend fun updateSelectedAppLanguage(locale: String) {
-        localLanguageDataSource.updateSelectedAppLanguage(locale = locale)
+        dataSource.updateSelectedAppLanguage(locale = locale)
         userPreferencesManager.saveSelectedAppLanguage(locale = locale)
     }
 }
