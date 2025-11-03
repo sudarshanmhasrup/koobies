@@ -5,4 +5,10 @@
     <string name="continue_button_label">Continue</string>
     <string name="theme_page_heading">Select App Theme</string>
     <string name="theme_page_message">Choose your preferred theme to use the app your way. You can switch between light, dark, or system default themes anytime later from the app’s settings.</string>
+    <string name="system_theme_type_name">System Default</string>
+    <string name="system_theme_type_message">Automatically adjusts to match your device’s light or dark mode.</string>
+    <string name="light_theme_type_name">Light</string>
+    <string name="light_theme_type_message">Bright and clear appearance for better visibility during the day.</string>
+    <string name="dark_theme_type_name">Dark</string>
+    <string name="dark_theme_type_message">Soft and comfortable look for low-light environments.</string>
 </resources>

@@ -5,4 +5,10 @@
     <string name="continue_button_label">सुरु ठेवा</string>
     <string name="theme_page_heading">ॲप थीम निवडा</string>
     <string name="theme_page_message">ॲप आपल्या पद्धतीने वापरण्यासाठी आपली आवडती थीम निवडा. आपण नंतर कधीही ॲपच्या सेटिंग्जमधून लाईट, डार्क किंवा सिस्टम डीफॉल्ट थीममध्ये स्विच करू शकता.</string>
+    <string name="system_theme_type_name">सिस्टम डीफॉल्ट</string>
+    <string name="system_theme_type_message">तुमच्या डिव्हाइसच्या लाईट किंवा डार्क मोडशी जुळण्यासाठी आपोआप समायोजित होते.</string>
+    <string name="light_theme_type_name">लाईट</string>
+    <string name="light_theme_type_message">दिवसा चांगल्या दृश्यमानतेसाठी तेजस्वी आणि स्पष्ट स्वरूप.</string>
+    <string name="dark_theme_type_name">डार्क</string>
+    <string name="dark_theme_type_message">कमी-प्रकाशाच्या वातावरणासाठी मऊ आणि आरामदायक लुक.</string>
 </resources>

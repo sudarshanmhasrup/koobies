@@ -5,4 +5,10 @@
     <string name="continue_button_label">Weiter</string>
     <string name="theme_page_heading">App-Theme auswählen</string>
     <string name="theme_page_message">Wähle dein bevorzugtes Theme, um die App nach deinen Wünschen zu nutzen. Du kannst jederzeit später in den App-Einstellungen zwischen hellen, dunklen oder systemeigenen Themes wechseln.</string>
+    <string name="system_theme_type_name">Systemstandard</string>
+    <string name="system_theme_type_message">Passt sich automatisch an den hellen oder dunklen Modus deines Geräts an.</string>
+    <string name="light_theme_type_name">Hell</string>
+    <string name="light_theme_type_message">Helles und klares Erscheinungsbild für bessere Sichtbarkeit bei Tag.</string>
+    <string name="dark_theme_type_name">Dunkel</string>
+    <string name="dark_theme_type_message">Weiches und angenehmes Aussehen für Umgebungen mit wenig Licht.</string>
 </resources>

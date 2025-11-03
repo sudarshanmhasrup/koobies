@@ -5,4 +5,10 @@
     <string name="continue_button_label">続行</string>
     <string name="theme_page_heading">アプリのテーマを選択</string>
     <string name="theme_page_message">お好みのテーマを選択して、アプリを自分好みに使いましょう。後でアプリの設定から、ライト、ダーク、またはシステムのデフォルトテーマをいつでも切り替えることができます。</string>
+    <string name="system_theme_type_name">システムのデフォルト</string>
+    <string name="system_theme_type_message">デバイスのライトモードまたはダークモードに合わせて自動的に調整されます。</string>
+    <string name="light_theme_type_name">ライト</string>
+    <string name="light_theme_type_message">日中の視認性を高めるための明るくクリアな外観。</string>
+    <string name="dark_theme_type_name">ダーク</string>
+    <string name="dark_theme_type_message">低照度環境向けのソフトで快適な外観。</string>
 </resources>

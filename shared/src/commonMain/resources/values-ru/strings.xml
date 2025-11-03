@@ -5,4 +5,10 @@
     <string name="continue_button_label">Продолжить</string>
     <string name="theme_page_heading">Выберите тему приложения</string>
     <string name="theme_page_message">Выберите предпочитаемую тему, чтобы использовать приложение по-своему. Вы можете в любое время переключаться между светлой, темной или системной темой по умолчанию в настройках приложения.</string>
+    <string name="system_theme_type_name">Системная по умолчанию</string>
+    <string name="system_theme_type_message">Автоматически подстраивается под светлый или темный режим вашего устройства.</string>
+    <string name="light_theme_type_name">Светлая</string>
+    <string name="light_theme_type_message">Яркий и четкий вид для лучшей видимости днем.</string>
+    <string name="dark_theme_type_name">Темная</string>
+    <string name="dark_theme_type_message">Мягкий и удобный вид для условий низкой освещенности.</string>
 </resources>

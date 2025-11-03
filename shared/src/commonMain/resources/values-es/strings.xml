@@ -5,4 +5,10 @@
     <string name="continue_button_label">Continuar</string>
     <string name="theme_page_heading">Seleccionar tema de la aplicación</string>
     <string name="theme_page_message">Elige tu tema preferido para usar la aplicación a tu manera. Puedes cambiar entre temas claros, oscuros o predeterminados del sistema en cualquier momento desde la configuración de la aplicación.</string>
+    <string name="system_theme_type_name">Predeterminado del sistema</string>
+    <string name="system_theme_type_message">Se ajusta automáticamente para coincidir con el modo claro u oscuro de su dispositivo.</string>
+    <string name="light_theme_type_name">Claro</string>
+    <string name="light_theme_type_message">Aspecto brillante y claro para una mejor visibilidad durante el día.</string>
+    <string name="dark_theme_type_name">Oscuro</string>
+    <string name="dark_theme_type_message">Aspecto suave y cómodo para entornos con poca luz.</string>
 </resources>
