@@ -24,7 +24,6 @@ internal fun Modifier.greetingsAndMessageModifier(isLandscapeMode: Boolean = fal
 @Composable
 internal fun BoxScope.userOnboardingNavigationCardModifier(): Modifier {
     val cardShape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
-
     return Modifier
         .fillMaxWidth(0.32f)
         .padding(top = 80.dp)
@@ -32,7 +31,7 @@ internal fun BoxScope.userOnboardingNavigationCardModifier(): Modifier {
         .shadow(
             elevation = 24.dp,
             shape = cardShape,
-            ambientColor = Color(0xFF777680).copy(alpha = 0.84f),
+            ambientColor = Color(0xFF777680).copy(alpha = 0.94f),
             spotColor = Color.Black.copy(alpha = 0.12f)
         )
         .clip(shape = cardShape)
