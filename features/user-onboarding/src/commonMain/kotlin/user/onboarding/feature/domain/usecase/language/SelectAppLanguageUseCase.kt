@@ -5,6 +5,6 @@ import user.onboarding.feature.domain.repository.language.LanguageRepository
 
 internal class SelectAppLanguageUseCase(private val repository: LanguageRepository) {
     suspend operator fun invoke(language: AppLanguage) {
-        repository.updateSelectedAppLanguage(locale = language.locale)
+        repository.updateSelectedAppLanguage(language = language)
     }
 }
