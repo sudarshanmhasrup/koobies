@@ -29,7 +29,7 @@ internal class LocalThemeDataSourceImpl : LocalThemeDataSource {
         return supportedAppThemes
     }
 
-    override fun updateSelectedAppTheme(theme: AppTheme) {
+    override suspend fun updateSelectedAppTheme(theme: AppTheme) {
         supportedAppThemes.update { value ->
             value.map {
                 if (it.themeType == theme.themeType) {
