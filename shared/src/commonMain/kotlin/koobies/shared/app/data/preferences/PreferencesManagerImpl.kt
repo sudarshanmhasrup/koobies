@@ -10,18 +10,18 @@ class PreferencesManagerImpl : PreferencesManager {
     private val dataStore = dataStoreManager.getDataStore()
 
     override suspend fun saveSelectedAppLanguage(locale: String) {
-        dataStore.edit { dataStore ->
-            dataStore[SELECTED_LANGUAGE_KEY] = locale
+        dataStore.edit { preferences ->
+            preferences[SELECTED_LANGUAGE_KEY] = locale
         }
     }
 
     override fun getSelectedAppLanguage(): Flow<String> {
-        return dataStore.data.map { dataStore ->
-            dataStore[SELECTED_LANGUAGE_KEY] ?: ""
+        return dataStore.data.map { preferences ->
+            preferences[SELECTED_LANGUAGE_KEY] ?: ""
         }
     }
 
     companion object {
-        private val SELECTED_LANGUAGE_KEY = stringPreferencesKey("selected_language")
+        private val SELECTED_LANGUAGE_KEY = stringPreferencesKey("selected_app_language")
     }
 }
