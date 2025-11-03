@@ -37,7 +37,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.localina)
-            implementation(libs.koin.core)
+            implementation(libs.bundles.koin.multiplatform)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
             implementation(projects.shared)
