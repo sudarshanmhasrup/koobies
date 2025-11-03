@@ -15,6 +15,7 @@ import user.onboarding.feature.domain.repository.theme.ThemeRepository
 import user.onboarding.feature.domain.usecase.language.GetSupportedAppLanguagesUseCase
 import user.onboarding.feature.domain.usecase.language.SelectAppLanguageUseCase
 import user.onboarding.feature.domain.usecase.theme.GetSupportedAppThemesUseCase
+import user.onboarding.feature.domain.usecase.theme.SelectAppThemeUseCase
 import user.onboarding.feature.presentation.pages.language.LanguagePageViewModel
 import user.onboarding.feature.presentation.pages.theme.ThemePageViewModel
 
@@ -28,5 +29,6 @@ val userOnboardingModule = module {
     singleOf(::LocalThemeDataSourceImpl).bind<LocalThemeDataSource>()
     singleOf(::ThemeRepositoryImpl).bind<ThemeRepository>()
     singleOf(::GetSupportedAppThemesUseCase)
+    singleOf(::SelectAppThemeUseCase)
     viewModelOf(::ThemePageViewModel)
 }
