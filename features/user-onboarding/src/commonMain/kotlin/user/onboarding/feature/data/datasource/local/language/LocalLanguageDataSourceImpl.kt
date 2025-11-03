@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import user.onboarding.feature.domain.model.language.AppLanguage
 
 internal class LocalLanguageDataSourceImpl(
-    private val userPreferencesManager: PreferencesManager
+    private val preferencesManager: PreferencesManager
 ) : LocalLanguageDataSource {
     private val supportedAppLanguages = MutableStateFlow(
         value = listOf(
@@ -81,7 +81,7 @@ internal class LocalLanguageDataSourceImpl(
 
     init {
         CoroutineScope(Dispatchers.IO).launch {
-            val selectedAppLanguage = userPreferencesManager.getSelectedAppLanguage().first()
+            val selectedAppLanguage = preferencesManager.getSelectedAppLanguage().first()
             if (selectedAppLanguage.isEmpty()) {
                 return@launch
             }
