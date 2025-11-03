@@ -20,11 +20,11 @@ import androidx.compose.ui.unit.dp
 import compose.design.system.api.Theme
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import user.onboarding.feature.domain.model.language.Language
+import user.onboarding.feature.domain.model.language.AppLanguage
 
 @Composable
 internal fun LanguageCard(
-    language: Language,
+    language: AppLanguage,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -60,7 +60,7 @@ internal fun LanguageCard(
 @Composable
 private fun LanguageCardPreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        val language = Language(name = "English", message = "Use this app in English", locale = "en", isSelected = true)
+        val language = AppLanguage(name = "English", message = "Use this app in English", locale = "en", isSelected = true)
         LanguageCard(language = language, modifier = Modifier.fillMaxWidth(), onClick = {})
     }
 }
