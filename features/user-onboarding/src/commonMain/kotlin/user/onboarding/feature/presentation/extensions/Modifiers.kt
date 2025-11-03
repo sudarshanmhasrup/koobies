@@ -46,3 +46,10 @@ internal fun BoxScope.continueButtonBackgroundModifier(): Modifier {
         .padding(all = 20.dp)
         .align(alignment = Alignment.BottomEnd)
 }
+
+internal fun Modifier.headingAndMessageModifier(isLandscapeMode: Boolean = false): Modifier {
+    val topPadding = if (isLandscapeMode) 20.dp else 80.dp
+    return this
+        .fillMaxWidth()
+        .padding(top = topPadding, bottom = 0.dp, start = 20.dp, end = 20.dp)
+}
