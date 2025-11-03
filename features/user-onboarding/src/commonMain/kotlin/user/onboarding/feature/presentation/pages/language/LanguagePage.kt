@@ -28,6 +28,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import user.onboarding.feature.presentation.extensions.continueButtonBackgroundModifier
 import user.onboarding.feature.presentation.extensions.greetingsAndMessageModifier
+import user.onboarding.feature.presentation.navigation.LocalUserOnboardingNavHostController
+import user.onboarding.feature.presentation.navigation.UserOnboardingRoutes
 import user.onboarding.feature.presentation.pages.language.components.GreetingsAndMessage
 import user.onboarding.feature.presentation.pages.language.components.LanguageCard
 
@@ -69,6 +71,8 @@ private fun LanguagePageLayout(
     modifier: Modifier = Modifier,
     modifier2: Modifier = Modifier
 ) {
+    val userOnboardingNavHostController = LocalUserOnboardingNavHostController.current
+
     Box(modifier = modifier) {
         GreetingsAndMessage(
             greetings = stringResource(resource = Res.string.language_page_greetings),
@@ -85,7 +89,9 @@ private fun LanguagePageLayout(
         Box(modifier = continueButtonBackgroundModifier()) {
             RoundButton(
                 label = stringResource(resource = Res.string.continue_button_label),
-                onClick = {}
+                onClick = {
+                    userOnboardingNavHostController.navigate(route = UserOnboardingRoutes.ThemePage)
+                }
             )
         }
     }
