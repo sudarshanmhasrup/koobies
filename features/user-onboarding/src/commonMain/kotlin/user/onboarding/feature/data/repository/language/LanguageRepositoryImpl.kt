@@ -10,12 +10,12 @@ internal class LanguageRepositoryImpl(
     private val localLanguageDataSource: LocalLanguageDataSource,
     private val userPreferencesManager: PreferencesManager
 ) : LanguageRepository {
-    override fun getLanguages(): Flow<List<AppLanguage>> {
-        return localLanguageDataSource.getLanguages()
+    override fun getSupportedAppLanguages(): Flow<List<AppLanguage>> {
+        return localLanguageDataSource.getSupportedAppLanguages()
     }
 
-    override suspend fun updateSelectedLanguage(locale: String) {
-        localLanguageDataSource.updateSelectedLanguage(locale = locale)
-        userPreferencesManager.saveSelectedLanguage(locale = locale)
+    override suspend fun updateSelectedAppLanguage(locale: String) {
+        localLanguageDataSource.updateSelectedAppLanguage(locale = locale)
+        userPreferencesManager.saveSelectedAppLanguage(locale = locale)
     }
 }
