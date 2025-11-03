@@ -6,32 +6,32 @@ import io.github.sudarshanmhasrup.localina.api.LocaleUpdater
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import user.onboarding.feature.domain.model.language.Language
-import user.onboarding.feature.domain.usecase.language.GetLanguagesUseCase
-import user.onboarding.feature.domain.usecase.language.SelectLanguageUseCase
+import user.onboarding.feature.domain.model.language.AppLanguage
+import user.onboarding.feature.domain.usecase.language.GetSupportedAppLanguagesUseCase
+import user.onboarding.feature.domain.usecase.language.SelectAppLanguageUseCase
 
 internal class LanguagePageViewModel(
-    private val getLanguagesUseCase: GetLanguagesUseCase,
-    private val selectLanguageUseCase: SelectLanguageUseCase
+    private val getSupportedAppLanguagesUseCase: GetSupportedAppLanguagesUseCase,
+    private val selectAppLanguageUseCase: SelectAppLanguageUseCase,
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(value = LanguagePageUiState())
     val uiState: StateFlow<LanguagePageUiState> = _uiState
 
     init {
         viewModelScope.launch {
-            getLanguagesUseCase.invoke().collect { languages ->
-                _uiState.value = _uiState.value.copy(languages = languages)
+            getSupportedAppLanguagesUseCase.invoke().collect { supportedAppLanguages ->
+                _uiState.value = _uiState.value.copy(supportedAppLanguages = supportedAppLanguages)
 
-                val selectedLanguage = languages.find { it.isSelected }
-                LocaleUpdater.updateLocale(locale = selectedLanguage?.locale ?: "en")
+                val selectedAppLanguage = supportedAppLanguages.find { it.isSelected }
+                LocaleUpdater.updateLocale(locale = selectedAppLanguage?.locale ?: "en")
             }
         }
     }
 
     @Suppress("ViewModelPublicFunctionShouldStartWithOn")
-    fun updateSelectedLanguage(language: Language) {
+    fun updateSelectedAppLanguage(language: AppLanguage) {
         viewModelScope.launch {
-            selectLanguageUseCase.invoke(language = language)
+            selectAppLanguageUseCase.invoke(language = language)
         }
     }
 }
