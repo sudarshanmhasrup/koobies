@@ -1,9 +1,9 @@
 package user.onboarding.feature.domain.repository.language
 
 import kotlinx.coroutines.flow.Flow
-import user.onboarding.feature.domain.model.language.Language
+import user.onboarding.feature.domain.model.language.AppLanguage
 
 internal interface LanguageRepository {
-    fun getLanguages(): Flow<List<Language>>
-    suspend fun updateSelectedLanguage(locale: String)
+    fun getSupportedAppLanguages(): Flow<List<AppLanguage>>
+    suspend fun updateSelectedAppLanguage(locale: String)
 }
