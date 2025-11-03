@@ -6,5 +6,5 @@ import user.onboarding.feature.domain.model.theme.AppTheme
 @Suppress("ComposableNaming")
 internal interface LocalThemeDataSource {
     fun getSupportedAppThemes(): Flow<List<AppTheme>>
-    suspend fun updateSelectedAppTheme(theme: AppTheme)
+    suspend fun updateSelectedAppTheme(theme: String)
 }
