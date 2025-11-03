@@ -2,7 +2,6 @@ package koobies.shared.app.data.preferences
 
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import koobies.shared.app.domain.preferences.DataStoreManager
 import koobies.shared.app.domain.preferences.PreferencesManager
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
