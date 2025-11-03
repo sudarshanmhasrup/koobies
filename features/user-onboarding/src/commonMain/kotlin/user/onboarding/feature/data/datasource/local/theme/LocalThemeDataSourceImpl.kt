@@ -1,6 +1,5 @@
 package user.onboarding.feature.data.datasource.local.theme
 
-import androidx.compose.runtime.Composable
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
