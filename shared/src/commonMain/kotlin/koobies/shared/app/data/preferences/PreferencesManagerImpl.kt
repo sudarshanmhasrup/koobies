@@ -21,7 +21,20 @@ class PreferencesManagerImpl : PreferencesManager {
         }
     }
 
+    override suspend fun saveSelectedAppTheme(theme: String) {
+        dataStore.edit { preferences ->
+            preferences[SELECTED_THEME_KEY] = theme
+        }
+    }
+
+    override fun getSelectedAppTheme(): Flow<String> {
+        return dataStore.data.map { preferences ->
+            preferences[SELECTED_THEME_KEY] ?: ""
+        }
+    }
+
     companion object {
-        private val SELECTED_LANGUAGE_KEY = stringPreferencesKey("selected_app_language")
+        private val SELECTED_LANGUAGE_KEY = stringPreferencesKey(name = "selected_app_language")
+        private val SELECTED_THEME_KEY = stringPreferencesKey(name = "selected_app_theme")
     }
 }
