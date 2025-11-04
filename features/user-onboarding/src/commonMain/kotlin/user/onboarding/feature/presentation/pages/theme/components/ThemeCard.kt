@@ -15,7 +15,6 @@ import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import compose.design.system.api.Theme
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
@@ -37,7 +36,7 @@ internal fun ThemeCard(
 
     val radioButtonColors = RadioButtonDefaults.colors(
         selectedColor = Theme.colorScheme.primaryColor,
-        unselectedColor = Color(0xFFc7c5d0)
+        unselectedColor = Theme.colorScheme.tertiaryColor
     )
 
     val primaryFontColor = Theme.colorScheme.primaryFontColor
