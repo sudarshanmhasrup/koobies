@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.core.splashscreen)
     implementation(libs.activity.compose)
     implementation(projects.userApp.compose)
+    implementation(projects.shared)
 }
 
 // Custom build directory
