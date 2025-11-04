@@ -35,13 +35,18 @@ kotlin {
     }
 
     sourceSets {
+        val desktopMain by getting
         commonMain.dependencies {
             implementation(libs.localina)
             implementation(libs.bundles.koin.multiplatform)
+            implementation(libs.bundles.compose.multiplatform.lifecycle)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
             implementation(projects.shared)
             implementation(projects.features.userOnboarding)
+        }
+        desktopMain.dependencies {
+            implementation(libs.kotlinx.coroutines.swing)
         }
     }
 }
