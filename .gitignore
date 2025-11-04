@@ -9,6 +9,13 @@
 
 # Build output folder
 .build
+shared/build
 
 # Local properties
 local.properties
+
+# Node modules
+site/node_modules
+
+# Svelte Kit cache folder
+site/.svelte-kit
