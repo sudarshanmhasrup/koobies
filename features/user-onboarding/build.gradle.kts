@@ -15,7 +15,7 @@ kotlin {
         minSdk = libs.versions.features.userOnboarding.androidLibrary.minSdk.get().toInt()
     }
 
-    jvm {
+    jvm("desktop") {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_21
         }
@@ -26,6 +26,7 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
+        val desktopMain by getting
         androidMain.dependencies {
             implementation(libs.compose.multiplatform.ui.tooling.preview)
         }
@@ -40,6 +41,9 @@ kotlin {
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+        desktopMain.dependencies {
+            implementation(libs.kotlinx.coroutines.swing)
         }
     }
 }
