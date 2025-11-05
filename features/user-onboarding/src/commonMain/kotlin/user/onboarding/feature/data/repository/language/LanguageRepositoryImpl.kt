@@ -15,7 +15,10 @@ internal class LanguageRepositoryImpl(
     }
 
     override suspend fun updateSelectedAppLanguage(language: AppLanguage) {
-        dataSource.updateSelectedAppLanguage(locale = language.locale)
         preferencesManager.saveSelectedAppLanguage(locale = language.locale)
+    }
+
+    override fun getSelectedAppLanguage(): Flow<String> {
+        return preferencesManager.getSelectedAppLanguage()
     }
 }
