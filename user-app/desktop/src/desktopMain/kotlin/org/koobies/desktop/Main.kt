@@ -14,6 +14,11 @@ import koobies.compose.app.di.initKoin
 import org.koobies.desktop.di.appModule
 import org.koobies.desktop.presentation.screens.main.MainScreen
 
+/**
+ * App's main entry point for desktop.
+ *
+ * It sets up Koin, provides ViewModel and Lifecycle owners, and shows the main UI using MainScreen().
+ */
 fun main() {
     initKoin {
         modules(appModule)
@@ -43,6 +48,7 @@ fun main() {
             }
         }
 
+        // Provide the owners to Compose and show the main UI
         CompositionLocalProvider(
             LocalViewModelStoreOwner provides viewModelStoreOwner,
             LocalLifecycleOwner provides lifecycleOwner
