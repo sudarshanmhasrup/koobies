@@ -8,6 +8,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import compose.design.system.api.Theme
 import io.github.sudarshanmhasrup.localina.api.LocalinaApp
 import koobies.compose.app.presentation.extensions.composeAppModifier
+import koobies.compose.app.presentation.extensions.navigationBarMaskModifier
 import koobies.compose.app.presentation.navigation.ComposeAppNavigation
 import koobies.shared.app.presentation.composeApp.ComposeAppViewModel
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
@@ -24,6 +25,7 @@ fun ComposeApp() {
             val backgroundColor = Theme.colorScheme.backgroundColor
             Box(modifier = Modifier.composeAppModifier(backgroundColor = backgroundColor)) {
                 ComposeAppNavigation(modifier = Modifier.fillMaxSize())
+                Box(modifier = navigationBarMaskModifier(backgroundColor = backgroundColor))
             }
         }
     }
