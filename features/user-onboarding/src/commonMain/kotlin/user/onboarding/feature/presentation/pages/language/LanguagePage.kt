@@ -98,7 +98,7 @@ private fun LanguageList(modifier: Modifier = Modifier) {
                 language = language,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = {
-                    languagePageViewModel.updateSelectedAppLanguage(language = language)
+                    languagePageViewModel.updateSelectedAppLanguage(language = language.appLanguage)
                 }
             )
         }
