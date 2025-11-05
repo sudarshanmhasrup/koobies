@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import compose.design.system.api.Theme
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import user.onboarding.feature.domain.model.language.AppLanguage
 import user.onboarding.feature.presentation.model.language.AppLanguageUi
 
 @Composable
@@ -48,9 +49,9 @@ internal fun LanguageCard(
         RadioButton(selected = language.isSelected, colors = radioButtonColors, onClick = onClick)
         Spacer(modifier = Modifier.width(8.dp))
         Column(modifier = Modifier.fillMaxWidth()) {
-            BasicText(text = language.name, style = nameTextStyle, modifier = commonWidthModifier)
+            BasicText(text = language.appLanguage.name, style = nameTextStyle, modifier = commonWidthModifier)
             Spacer(modifier = Modifier.height(6.dp))
-            BasicText(text = language.message, style = messageTextStyle, modifier = commonWidthModifier)
+            BasicText(text = language.appLanguage.message, style = messageTextStyle, modifier = commonWidthModifier)
         }
     }
 }
@@ -59,10 +60,9 @@ internal fun LanguageCard(
 @Composable
 private fun LanguageCardPreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        val language =
-            AppLanguageUi(name = "English", message = "Use this app in English", locale = "en", isSelected = true)
+        val language = AppLanguage(name = "English", message = "Use this app in English", locale = "en")
         LanguageCard(
-            language = language,
+            language = AppLanguageUi(appLanguage = language, isSelected = true),
             modifier = Modifier.fillMaxWidth(),
             onClick = {}
         )
