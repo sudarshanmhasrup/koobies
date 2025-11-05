@@ -17,8 +17,8 @@ internal fun ComposeAppNavigation(modifier: Modifier = Modifier) {
     val composeAppNavHostController = rememberNavController()
 
     NavHost(
-        startDestination = ComposeAppRoute.UserOnboarding,
         navController = composeAppNavHostController,
+        startDestination = ComposeAppRoute.UserOnboarding,
         modifier = modifier
     ) {
         composable<ComposeAppRoute.UserOnboarding> {
