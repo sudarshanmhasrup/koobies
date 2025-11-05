@@ -21,17 +21,18 @@ import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.domain.model.theme.AppTheme
 import user.onboarding.feature.domain.model.theme.ThemeType
+import user.onboarding.feature.presentation.model.theme.AppThemeUi
 
 @Composable
 internal fun ThemeCard(
-    theme: AppTheme,
+    theme: AppThemeUi,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val commonModifier = Modifier.fillMaxWidth()
     val backgroundModifier = modifier
         .background(color = Theme.colorScheme.backgroundColor)
-        .clickable(onClick = onClick, indication = null, interactionSource = null)
+        .clickable(onClick = onClick)
         .padding(vertical = 12.dp, horizontal = 8.dp)
 
     val radioButtonColors = RadioButtonDefaults.colors(
@@ -52,7 +53,6 @@ internal fun ThemeCard(
             BasicText(text = theme.name, style = nameTextStyle, modifier = commonModifier)
             Spacer(modifier = Modifier.height(6.dp))
             BasicText(text = theme.message, style = messageTextStyle, modifier = commonModifier)
-
         }
     }
 }
@@ -61,7 +61,8 @@ internal fun ThemeCard(
 @Composable
 private fun LanguageCardPreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        val themeMode = AppTheme(name = "System Default", themeType = ThemeType.Light, isSelected = true)
-        ThemeCard(theme = themeMode, modifier = Modifier.fillMaxWidth(), onClick = {})
+        val appTheme = AppTheme(themeType = ThemeType.Light)
+        val theme = AppThemeUi(name = "System Default", appTheme = appTheme, isSelected = true)
+        ThemeCard(theme = theme, modifier = Modifier.fillMaxWidth(), onClick = {})
     }
 }
