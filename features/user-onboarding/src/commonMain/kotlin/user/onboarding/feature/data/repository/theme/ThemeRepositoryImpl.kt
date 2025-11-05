@@ -15,7 +15,10 @@ internal class ThemeRepositoryImpl(
     }
 
     override suspend fun updateSelectedAppTheme(theme: AppTheme) {
-        dataSource.updateSelectedAppTheme(theme = theme.themeType.code)
         preferencesManager.saveSelectedAppTheme(theme = theme.themeType.code)
+    }
+
+    override fun getSelectedAppTheme(): Flow<String> {
+        return preferencesManager.getSelectedAppTheme()
     }
 }
