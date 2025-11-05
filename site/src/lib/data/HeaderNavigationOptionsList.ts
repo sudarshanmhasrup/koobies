@@ -16,6 +16,10 @@ const headerNavigationOptionsList: HeaderNavigationOption[] = [
         endpoint: "/courses"
     },
     {
+        label: "Projects",
+        endpoint: "/projects"
+    },
+    {
         label: "Blogs",
         endpoint: "/blogs"
     },
@@ -24,7 +28,7 @@ const headerNavigationOptionsList: HeaderNavigationOption[] = [
         endpoint: "/contributors"
     },
     {
-        label: "About US",
+        label: "About Us",
         endpoint: "/about-us"
     },
     {
