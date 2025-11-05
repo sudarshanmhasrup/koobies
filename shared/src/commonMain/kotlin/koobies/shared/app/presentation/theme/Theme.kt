@@ -24,7 +24,7 @@ internal val darkModeColors = ColorScheme(
 
 @Composable
 fun KoobiesAppTheme(
-    isDarkMode: Boolean,
+    isDarkMode: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (isDarkMode) darkModeColors else lightModeColors
