@@ -11,10 +11,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.window.core.layout.WindowSizeClass.Companion.HEIGHT_DP_MEDIUM_LOWER_BOUND
 import androidx.window.core.layout.WindowSizeClass.Companion.WIDTH_DP_MEDIUM_LOWER_BOUND
 import compose.design.system.components.RoundButton
@@ -29,12 +29,14 @@ import org.koin.compose.viewmodel.koinViewModel
 import user.onboarding.feature.presentation.extensions.continueButtonBackgroundModifier
 import user.onboarding.feature.presentation.extensions.greetingsAndMessageModifier
 import user.onboarding.feature.presentation.navigation.LocalUserOnboardingNavHostController
-import user.onboarding.feature.presentation.navigation.UserOnboardingRoutes
+import user.onboarding.feature.presentation.navigation.UserOnboardingRoute
 import user.onboarding.feature.presentation.pages.language.components.GreetingsAndMessage
 import user.onboarding.feature.presentation.pages.language.components.LanguageCard
 
 @Composable
 fun LanguagePage(modifier: Modifier = Modifier) {
+    val languagePageViewModel = koinViewModel<LanguagePageViewModel>()
+
     val windowSizeClass = currentWindowAdaptiveInfo().windowSizeClass
     val isLandscapeMode = windowSizeClass.isWidthAtLeastBreakpoint(WIDTH_DP_MEDIUM_LOWER_BOUND) &&
             !windowSizeClass.isHeightAtLeastBreakpoint(HEIGHT_DP_MEDIUM_LOWER_BOUND)
@@ -45,6 +47,7 @@ fun LanguagePage(modifier: Modifier = Modifier) {
                 .weight(1f)
                 .align(alignment = Alignment.CenterVertically)
             LanguagePageLayout(
+                languagePageViewModel = languagePageViewModel,
                 isLandscapeMode = isLandscapeMode,
                 modifier = layoutModifier,
                 modifier2 = Modifier.weight(1f),
@@ -52,13 +55,18 @@ fun LanguagePage(modifier: Modifier = Modifier) {
         }
     } else {
         Column(modifier = modifier) {
-            LanguagePageLayout(modifier = Modifier.fillMaxWidth(), modifier2 = Modifier.fillMaxWidth())
+            LanguagePageLayout(
+                languagePageViewModel = languagePageViewModel,
+                modifier = Modifier.fillMaxWidth(),
+                modifier2 = Modifier.fillMaxWidth()
+            )
         }
     }
 }
 
 @Composable
 private fun LanguagePageLayout(
+    languagePageViewModel: LanguagePageViewModel,
     isLandscapeMode: Boolean = false,
     modifier: Modifier = Modifier,
     modifier2: Modifier = Modifier
@@ -73,13 +81,14 @@ private fun LanguagePageLayout(
         )
     }
     Box(modifier = modifier2) {
-        LanguageList(modifier = modifier2)
+        LanguageList(languagePageViewModel = languagePageViewModel, modifier = modifier2)
         // Continue button background
         Box(modifier = continueButtonBackgroundModifier()) {
             RoundButton(
                 label = stringResource(resource = Res.string.continue_button_label),
                 onClick = {
-                    userOnboardingNavHostController.navigate(route = UserOnboardingRoutes.ThemePage)
+                    languagePageViewModel.onLanguageSelected()
+                    userOnboardingNavHostController.navigate(route = UserOnboardingRoute.ThemePage)
                 }
             )
         }
@@ -87,9 +96,11 @@ private fun LanguagePageLayout(
 }
 
 @Composable
-private fun LanguageList(modifier: Modifier = Modifier) {
-    val languagePageViewModel = koinViewModel<LanguagePageViewModel>()
-    val uiState = languagePageViewModel.uiState.collectAsStateWithLifecycle()
+private fun LanguageList(
+    languagePageViewModel: LanguagePageViewModel,
+    modifier: Modifier = Modifier
+) {
+    val uiState = languagePageViewModel.uiState.collectAsState()
     val supportedAppLanguages = uiState.value.supportedAppLanguages
 
     LazyColumn(modifier = modifier.padding(top = 20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -98,7 +109,7 @@ private fun LanguageList(modifier: Modifier = Modifier) {
                 language = language,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = {
-                    languagePageViewModel.updateSelectedAppLanguage(language = language.appLanguage)
+                    languagePageViewModel.onLanguageSelected(language = language.appLanguage)
                 }
             )
         }
