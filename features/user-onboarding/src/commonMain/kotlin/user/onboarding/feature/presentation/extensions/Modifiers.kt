@@ -3,6 +3,7 @@ package user.onboarding.feature.presentation.extensions
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -42,7 +43,8 @@ internal fun BoxScope.userOnboardingNavigationCardModifier(): Modifier {
 @Composable
 internal fun BoxScope.continueButtonBackgroundModifier(): Modifier {
     return Modifier
-        .padding(all = 20.dp)
+        .navigationBarsPadding()
+        .padding(horizontal = 20.dp, vertical = 8.dp)
         .align(alignment = Alignment.BottomEnd)
 }
 
