@@ -10,5 +10,5 @@ data class ColorScheme(
     val secondaryColor: Color = Color.Unspecified,
     val tertiaryColor: Color = Color.Unspecified,
     val primaryFontColor: Color = Color.Unspecified,
-    val secondaryFontColor: Color = Color.Unspecified,
+    val secondaryFontColor: Color = Color.Unspecified
 )
