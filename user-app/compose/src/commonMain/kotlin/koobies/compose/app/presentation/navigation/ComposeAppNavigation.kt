@@ -3,6 +3,7 @@ package koobies.compose.app.presentation.navigation
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -12,9 +13,11 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.presentation.navigation.UserOnboardingNavigation
 
 @Composable
-internal fun ComposeAppNavigation(modifier: Modifier = Modifier) {
+internal fun ComposeAppNavigation(
+    composeAppNavHostController: NavHostController,
+    modifier: Modifier = Modifier
+) {
     val commonSizeModifier = Modifier.fillMaxSize()
-    val composeAppNavHostController = rememberNavController()
 
     NavHost(
         navController = composeAppNavHostController,
@@ -31,6 +34,6 @@ internal fun ComposeAppNavigation(modifier: Modifier = Modifier) {
 @Composable
 private fun ComposeAppNavigationPreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        ComposeAppNavigation(modifier = Modifier.fillMaxSize())
+        ComposeAppNavigation(composeAppNavHostController = rememberNavController(), modifier = Modifier.fillMaxSize())
     }
 }
