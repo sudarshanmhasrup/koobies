@@ -17,7 +17,7 @@ class PreferencesManagerImpl : PreferencesManager {
 
     override fun getSelectedAppLanguage(): Flow<String> {
         return dataStore.data.map { preferences ->
-            preferences[SELECTED_LANGUAGE_KEY] ?: ""
+            preferences[SELECTED_LANGUAGE_KEY] ?: "en"
         }
     }
 
@@ -29,7 +29,7 @@ class PreferencesManagerImpl : PreferencesManager {
 
     override fun getSelectedAppTheme(): Flow<String> {
         return dataStore.data.map { preferences ->
-            preferences[SELECTED_THEME_KEY] ?: ""
+            preferences[SELECTED_THEME_KEY] ?: "System"
         }
     }
 
