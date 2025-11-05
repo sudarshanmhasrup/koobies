@@ -20,7 +20,7 @@ import compose.design.system.api.Theme
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.domain.model.language.AppLanguage
-import user.onboarding.feature.domain.model.language.AppLanguageUi
+import user.onboarding.feature.presentation.model.language.AppLanguageUi
 
 @Composable
 internal fun LanguageCard(
@@ -28,10 +28,10 @@ internal fun LanguageCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val commonModifier = Modifier.fillMaxWidth()
+    val commonWidthModifier = Modifier.fillMaxWidth()
     val backgroundModifier = modifier
         .background(color = Theme.colorScheme.backgroundColor)
-        .clickable(onClick = onClick, indication = null, interactionSource = null)
+        .clickable(onClick = onClick)
         .padding(vertical = 12.dp, horizontal = 8.dp)
 
     val radioButtonColors = RadioButtonDefaults.colors(
@@ -49,9 +49,9 @@ internal fun LanguageCard(
         RadioButton(selected = language.isSelected, colors = radioButtonColors, onClick = onClick)
         Spacer(modifier = Modifier.width(8.dp))
         Column(modifier = Modifier.fillMaxWidth()) {
-            BasicText(text = language.appLanguage.name, style = nameTextStyle, modifier = commonModifier)
+            BasicText(text = language.appLanguage.name, style = nameTextStyle, modifier = commonWidthModifier)
             Spacer(modifier = Modifier.height(6.dp))
-            BasicText(text = language.appLanguage.message, style = messageTextStyle, modifier = commonModifier)
+            BasicText(text = language.appLanguage.message, style = messageTextStyle, modifier = commonWidthModifier)
         }
     }
 }
