@@ -24,7 +24,7 @@ internal fun GreetingsAndMessage(
     message: String,
     modifier: Modifier = Modifier
 ) {
-    val commonModifier = Modifier.fillMaxWidth()
+    val commonWidthModifier = Modifier.fillMaxWidth()
 
     val primaryFontColor = Theme.colorScheme.primaryFontColor
     val greetingsTextStyle =
@@ -34,9 +34,9 @@ internal fun GreetingsAndMessage(
     val messageTextStyle = Theme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
 
     Column(modifier = modifier) {
-        BasicText(text = greetings, style = greetingsTextStyle, modifier = commonModifier)
+        BasicText(text = greetings, style = greetingsTextStyle, modifier = commonWidthModifier)
         Spacer(modifier = Modifier.height(12.dp))
-        BasicText(text = message, style = messageTextStyle, modifier = commonModifier)
+        BasicText(text = message, style = messageTextStyle, modifier = commonWidthModifier)
     }
 }
 
