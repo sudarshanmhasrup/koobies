@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.navigation.compose.rememberNavController
 import compose.design.system.api.Theme
 import io.github.sudarshanmhasrup.localina.api.LocalinaApp
 import koobies.compose.app.presentation.extensions.composeAppModifier
@@ -20,16 +19,12 @@ fun ComposeApp() {
     val composeAppViewModel = koinViewModel<ComposeAppViewModel>()
     val uiState = composeAppViewModel.uiState.collectAsStateWithLifecycle()
     val isDarkMode = uiState.value.isDarkMode
-    val composeAppNavController = rememberNavController()
 
     LocalinaApp {
         KoobiesAppTheme(isDarkMode = isDarkMode) {
             val backgroundColor = Theme.colorScheme.backgroundColor
             Box(modifier = Modifier.composeAppModifier(backgroundColor = backgroundColor)) {
-                ComposeAppNavigation(
-                    composeAppNavHostController = composeAppNavController,
-                    modifier = Modifier.fillMaxSize()
-                )
+                ComposeAppNavigation(modifier = Modifier.fillMaxSize())
                 Box(modifier = navigationBarMaskModifier(backgroundColor = backgroundColor))
             }
         }
