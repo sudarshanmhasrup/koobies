@@ -47,7 +47,6 @@ fun LanguagePage(modifier: Modifier = Modifier) {
                 .weight(1f)
                 .align(alignment = Alignment.CenterVertically)
             LanguagePageLayout(
-                languagePageViewModel = languagePageViewModel,
                 isLandscapeMode = isLandscapeMode,
                 modifier = layoutModifier,
                 modifier2 = Modifier.weight(1f),
@@ -55,23 +54,19 @@ fun LanguagePage(modifier: Modifier = Modifier) {
         }
     } else {
         Column(modifier = modifier) {
-            LanguagePageLayout(
-                languagePageViewModel = languagePageViewModel,
-                modifier = Modifier.fillMaxWidth(),
-                modifier2 = Modifier.fillMaxWidth()
-            )
+            LanguagePageLayout(modifier = Modifier.fillMaxWidth(), modifier2 = Modifier.fillMaxWidth())
         }
     }
 }
 
 @Composable
 private fun LanguagePageLayout(
-    languagePageViewModel: LanguagePageViewModel,
     isLandscapeMode: Boolean = false,
     modifier: Modifier = Modifier,
     modifier2: Modifier = Modifier
 ) {
     val userOnboardingNavHostController = LocalUserOnboardingNavHostController.current
+    val languagePageViewModel = koinViewModel<LanguagePageViewModel>()
 
     Box(modifier = modifier) {
         GreetingsAndMessage(
@@ -81,7 +76,7 @@ private fun LanguagePageLayout(
         )
     }
     Box(modifier = modifier2) {
-        LanguageList(languagePageViewModel = languagePageViewModel, modifier = modifier2)
+        LanguageList(modifier = modifier2)
         // Continue button background
         Box(modifier = continueButtonBackgroundModifier()) {
             RoundButton(
@@ -96,10 +91,8 @@ private fun LanguagePageLayout(
 }
 
 @Composable
-private fun LanguageList(
-    languagePageViewModel: LanguagePageViewModel,
-    modifier: Modifier = Modifier
-) {
+private fun LanguageList(modifier: Modifier = Modifier) {
+    val languagePageViewModel = koinViewModel<LanguagePageViewModel>()
     val uiState = languagePageViewModel.uiState.collectAsState()
     val supportedAppLanguages = uiState.value.supportedAppLanguages
 
