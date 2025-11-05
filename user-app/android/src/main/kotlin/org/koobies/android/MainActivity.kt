@@ -24,6 +24,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         installSplashScreen()
         enableEdgeToEdge()
+
+        // Display the main app UI from the Android target of the user-app:compose module
         setContent {
             AndroidApp()
         }
