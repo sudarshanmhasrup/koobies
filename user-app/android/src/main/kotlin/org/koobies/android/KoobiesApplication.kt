@@ -7,8 +7,7 @@ import org.koin.android.ext.koin.androidContext
 /**
  * This is the main app class.
  *
- * It runs when the app starts and sets up Koin for dependency injection.
- * Koin helps the app manage dependencies easily.
+ * It runs when the app starts and sets up Koin for dependency injection. Koin helps the app manage dependencies easily.
  */
 class KoobiesApplication : Application() {
     override fun onCreate() {
