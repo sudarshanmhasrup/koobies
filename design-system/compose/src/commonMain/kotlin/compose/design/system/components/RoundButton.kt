@@ -17,11 +17,7 @@ fun RoundButton(
     onClick: () -> Unit
 ) {
     val buttonColor = ButtonDefaults.buttonColors(containerColor = Theme.colorScheme.primaryColor)
-    Button(
-        colors = buttonColor,
-        contentPadding = PaddingValues(all = 0.dp),
-        onClick = onClick,
-    ) {
+    Button(colors = buttonColor, contentPadding = PaddingValues(all = 0.dp), onClick = onClick,) {
         Text(
             text = label,
             color = Color.White,
