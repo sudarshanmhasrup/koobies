@@ -12,6 +12,10 @@ kotlin {
         namespace = libs.versions.designSystem.compose.androidLibrary.namespace.get()
         compileSdk = libs.versions.designSystem.compose.androidLibrary.compileSdk.get().toInt()
         minSdk = libs.versions.designSystem.compose.androidLibrary.minSdk.get().toInt()
+
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_11
+        }
     }
 
     jvm("desktop") {
