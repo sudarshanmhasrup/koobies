@@ -5,17 +5,20 @@ import androidx.lifecycle.viewModelScope
 import koobies.shared.app.presentation.composeApp.ComposeAppViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import user.onboarding.feature.domain.model.theme.AppTheme
+import user.onboarding.feature.domain.model.theme.ThemeType
+import user.onboarding.feature.domain.usecase.theme.GetSelectedAppThemeUseCase
 import user.onboarding.feature.domain.usecase.theme.GetSupportedAppThemesUseCase
 import user.onboarding.feature.domain.usecase.theme.SelectAppThemeUseCase
-import kotlin.text.toInt
+import user.onboarding.feature.presentation.model.theme.AppThemeUi
 
-@Suppress("ViewModelPublicFunctionShouldStartWithOn")
 internal class ThemePageViewModel(
     private val getSupportedAppThemesUseCase: GetSupportedAppThemesUseCase,
     private val selectAppThemeUseCase: SelectAppThemeUseCase,
+    private val getSelectedAppThemeUseCase: GetSelectedAppThemeUseCase,
     private val composeAppViewModel: ComposeAppViewModel
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(value = ThemePageUiState())
@@ -23,22 +26,45 @@ internal class ThemePageViewModel(
 
     init {
         viewModelScope.launch {
-            getSupportedAppThemesUseCase.invoke().collect { supportedAppThemes ->
-                _uiState.value = _uiState.value.copy(supportedAppThemes = supportedAppThemes)
+            combine(
+                getSupportedAppThemesUseCase(),
+                getSelectedAppThemeUseCase()
+            ) { supportedAppThemes, selectedAppTheme ->
+                supportedAppThemes.map { theme ->
+                    AppThemeUi(
+                        name = theme.themeType.code,
+                        appTheme = AppTheme(themeType = theme.themeType),
+                        isSelected = theme.themeType.code == selectedAppTheme
+                    )
+                }
+            }.collect { supportedAppThemes ->
+                _uiState.update { value ->
+                    value.copy(supportedAppThemes = supportedAppThemes)
+                }
             }
         }
     }
 
-    fun updateSupportedAppThemes(supportedAppThemes: List<AppTheme>) {
+    fun onUpdateSupportedAppThemes(supportedAppThemes: List<AppThemeUi>) {
         _uiState.update { value ->
             value.copy(supportedAppThemes = supportedAppThemes)
         }
     }
 
-    fun updateSelectedAppTheme(theme: AppTheme) {
+    fun onUpdateSelectedAppTheme(theme: AppTheme) {
+        _uiState.update { value ->
+            value.copy(supportedAppThemes = value.supportedAppThemes.map {
+                it.copy(isSelected = it.appTheme.themeType == theme.themeType)
+            })
+        }
+        composeAppViewModel.onChangeTheme(theme = theme.themeType.code)
+        onUpdateSelectedAppTheme()
+    }
+
+    fun onUpdateSelectedAppTheme() {
         viewModelScope.launch {
-            selectAppThemeUseCase.invoke(theme = theme)
-            composeAppViewModel.setThemeMode(themeCode = theme.themeType.code.toInt())
+            val selectedAppTheme = _uiState.value.supportedAppThemes.first { it.isSelected }
+            selectAppThemeUseCase.invoke(theme = selectedAppTheme.appTheme)
         }
     }
 }
