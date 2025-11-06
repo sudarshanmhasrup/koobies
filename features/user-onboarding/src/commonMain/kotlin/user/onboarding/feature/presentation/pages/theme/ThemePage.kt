@@ -33,12 +33,10 @@ import koobies.shared.app.resources.theme_page_message
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
-import user.onboarding.feature.domain.model.theme.AppTheme
 import user.onboarding.feature.domain.model.theme.ThemeType
 import user.onboarding.feature.presentation.extensions.continueButtonBackgroundModifier
 import user.onboarding.feature.presentation.extensions.headingAndMessageModifier
-import user.onboarding.feature.presentation.navigation.LocalUserOnboardingNavHostController
-import user.onboarding.feature.presentation.navigation.UserOnboardingRoutes
+import user.onboarding.feature.presentation.model.theme.AppThemeUi
 import user.onboarding.feature.presentation.pages.theme.components.HeadingAndMessage
 import user.onboarding.feature.presentation.pages.theme.components.ThemeCard
 
@@ -72,8 +70,6 @@ private fun ThemePageLayout(
     modifier: Modifier = Modifier,
     modifier2: Modifier = Modifier
 ) {
-    val userOnboardingNavHostController = LocalUserOnboardingNavHostController.current
-
     Box(modifier = modifier) {
         HeadingAndMessage(
             heading = stringResource(resource = Res.string.theme_page_heading),
@@ -88,7 +84,7 @@ private fun ThemePageLayout(
             RoundButton(
                 label = stringResource(resource = Res.string.continue_button_label),
                 onClick = {
-                    userOnboardingNavHostController.navigate(route = UserOnboardingRoutes.ThemePage)
+
                 }
             )
         }
@@ -96,19 +92,21 @@ private fun ThemePageLayout(
 }
 
 @Composable
-private fun localizedThemes(themes: List<AppTheme>): List<AppTheme> {
+private fun localizedThemes(themes: List<AppThemeUi>): List<AppThemeUi> {
     return themes.map {
-        when (it.themeType) {
+        when (it.appTheme.themeType) {
             ThemeType.System -> it.copy(
-                name = stringResource(Res.string.system_theme_type_name),
-                message = stringResource(Res.string.system_theme_type_message)
+                name = stringResource(resource = Res.string.system_theme_type_name),
+                message = stringResource(Res.string.system_theme_type_message),
             )
+
             ThemeType.Light -> it.copy(
-                name = stringResource(Res.string.light_theme_type_name),
+                name = stringResource(resource = Res.string.light_theme_type_name),
                 message = stringResource(Res.string.light_theme_type_message)
             )
+
             ThemeType.Dark -> it.copy(
-                name = stringResource(Res.string.dark_theme_type_name),
+                name = stringResource(resource = Res.string.dark_theme_type_name),
                 message = stringResource(Res.string.dark_theme_type_message)
             )
         }
@@ -121,7 +119,8 @@ private fun LanguageList(modifier: Modifier = Modifier) {
     val uiState = themePageViewModel.uiState.collectAsStateWithLifecycle()
     val supportedAppThemes = uiState.value.supportedAppThemes
 
-    themePageViewModel.updateSupportedAppThemes(supportedAppThemes = localizedThemes(themes = supportedAppThemes))
+    val localizedThemes = localizedThemes(themes = supportedAppThemes)
+    themePageViewModel.onUpdateSupportedAppThemes(supportedAppThemes = localizedThemes)
 
     LazyColumn(modifier = modifier.padding(vertical = 20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         items(items = supportedAppThemes) { theme ->
@@ -129,7 +128,7 @@ private fun LanguageList(modifier: Modifier = Modifier) {
                 theme = theme,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = {
-                    themePageViewModel.updateSelectedAppTheme(theme = theme)
+                    themePageViewModel.onUpdateSelectedAppTheme(theme = theme.appTheme)
                 }
             )
         }
