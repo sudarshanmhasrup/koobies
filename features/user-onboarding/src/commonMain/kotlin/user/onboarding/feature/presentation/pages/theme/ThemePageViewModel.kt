@@ -4,12 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import koobies.shared.app.presentation.composeApp.ComposeAppViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import user.onboarding.feature.domain.model.theme.AppTheme
-import user.onboarding.feature.domain.model.theme.ThemeType
 import user.onboarding.feature.domain.usecase.theme.GetSelectedAppThemeUseCase
 import user.onboarding.feature.domain.usecase.theme.GetSupportedAppThemesUseCase
 import user.onboarding.feature.domain.usecase.theme.SelectAppThemeUseCase
@@ -22,7 +21,7 @@ internal class ThemePageViewModel(
     private val composeAppViewModel: ComposeAppViewModel
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(value = ThemePageUiState())
-    val uiState: StateFlow<ThemePageUiState> = _uiState
+    val uiState = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch {
@@ -32,7 +31,6 @@ internal class ThemePageViewModel(
             ) { supportedAppThemes, selectedAppTheme ->
                 supportedAppThemes.map { theme ->
                     AppThemeUi(
-                        name = theme.themeType.code,
                         appTheme = AppTheme(themeType = theme.themeType),
                         isSelected = theme.themeType.code == selectedAppTheme
                     )
