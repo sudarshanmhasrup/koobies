@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.sudarshanmhasrup.localina.api.LocaleUpdater
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -20,7 +20,7 @@ internal class LanguagePageViewModel(
     private val getSelectedAppLanguageUseCase: GetSelectedAppLanguageUseCase
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(value = LanguagePageUiState())
-    val uiState: StateFlow<LanguagePageUiState> = _uiState
+    val uiState = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch {
