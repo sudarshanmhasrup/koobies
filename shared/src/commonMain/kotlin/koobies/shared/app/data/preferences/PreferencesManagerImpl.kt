@@ -12,7 +12,7 @@ import org.koin.core.component.inject
  * Preferences are persisted using DataStore and survive app restarts.
  */
 class PreferencesManagerImpl : PreferencesManager, KoinComponent {
-    private val dataStoreManager: DataStoreManager by inject()
+    private val dataStoreManager by inject<DataStoreManager>()
     private val dataStore = dataStoreManager.getDataStore()
 
     override suspend fun saveSelectedAppLanguage(locale: String) {
