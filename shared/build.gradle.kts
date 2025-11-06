@@ -34,6 +34,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.localina)
             implementation(libs.bundles.datastore)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.bundles.koin.multiplatform)
