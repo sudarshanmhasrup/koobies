@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import compose.design.system.api.ThemeWrapper
 import compose.design.system.color.ColorScheme
 
-// Light mode color scheme
 internal val lightModeColors = ColorScheme(
     backgroundColor = backgroundColorLight,
     primaryColor = primaryColor,
@@ -13,7 +12,6 @@ internal val lightModeColors = ColorScheme(
     secondaryFontColor = secondaryFontColorLight
 )
 
-// Dark mode color scheme
 internal val darkModeColors = ColorScheme(
     backgroundColor = backgroundColorDark,
     primaryColor = primaryColor,
