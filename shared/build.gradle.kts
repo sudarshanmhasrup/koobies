@@ -37,7 +37,7 @@ kotlin {
             implementation(libs.localina)
             implementation(libs.bundles.datastore)
             implementation(libs.kotlinx.serialization.json)
-            implementation(libs.bundles.koin.multiplatform)
+            implementation(libs.bundles.koin.compose.multiplatform)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
         }

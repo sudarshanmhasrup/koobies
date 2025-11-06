@@ -33,7 +33,7 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.localina)
             implementation(libs.kotlinx.serialization.json)
-            implementation(libs.bundles.koin.multiplatform)
+            implementation(libs.bundles.koin.compose.multiplatform)
             implementation(libs.bundles.compose.multiplatform.lifecycle)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.designSystem.compose)
