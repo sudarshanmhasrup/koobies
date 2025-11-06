@@ -14,10 +14,8 @@ import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
 
 /**
- * App's main entry point.
- *
- * It shows a splash screen while loading, makes the app full screen, shows the main UI, sets up Koin, and waits until
- * the UI is ready.
+ * Main Activity for the Android app.
+ * Handles splash screen, edge-to-edge display, and Koin initialization.
  */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
