@@ -11,6 +11,7 @@ import io.github.sudarshanmhasrup.localina.api.LocalinaApp
 import koobies.compose.app.presentation.extensions.composeAppModifier
 import koobies.compose.app.presentation.extensions.navigationBarMaskModifier
 import koobies.compose.app.presentation.navigation.ComposeAppNavigation
+import koobies.compose.app.presentation.navigation.ComposeAppNavigationViewModel
 import koobies.shared.app.presentation.composeApp.ComposeAppViewModel
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import org.koin.compose.viewmodel.koinViewModel
@@ -21,13 +22,18 @@ fun ComposeApp() {
     val uiState = composeAppViewModel.uiState.collectAsStateWithLifecycle()
     val isDarkMode = uiState.value.isDarkMode
 
-    val composeAppNavHostController = rememberNavController()
+    val composeAppNavigationViewModel = koinViewModel<ComposeAppNavigationViewModel>()
+    composeAppNavigationViewModel.onCreateNavHostController(navHostController = rememberNavController())
+    val composeAppNavHostController = composeAppNavigationViewModel.onGetNavHostController()
 
     LocalinaApp {
         KoobiesAppTheme(isDarkMode = isDarkMode) {
             val backgroundColor = Theme.colorScheme.backgroundColor
             Box(modifier = Modifier.composeAppModifier(backgroundColor = backgroundColor)) {
-                ComposeAppNavigation(composeAppNavHostController = composeAppNavHostController, modifier = Modifier.fillMaxSize())
+                ComposeAppNavigation(
+                    composeAppNavHostController = composeAppNavHostController,
+                    modifier = Modifier.fillMaxSize()
+                )
                 Box(modifier = navigationBarMaskModifier(backgroundColor = backgroundColor))
             }
         }
