@@ -31,7 +31,7 @@ kotlin {
     sourceSets {
         val desktopMain by getting
         commonMain.dependencies {
-            implementation(libs.bundles.koin.multiplatform)
+            implementation(libs.bundles.koin.compose.multiplatform)
             implementation(libs.bundles.compose.multiplatform.lifecycle)
             implementation(libs.bundles.compose.multiplatform)
             implementation(projects.userApp.compose)
