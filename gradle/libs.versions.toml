@@ -98,8 +98,8 @@ compose-multiplatform = [
     "compose-multiplatform-foundation", "compose-multiplatform-material3", "compose-multiplatform-material3-adaptive",
     "compose-multiplatform-navigation"
 ]
-compose-multiplatform-lifecycle = [ "compose-multiplatform-viewmodel", "compose-multiplatform-viewmodel-compose", "compose-multiplatform-lifecycle-runtime"]
-koin-multiplatform = ["koin-core", "koin-compose", "koin-compose-viewmodel"]
+compose-multiplatform-lifecycle = ["compose-multiplatform-viewmodel", "compose-multiplatform-viewmodel-compose", "compose-multiplatform-lifecycle-runtime"]
+koin-compose-multiplatform = ["koin-core", "koin-compose", "koin-compose-viewmodel"]
 koin-android = ["koin-core", "koin-android"]
 datastore = ["datastore", "datastore-preferences"]
 
