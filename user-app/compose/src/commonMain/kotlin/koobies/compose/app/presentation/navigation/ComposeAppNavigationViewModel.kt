@@ -10,7 +10,7 @@ internal class ComposeAppNavigationViewModel : ViewModel() {
         this.navHostController = navHostController
     }
 
-    fun onGetComposeAppNavHostController(): NavHostController {
+    fun onGetNavHostController(): NavHostController {
         return navHostController!!
     }
 }
