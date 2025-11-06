@@ -8,6 +8,6 @@ import user.onboarding.feature.di.userOnboardingModule
 fun initKoin(config: KoinAppDeclaration? = null) {
     startKoin {
         config?.invoke(this)
-        modules(sharedModule, userOnboardingModule)
+        modules(composeAppModule, sharedModule, userOnboardingModule)
     }
 }
