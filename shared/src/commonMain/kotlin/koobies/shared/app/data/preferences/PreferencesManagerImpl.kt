@@ -7,6 +7,10 @@ import kotlinx.coroutines.flow.map
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+/**
+ * Manages various user preferences and settings
+ * Preferences are persisted using DataStore and survive app restarts.
+ */
 class PreferencesManagerImpl : PreferencesManager, KoinComponent {
     private val dataStoreManager: DataStoreManager by inject()
     private val dataStore = dataStoreManager.getDataStore()
