@@ -34,9 +34,7 @@ import user.onboarding.feature.presentation.pages.language.components.GreetingsA
 import user.onboarding.feature.presentation.pages.language.components.LanguageCard
 
 @Composable
-fun LanguagePage(modifier: Modifier = Modifier) {
-    val languagePageViewModel = koinViewModel<LanguagePageViewModel>()
-
+internal fun LanguagePage(modifier: Modifier = Modifier) {
     val windowSizeClass = currentWindowAdaptiveInfo().windowSizeClass
     val isLandscapeMode = windowSizeClass.isWidthAtLeastBreakpoint(WIDTH_DP_MEDIUM_LOWER_BOUND) &&
             !windowSizeClass.isHeightAtLeastBreakpoint(HEIGHT_DP_MEDIUM_LOWER_BOUND)
