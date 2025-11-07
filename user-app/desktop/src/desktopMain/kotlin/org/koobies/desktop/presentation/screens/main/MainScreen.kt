@@ -17,10 +17,10 @@ import androidx.compose.ui.window.rememberWindowState
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import compose.design.system.api.Theme
 import compose.user.app.DesktopApp
-import koobies.shared.app.presentation.theme.KoobiesAppTheme
-import koobies.shared.app.resources.Res
-import koobies.shared.app.resources.ic_koobies_desktop
-import koobies.shared.app.resources.koobies_logo
+import compose.shared.app.presentation.theme.KoobiesAppTheme
+import compose.shared.app.resources.Res
+import compose.shared.app.resources.ic_koobies_desktop
+import compose.shared.app.resources.koobies_logo
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koobies.desktop.presentation.extensions.splashScreenModifier
