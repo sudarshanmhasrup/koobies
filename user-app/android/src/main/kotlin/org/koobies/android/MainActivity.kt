@@ -9,7 +9,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import compose.user.app.AndroidApp
-import koobies.shared.app.presentation.splash.SplashScreenManager
+import compose.shared.app.presentation.splash.SplashScreenManager
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
 
