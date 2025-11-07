@@ -17,8 +17,8 @@ import androidx.compose.ui.unit.sp
  * - Body (Large, Medium, Small) - Main content text
  * - Label (Large, Medium, Small) - Buttons and labels
  *
- * Each category includes four font weights: Regular, Medium, SemiBold, and Bold,
- * allowing flexible typography choices throughout the application.
+ * Each category includes four font weights: Regular, Medium, SemiBold, and Bold, allowing flexible typography choices
+ * throughout the application.
  */
 @Immutable
 data class Typography(
