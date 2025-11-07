@@ -3,7 +3,7 @@ package compose.shared.app.data.preferences
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Manages various user preferences and settings
+ * Manages various user preferences and settings.
  * Preferences are persisted using DataStore and survive app restarts.
  */
 interface PreferencesManager {
