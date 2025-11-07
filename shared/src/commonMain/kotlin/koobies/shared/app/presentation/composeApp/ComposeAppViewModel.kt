@@ -6,6 +6,7 @@ import io.github.sudarshanmhasrup.localina.api.LocaleUpdater
 import koobies.shared.app.data.preferences.PreferencesManager
 import koobies.shared.app.presentation.splash.SplashScreenManager
 import koobies.shared.app.presentation.system.SystemBarThemeManager
+import koobies.shared.app.presentation.theme.isSystemInDarkMode
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
@@ -50,8 +51,13 @@ class ComposeAppViewModel(private val preferencesManager: PreferencesManager) : 
             value.copy(
                 isDarkMode = when (theme) {
                     "System" -> {
-                        systemBarThemeManager.setDarkMode()
-                        true
+                        val isSystemInDarkMode = isSystemInDarkMode()
+                        if (isSystemInDarkMode) {
+                            systemBarThemeManager.setDarkMode()
+                        } else {
+                            systemBarThemeManager.setLightMode()
+                        }
+                        isSystemInDarkMode
                     }
 
                     "Light" -> {
