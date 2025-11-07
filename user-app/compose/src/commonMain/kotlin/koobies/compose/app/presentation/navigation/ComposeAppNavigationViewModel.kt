@@ -6,11 +6,11 @@ import androidx.navigation.NavHostController
 internal class ComposeAppNavigationViewModel : ViewModel() {
     private var navHostController: NavHostController? = null
 
-    fun onCreateNavHostController(navHostController: NavHostController) {
-        this.navHostController = navHostController
+    fun onGetNavHostController(): NavHostController? {
+        return navHostController
     }
 
-    fun onGetNavHostController(): NavHostController {
-        return navHostController!!
+    fun onSetNavHostController(navHostController: NavHostController) {
+        this.navHostController = navHostController
     }
 }
