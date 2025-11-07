@@ -7,8 +7,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import koobies.shared.app.presentation.navigation.ComposeAppRoute
-import koobies.shared.app.presentation.theme.KoobiesAppTheme
+import compose.shared.app.presentation.navigation.ComposeAppRoute
+import compose.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.presentation.navigation.UserOnboardingNavigation
 
