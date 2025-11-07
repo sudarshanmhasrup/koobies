@@ -1,6 +1,6 @@
 package compose.user.app.di
 
-import koobies.shared.app.di.sharedModule
+import compose.shared.app.di.sharedModule
 import org.koin.core.context.startKoin
 import org.koin.dsl.KoinAppDeclaration
 import user.onboarding.feature.di.userOnboardingModule
