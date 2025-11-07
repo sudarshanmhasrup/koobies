@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import org.koin.compose.viewmodel.koinViewModel
 import user.onboarding.feature.presentation.extensions.languagePageEnterTransitionAnimation
 import user.onboarding.feature.presentation.extensions.languagePageExitTransitionAnimation
 import user.onboarding.feature.presentation.pages.language.LanguagePage
@@ -23,7 +24,13 @@ fun UserOnboardingNavigation(modifier: Modifier = Modifier) {
 
 @Composable
 private fun UserOnboardingNavigationHost(modifier: Modifier = Modifier) {
-    val userOnboardingNavHostController = rememberNavController()
+    val userOnboardingNavigationViewModel = koinViewModel<UserOnboardingNavigationViewModel>()
+    val userOnboardingNavHostController =
+        userOnboardingNavigationViewModel.onGetNavHostController()
+            ?: rememberNavController().also { navHostController ->
+                userOnboardingNavigationViewModel.onSetNavHostController(navHostController = navHostController)
+            }
+
     val commonSizeModifier = Modifier.fillMaxSize()
 
     CompositionLocalProvider(LocalUserOnboardingNavHostController provides userOnboardingNavHostController) {
