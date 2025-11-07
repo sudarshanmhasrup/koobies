@@ -23,8 +23,10 @@ fun ComposeApp() {
     val isDarkMode = uiState.value.isDarkMode
 
     val composeAppNavigationViewModel = koinViewModel<ComposeAppNavigationViewModel>()
-    composeAppNavigationViewModel.onCreateNavHostController(navHostController = rememberNavController())
-    val composeAppNavHostController = composeAppNavigationViewModel.onGetNavHostController()
+    val composeAppNavHostController =
+        composeAppNavigationViewModel.onGetNavHostController() ?: rememberNavController().also { navHostController ->
+            composeAppNavigationViewModel.onSetNavHostController(navHostController = navHostController)
+        }
 
     LocalinaApp {
         KoobiesAppTheme(isDarkMode = isDarkMode) {
