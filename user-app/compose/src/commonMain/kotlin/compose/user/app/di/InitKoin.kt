@@ -1,4 +1,4 @@
-package koobies.compose.app.di
+package compose.user.app.di
 
 import koobies.shared.app.di.sharedModule
 import org.koin.core.context.startKoin

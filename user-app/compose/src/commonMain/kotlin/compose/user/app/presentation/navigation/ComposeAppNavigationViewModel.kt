@@ -1,4 +1,4 @@
-package koobies.compose.app.presentation.navigation
+package compose.user.app.presentation.navigation
 
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavHostController

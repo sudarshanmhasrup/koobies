@@ -1,7 +1,7 @@
 package org.koobies.android
 
 import android.app.Application
-import koobies.compose.app.di.initKoin
+import compose.user.app.di.initKoin
 import org.koin.android.ext.koin.androidContext
 
 /**

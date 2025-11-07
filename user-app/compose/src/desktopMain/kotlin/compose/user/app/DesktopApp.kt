@@ -1,7 +1,7 @@
-package koobies.compose.app
+package compose.user.app
 
 import androidx.compose.runtime.Composable
-import koobies.compose.app.presentation.ComposeApp
+import compose.user.app.presentation.ComposeApp
 
 @Composable
 fun DesktopApp() {

@@ -1,4 +1,4 @@
-package koobies.compose.app.presentation.navigation
+package compose.user.app.presentation.navigation
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable

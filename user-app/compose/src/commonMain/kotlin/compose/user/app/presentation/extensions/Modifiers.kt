@@ -1,4 +1,4 @@
-package koobies.compose.app.presentation.extensions
+package compose.user.app.presentation.extensions
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxScope

@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
-import koobies.compose.app.di.initKoin
+import compose.user.app.di.initKoin
 import org.koobies.desktop.di.appModule
 import org.koobies.desktop.presentation.screens.main.MainScreen
 

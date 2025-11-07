@@ -16,7 +16,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.rememberWindowState
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import compose.design.system.api.Theme
-import koobies.compose.app.DesktopApp
+import compose.user.app.DesktopApp
 import koobies.shared.app.presentation.theme.KoobiesAppTheme
 import koobies.shared.app.resources.Res
 import koobies.shared.app.resources.ic_koobies_desktop
