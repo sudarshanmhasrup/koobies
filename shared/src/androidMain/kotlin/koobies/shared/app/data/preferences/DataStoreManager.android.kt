@@ -14,5 +14,3 @@ internal actual class DataStoreManager {
         )
     }
 }
-
-val x = ""
