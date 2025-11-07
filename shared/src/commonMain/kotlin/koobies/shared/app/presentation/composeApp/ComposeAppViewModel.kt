@@ -24,7 +24,6 @@ import org.koin.core.component.inject
  * Each app can create its own instance through Koin dependency injection.
  *
  * @param preferencesManager Manages persistent user preferences (language, theme)
- * @param systemBarThemeManager Handles platform-specific system bar theme updates
  */
 class ComposeAppViewModel(private val preferencesManager: PreferencesManager) : ViewModel(), KoinComponent {
     private val systemBarThemeManager by inject<SystemBarThemeManager>()
