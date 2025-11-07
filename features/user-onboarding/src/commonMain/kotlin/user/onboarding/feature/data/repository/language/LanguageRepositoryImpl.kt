@@ -1,6 +1,6 @@
 package user.onboarding.feature.data.repository.language
 
-import koobies.shared.app.data.preferences.PreferencesManager
+import compose.shared.app.data.preferences.PreferencesManager
 import kotlinx.coroutines.flow.Flow
 import user.onboarding.feature.data.datasource.local.language.LocalLanguageDataSource
 import user.onboarding.feature.domain.model.language.AppLanguage
