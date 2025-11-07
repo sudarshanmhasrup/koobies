@@ -14,6 +14,18 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+/**
+ * Core ViewModel used across all Compose Multiplatform application.
+ *
+ * Manages app-wide state shared across all platforms (Android, iOS, Desktop).
+ * Handles language localization, theme preferences, splash screen lifecycle and many more things.
+ *
+ * This ViewModel is reusable across multiple CMP applications within the Koobies platform.
+ * Each app can create its own instance through Koin dependency injection.
+ *
+ * @param preferencesManager Manages persistent user preferences (language, theme)
+ * @param systemBarThemeManager Handles platform-specific system bar theme updates
+ */
 class ComposeAppViewModel(private val preferencesManager: PreferencesManager) : ViewModel(), KoinComponent {
     private val systemBarThemeManager by inject<SystemBarThemeManager>()
 
