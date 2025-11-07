@@ -13,9 +13,9 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.rememberWindowState
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import koobies.shared.app.resources.Res
-import koobies.shared.app.resources.ic_koobies_desktop
-import koobies.shared.app.resources.koobies_logo
+import compose.shared.app.resources.Res
+import compose.shared.app.resources.ic_koobies_desktop
+import compose.shared.app.resources.koobies_logo
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koobies.desktop.presentation.extensions.splashScreenLogoAndContainerModifier
