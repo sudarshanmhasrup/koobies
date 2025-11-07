@@ -2,7 +2,7 @@ package compose.shared.app.presentation.composeApp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import compose.shared.app.preferences.PreferencesManager
+import compose.shared.app.data.preferences.PreferencesManager
 import compose.shared.app.presentation.splash.SplashScreenManager
 import compose.shared.app.presentation.system.SystemBarThemeManager
 import compose.shared.app.presentation.theme.isSystemInDarkMode

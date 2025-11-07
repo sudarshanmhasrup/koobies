@@ -17,7 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import compose.design.system.api.Theme
-import koobies.shared.app.presentation.theme.KoobiesAppTheme
+import compose.shared.app.presentation.theme.KoobiesAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.domain.model.theme.AppTheme
 import user.onboarding.feature.domain.model.theme.ThemeType

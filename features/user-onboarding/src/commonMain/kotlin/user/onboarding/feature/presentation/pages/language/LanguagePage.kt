@@ -18,11 +18,11 @@ import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowSizeClass.Companion.HEIGHT_DP_MEDIUM_LOWER_BOUND
 import androidx.window.core.layout.WindowSizeClass.Companion.WIDTH_DP_MEDIUM_LOWER_BOUND
 import compose.design.system.components.RoundButton
-import koobies.shared.app.presentation.theme.KoobiesAppTheme
-import koobies.shared.app.resources.Res
-import koobies.shared.app.resources.continue_button_label
-import koobies.shared.app.resources.language_page_greetings
-import koobies.shared.app.resources.language_page_message
+import compose.shared.app.presentation.theme.KoobiesAppTheme
+import compose.shared.app.resources.Res
+import compose.shared.app.resources.continue_button_label
+import compose.shared.app.resources.language_page_greetings
+import compose.shared.app.resources.language_page_message
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel

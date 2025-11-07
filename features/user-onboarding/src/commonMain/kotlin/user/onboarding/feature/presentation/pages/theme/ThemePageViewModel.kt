@@ -2,7 +2,7 @@ package user.onboarding.feature.presentation.pages.theme
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import koobies.shared.app.presentation.composeApp.ComposeAppViewModel
+import compose.shared.app.presentation.composeApp.ComposeAppViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine

@@ -10,10 +10,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import compose.design.system.api.Theme
-import koobies.shared.app.presentation.theme.KoobiesAppTheme
-import koobies.shared.app.resources.Res
-import koobies.shared.app.resources.theme_page_heading
-import koobies.shared.app.resources.theme_page_message
+import compose.shared.app.presentation.theme.KoobiesAppTheme
+import compose.shared.app.resources.Res
+import compose.shared.app.resources.theme_page_heading
+import compose.shared.app.resources.theme_page_message
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import user.onboarding.feature.presentation.extensions.headingAndMessageModifier
