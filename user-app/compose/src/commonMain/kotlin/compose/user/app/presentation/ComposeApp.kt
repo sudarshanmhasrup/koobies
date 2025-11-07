@@ -12,8 +12,8 @@ import compose.user.app.presentation.extensions.composeAppModifier
 import compose.user.app.presentation.extensions.navigationBarMaskModifier
 import compose.user.app.presentation.navigation.ComposeAppNavigation
 import compose.user.app.presentation.navigation.ComposeAppNavigationViewModel
-import koobies.shared.app.presentation.composeApp.ComposeAppViewModel
-import koobies.shared.app.presentation.theme.KoobiesAppTheme
+import compose.shared.app.presentation.composeApp.ComposeAppViewModel
+import compose.shared.app.presentation.theme.KoobiesAppTheme
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
