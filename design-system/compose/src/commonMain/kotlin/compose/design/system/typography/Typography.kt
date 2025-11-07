@@ -5,6 +5,21 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+
+/**
+ * Custom typography scale for the Koobies design system.
+ * Inspired by Material Design 3 guidelines but tailored for specific app needs.
+ *
+ * Provides a comprehensive set of text styles organized into categories:
+ * - Display (Large, Medium, Small) - High emphasis, short text
+ * - Headline (Large, Medium, Small) - High emphasis, longer text
+ * - Title (Large, Medium, Small) - Medium emphasis section headers
+ * - Body (Large, Medium, Small) - Main content text
+ * - Label (Large, Medium, Small) - Buttons and labels
+ *
+ * Each category includes four font weights: Regular, Medium, SemiBold, and Bold,
+ * allowing flexible typography choices throughout the application.
+ */
 @Immutable
 data class Typography(
     // Type: Display Large
