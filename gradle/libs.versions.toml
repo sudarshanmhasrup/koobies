@@ -39,11 +39,11 @@ userApp-desktop-distributionPackageName = "Koobies"
 userApp-desktop-distributionPackageVersion = "1.0.0"
 
 # user-app:compose module's configuration information
-userApp-compose-group = "koobies.compose.app"
+userApp-compose-group = "compose.user.app"
 userApp-compose-version = "1.0.0"
 
 # user-app:compose module's android library package information
-userApp-compose-androidLibrary-namespace = "koobies.compose.app"
+userApp-compose-androidLibrary-namespace = "compose.user.app"
 userApp-compose-androidLibrary-compileSdk = "36"
 userApp-compose-androidLibrary-minSdk = "24"
 
