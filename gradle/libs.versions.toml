@@ -48,12 +48,12 @@ userApp-compose-androidLibrary-compileSdk = "36"
 userApp-compose-androidLibrary-minSdk = "24"
 
 # shared module's configuration information
-shared-group = "koobies.shared.app"
+shared-group = "compose.shared.app"
 shared-version = "1.0.0"
-shared-packageOfResClass = "koobies.shared.app.resources"
+shared-packageOfResClass = "compose.shared.app.resources"
 
 # shared module's android library package information
-shared-androidLibrary-namespace = "koobies.shared.app"
+shared-androidLibrary-namespace = "compose.shared.app"
 shared-androidLibrary-compileSdk = "36"
 shared-androidLibrary-minSdk = "24"
 
