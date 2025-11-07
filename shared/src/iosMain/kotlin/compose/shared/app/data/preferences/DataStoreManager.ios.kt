@@ -2,8 +2,6 @@ package compose.shared.app.data.preferences
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import compose.shared.app.data.preferences.createDataStore
-import compose.shared.app.data.preferences.dataStoreFileName
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
@@ -23,7 +21,7 @@ internal actual class DataStoreManager actual constructor() {
                     create = false,
                     error = null,
                 )
-                requireNotNull(documentDirectory).path + "/${dataStoreFileName}"
+                requireNotNull(value = documentDirectory).path + "/${dataStoreFileName}"
             }
         )
     }
