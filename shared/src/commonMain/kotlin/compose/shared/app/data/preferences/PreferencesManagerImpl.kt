@@ -1,4 +1,4 @@
-package compose.shared.app.preferences
+package compose.shared.app.data.preferences
 
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey

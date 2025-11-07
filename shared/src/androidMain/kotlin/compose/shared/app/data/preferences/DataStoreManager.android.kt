@@ -1,8 +1,10 @@
-package compose.shared.app.preferences
+package compose.shared.app.data.preferences
 
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import compose.shared.app.data.preferences.createDataStore
+import compose.shared.app.data.preferences.dataStoreFileName
 import org.koin.java.KoinJavaComponent
 
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")

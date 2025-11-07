@@ -1,4 +1,4 @@
-package compose.shared.app.preferences
+package compose.shared.app.data.preferences
 
 import kotlinx.coroutines.flow.Flow
 
