@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Splash Screen Theme for API level 31 and higher -->
+    <!-- Splash Screen Theme for API level 31 and 32 -->
     <style name="Theme.AppStarting" parent="Theme.SplashScreen">
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
         <item name="android:windowSplashScreenBackground">@color/black</item>
