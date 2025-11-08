@@ -2,6 +2,7 @@ package user.onboarding.feature.presentation.pages.theme.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +13,9 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -32,7 +35,11 @@ internal fun ThemeCard(
     val commonModifier = Modifier.fillMaxWidth()
     val backgroundModifier = modifier
         .background(color = Theme.colorScheme.backgroundColor)
-        .clickable(onClick = onClick)
+        .clickable(
+            onClick = onClick,
+            interactionSource = remember { MutableInteractionSource() },
+            indication = ripple()
+        )
         .padding(vertical = 12.dp, horizontal = 8.dp)
 
     val radioButtonColors = RadioButtonDefaults.colors(
