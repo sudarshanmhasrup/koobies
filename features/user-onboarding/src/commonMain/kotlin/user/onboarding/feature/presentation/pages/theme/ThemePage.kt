@@ -24,6 +24,7 @@ import compose.shared.app.resources.Res
 import compose.shared.app.resources.continue_button_label
 import compose.shared.app.resources.dark_theme_type_message
 import compose.shared.app.resources.dark_theme_type_name
+import compose.shared.app.resources.done_button_label
 import compose.shared.app.resources.light_theme_type_message
 import compose.shared.app.resources.light_theme_type_name
 import compose.shared.app.resources.system_theme_type_message
@@ -37,6 +38,8 @@ import user.onboarding.feature.domain.model.theme.ThemeType
 import user.onboarding.feature.presentation.extensions.continueButtonBackgroundModifier
 import user.onboarding.feature.presentation.extensions.headingAndMessageModifier
 import user.onboarding.feature.presentation.model.theme.AppThemeUi
+import user.onboarding.feature.presentation.navigation.LocalUserOnboardingNavHostController
+import user.onboarding.feature.presentation.navigation.UserOnboardingRoute
 import user.onboarding.feature.presentation.pages.theme.components.HeadingAndMessage
 import user.onboarding.feature.presentation.pages.theme.components.ThemeCard
 
@@ -47,7 +50,7 @@ internal fun ThemePage(modifier: Modifier = Modifier) {
             !windowSizeClass.isHeightAtLeastBreakpoint(HEIGHT_DP_MEDIUM_LOWER_BOUND)
 
     if (isLandscapeMode) {
-        Row(modifier = modifier.padding(start = 60.dp)) {
+        Row(modifier = modifier.padding(start = 20.dp)) {
             val layoutModifier = Modifier
                 .weight(1f)
                 .align(alignment = Alignment.CenterVertically)
@@ -70,6 +73,8 @@ private fun ThemePageLayout(
     modifier: Modifier = Modifier,
     modifier2: Modifier = Modifier
 ) {
+    val composeAppNavHostController = LocalUserOnboardingNavHostController.current
+
     Box(modifier = modifier) {
         HeadingAndMessage(
             heading = stringResource(resource = Res.string.theme_page_heading),
@@ -82,9 +87,9 @@ private fun ThemePageLayout(
         // Continue button background
         Box(modifier = continueButtonBackgroundModifier()) {
             RoundButton(
-                label = stringResource(resource = Res.string.continue_button_label),
+                label = stringResource(resource = Res.string.done_button_label),
                 onClick = {
-
+                    composeAppNavHostController.navigate(route = UserOnboardingRoute.LandingPage)
                 }
             )
         }
