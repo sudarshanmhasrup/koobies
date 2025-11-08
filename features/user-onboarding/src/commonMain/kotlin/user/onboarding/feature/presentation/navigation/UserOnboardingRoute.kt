@@ -8,4 +8,7 @@ internal sealed class UserOnboardingRoute {
 
     @Serializable
     object ThemePage : UserOnboardingRoute()
+
+    @Serializable
+    object LandingPage : UserOnboardingRoute()
 }
