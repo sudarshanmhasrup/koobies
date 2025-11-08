@@ -6,8 +6,7 @@ import androidx.compose.ui.graphics.Color
 /**
  * Koobies design system color palette.
  *
- * Defines all color tokens used throughout the application for consistent theming across all platforms (Android, iOS,
- * Desktop).
+ * Defines all color tokens for consistent theming across all platforms (Android, iOS, Desktop).
  *
  * Colors are designed to work with both light and dark modes, providing a flexible color system that can be extended
  * with additional colors as needed.
