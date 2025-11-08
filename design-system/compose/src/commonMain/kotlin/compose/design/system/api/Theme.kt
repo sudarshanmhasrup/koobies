@@ -9,7 +9,7 @@ import compose.design.system.typography.Typography
 /**
  * Central access point for design system theme values.
  *
- * This object gives you easy access to colors and text styles throughout your app.
+ * This object gives you easy access to colors and text styles.
  * Instead of passing theme objects through many function parameters, use [Theme.colorScheme] and [Theme.typography] to
  * get current values.
  *
