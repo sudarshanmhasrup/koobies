@@ -7,6 +7,7 @@ import compose.design.system.color.ColorScheme
 internal val lightModeColors = ColorScheme(
     backgroundColor = backgroundColorLight,
     primaryColor = primaryColor,
+    secondaryColor = secondaryColorLight,
     tertiaryColor = tertiaryColorLight,
     primaryFontColor = primaryFontColorLight,
     secondaryFontColor = secondaryFontColorLight
@@ -15,6 +16,7 @@ internal val lightModeColors = ColorScheme(
 internal val darkModeColors = ColorScheme(
     backgroundColor = backgroundColorDark,
     primaryColor = primaryColor,
+    secondaryColor = secondaryColorDark,
     tertiaryColor = tertiaryColorDark,
     primaryFontColor = primaryFontColorDark,
     secondaryFontColor = secondaryFontColorDark
