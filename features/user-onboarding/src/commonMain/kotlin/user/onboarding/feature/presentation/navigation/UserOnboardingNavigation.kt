@@ -8,29 +8,28 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import org.koin.compose.viewmodel.koinViewModel
 import user.onboarding.feature.presentation.extensions.languagePageEnterTransitionAnimation
 import user.onboarding.feature.presentation.extensions.languagePageExitTransitionAnimation
+import user.onboarding.feature.presentation.pages.landing.LandingPage
 import user.onboarding.feature.presentation.pages.language.LanguagePage
 import user.onboarding.feature.presentation.pages.theme.ThemePage
 
 @Composable
-fun UserOnboardingNavigation(modifier: Modifier = Modifier) {
-    UserOnboardingNavigationHost(modifier = modifier)
+fun UserOnboardingNavigation(
+    userOnboardingNavHostController: NavHostController,
+    modifier: Modifier = Modifier
+) {
+    UserOnboardingNavigationHost(userOnboardingNavHostController = userOnboardingNavHostController, modifier = modifier)
 }
 
 @Composable
-private fun UserOnboardingNavigationHost(modifier: Modifier = Modifier) {
-    val userOnboardingNavigationViewModel = koinViewModel<UserOnboardingNavigationViewModel>()
-    val userOnboardingNavHostController =
-        userOnboardingNavigationViewModel.onGetNavHostController()
-            ?: rememberNavController().also { navHostController ->
-                userOnboardingNavigationViewModel.onSetNavHostController(navHostController = navHostController)
-            }
-
+private fun UserOnboardingNavigationHost(
+    userOnboardingNavHostController: NavHostController,
+    modifier: Modifier = Modifier
+) {
     val commonSizeModifier = Modifier.fillMaxSize()
 
     CompositionLocalProvider(LocalUserOnboardingNavHostController provides userOnboardingNavHostController) {
@@ -60,6 +59,9 @@ private fun UserOnboardingNavigationHost(modifier: Modifier = Modifier) {
                 }
             ) {
                 ThemePage(modifier = commonSizeModifier)
+            }
+            composable<UserOnboardingRoute.LandingPage> {
+                LandingPage(modifier = commonSizeModifier)
             }
         }
     }
