@@ -17,12 +17,10 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 internal fun BoxScope.userOnboardingNavigationCardModifier(backgroundColor: Color): Modifier {
-    val cardShape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
     return Modifier
-        .fillMaxWidth(0.32f)
-        .padding(top = 80.dp)
+        .fillMaxWidth()
         .align(alignment = Alignment.Center)
-        .clip(shape = cardShape)
+        .clip(shape = RoundedCornerShape(size = 20.dp))
         .background(color = backgroundColor)
         .padding(all = 12.dp)
 }
@@ -33,11 +31,12 @@ internal fun RowScope.desktopLayoutIllustrationContainerModifier(): Modifier {
         .weight(1.2f)
 }
 
-internal fun RowScope.desktopLayoutNavigationContainerModifier(): Modifier {
+internal fun RowScope.desktopLayoutNavigationContainerModifier(backgroundColor: Color): Modifier {
     return Modifier
+        .background(color = backgroundColor)
         .fillMaxWidth()
         .weight(0.8f)
-        .padding(vertical = 80.dp, horizontal = 20.dp)
+        .padding(vertical = 20.dp, horizontal = 40.dp)
 }
 
 internal fun Modifier.greetingsAndMessageModifier(isLandscapeMode: Boolean = false): Modifier {
