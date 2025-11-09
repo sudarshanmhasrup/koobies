@@ -2,6 +2,7 @@ package user.onboarding.feature.presentation.extensions
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,6 +30,13 @@ internal fun RowScope.desktopLayoutIllustrationContainerModifier(): Modifier {
     return Modifier
         .fillMaxHeight()
         .weight(1.2f)
+}
+
+@Composable
+internal fun ColumnScope.desktopLayoutTextContainerModifier(): Modifier {
+    return Modifier
+        .fillMaxWidth(fraction = 0.60f)
+        .align(alignment = Alignment.CenterHorizontally)
 }
 
 internal fun RowScope.desktopLayoutNavigationContainerModifier(backgroundColor: Color): Modifier {
