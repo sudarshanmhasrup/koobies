@@ -2,6 +2,8 @@ package user.onboarding.feature.presentation.extensions
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
@@ -23,6 +25,12 @@ internal fun BoxScope.userOnboardingNavigationCardModifier(backgroundColor: Colo
         .clip(shape = cardShape)
         .background(color = backgroundColor)
         .padding(all = 12.dp)
+}
+
+internal fun RowScope.desktopLayoutIllustrationContainerModifier(): Modifier {
+    return Modifier
+        .fillMaxHeight()
+        .weight(1.2f)
 }
 
 internal fun Modifier.greetingsAndMessageModifier(isLandscapeMode: Boolean = false): Modifier {
