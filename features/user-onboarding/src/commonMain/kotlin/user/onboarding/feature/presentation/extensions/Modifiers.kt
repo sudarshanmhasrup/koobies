@@ -33,6 +33,13 @@ internal fun RowScope.desktopLayoutIllustrationContainerModifier(): Modifier {
         .weight(1.2f)
 }
 
+internal fun RowScope.desktopLayoutNavigationContainerModifier(): Modifier {
+    return Modifier
+        .fillMaxWidth()
+        .weight(0.8f)
+        .padding(vertical = 80.dp, horizontal = 20.dp)
+}
+
 internal fun Modifier.greetingsAndMessageModifier(isLandscapeMode: Boolean = false): Modifier {
     val topPadding = if (isLandscapeMode) 20.dp else 80.dp
     return this
