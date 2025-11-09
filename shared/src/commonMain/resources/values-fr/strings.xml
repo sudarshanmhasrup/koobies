@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">Apparence claire et lumineuse pour une meilleure visibilité pendant la journée.</string>
     <string name="dark_theme_type_name">Sombre</string>
     <string name="dark_theme_type_message">Aspect doux et confortable pour les environnements à faible luminosité.</string>
+    <string name="done_button_label">Terminé</string>
 </resources>

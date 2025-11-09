@@ -5,4 +5,11 @@
     <string name="continue_button_label">继续</string>
     <string name="theme_page_heading">选择应用主题</string>
     <string name="theme_page_message">选择您喜欢的主题以您的方式使用该应用。您可以稍后随时在应用的设置中切换浅色、深色或系统默认主题。</string>
+    <string name="system_theme_type_name">系统默认</string>
+    <string name="system_theme_type_message">自动调整以匹配您设备的浅色或深色模式。</string>
+    <string name="light_theme_type_name">浅色</string>
+    <string name="light_theme_type_message">明亮清晰的外观，适合白天使用，视野更好。</string>
+    <string name="dark_theme_type_name">深色</string>
+    <string name="dark_theme_type_message">柔和舒适的外观，适合弱光环境。</string>
+    <string name="done_button_label">完成</string>
 </resources>

@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">日中の視認性を高めるための明るくクリアな外観。</string>
     <string name="dark_theme_type_name">ダーク</string>
     <string name="dark_theme_type_message">低照度環境向けのソフトで快適な外観。</string>
+    <string name="done_button_label">完了</string>
 </resources>

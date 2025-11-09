@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">दिन के दौरान बेहतर दृश्यता के लिए उज्ज्वल और स्पष्ट उपस्थिति।</string>
     <string name="dark_theme_type_name">डार्क</string>
     <string name="dark_theme_type_message">कम रोशनी वाले वातावरण के लिए नरम और आरामदायक लुक।</string>
+    <string name="done_button_label">हो गया</string>
 </resources>

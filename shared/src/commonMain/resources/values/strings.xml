@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">Bright and clear appearance for better visibility during the day.</string>
     <string name="dark_theme_type_name">Dark</string>
     <string name="dark_theme_type_message">Soft and comfortable look for low-light environments.</string>
+    <string name="done_button_label">Done</string>
 </resources>

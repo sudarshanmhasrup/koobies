@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">Яркий и четкий вид для лучшей видимости днем.</string>
     <string name="dark_theme_type_name">Темная</string>
     <string name="dark_theme_type_message">Мягкий и удобный вид для условий низкой освещенности.</string>
+    <string name="done_button_label">Готово</string>
 </resources>

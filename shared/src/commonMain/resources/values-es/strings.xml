@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">Aspecto brillante y claro para una mejor visibilidad durante el día.</string>
     <string name="dark_theme_type_name">Oscuro</string>
     <string name="dark_theme_type_message">Aspecto suave y cómodo para entornos con poca luz.</string>
+    <string name="done_button_label">Hecho</string>
 </resources>

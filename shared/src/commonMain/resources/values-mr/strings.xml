@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">दिवसा चांगल्या दृश्यमानतेसाठी तेजस्वी आणि स्पष्ट स्वरूप.</string>
     <string name="dark_theme_type_name">डार्क</string>
     <string name="dark_theme_type_message">कमी-प्रकाशाच्या वातावरणासाठी मऊ आणि आरामदायक लुक.</string>
+    <string name="done_button_label">झाले</string>
 </resources>

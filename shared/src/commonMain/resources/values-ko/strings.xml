@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">낮 동안 더 나은 가시성을 위한 밝고 선명한 모양.</string>
     <string name="dark_theme_type_name">다크</string>
     <string name="dark_theme_type_message">저조도 환경을 위한 부드럽고 편안한 모양.</string>
+    <string name="done_button_label">완료</string>
 </resources>

@@ -11,4 +11,5 @@
     <string name="light_theme_type_message">Helles und klares Erscheinungsbild für bessere Sichtbarkeit bei Tag.</string>
     <string name="dark_theme_type_name">Dunkel</string>
     <string name="dark_theme_type_message">Weiches und angenehmes Aussehen für Umgebungen mit wenig Licht.</string>
+    <string name="done_button_label">Fertig</string>
 </resources>
