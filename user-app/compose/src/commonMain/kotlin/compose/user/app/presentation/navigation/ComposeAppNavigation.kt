@@ -15,6 +15,7 @@ import user.onboarding.feature.presentation.navigation.UserOnboardingNavigation
 @Composable
 internal fun ComposeAppNavigation(
     composeAppNavHostController: NavHostController,
+    userOnboardingNavHostController: NavHostController,
     modifier: Modifier = Modifier
 ) {
     val commonSizeModifier = Modifier.fillMaxSize()
@@ -24,7 +25,10 @@ internal fun ComposeAppNavigation(
         modifier = modifier
     ) {
         composable<ComposeAppRoute.UserOnboarding> {
-            UserOnboardingNavigation(modifier = commonSizeModifier)
+            UserOnboardingNavigation(
+                userOnboardingNavHostController = userOnboardingNavHostController,
+                modifier = commonSizeModifier
+            )
         }
     }
 }
@@ -33,6 +37,10 @@ internal fun ComposeAppNavigation(
 @Composable
 private fun ComposeAppNavigationPreview() {
     KoobiesAppTheme(isDarkMode = false) {
-        ComposeAppNavigation(composeAppNavHostController = rememberNavController(), modifier = Modifier.fillMaxSize())
+        ComposeAppNavigation(
+            composeAppNavHostController = rememberNavController(),
+            userOnboardingNavHostController = rememberNavController(),
+            modifier = Modifier.fillMaxSize()
+        )
     }
 }
