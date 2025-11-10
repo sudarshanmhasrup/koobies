@@ -103,17 +103,17 @@ private fun localizedThemes(themes: List<AppThemeUi>): List<AppThemeUi> {
         when (it.appTheme.themeType) {
             ThemeType.System -> it.copy(
                 name = stringResource(resource = Res.string.system_theme_type_name),
-                message = stringResource(Res.string.system_theme_type_message),
+                message = stringResource(resource = Res.string.system_theme_type_message),
             )
 
             ThemeType.Light -> it.copy(
                 name = stringResource(resource = Res.string.light_theme_type_name),
-                message = stringResource(Res.string.light_theme_type_message)
+                message = stringResource(resource = Res.string.light_theme_type_message)
             )
 
             ThemeType.Dark -> it.copy(
                 name = stringResource(resource = Res.string.dark_theme_type_name),
-                message = stringResource(Res.string.dark_theme_type_message)
+                message = stringResource(resource = Res.string.dark_theme_type_message)
             )
         }
     }
