@@ -45,11 +45,20 @@ fun UserOnboardingNavigation(
     userOnboardingNavHostController: NavHostController,
     modifier: Modifier = Modifier
 ) {
+    val isDesktopMode = false
+
     Box(modifier = modifier) {
-        DesktopLayout(
-            userOnboardingNavHostController = userOnboardingNavHostController,
-            modifier = modifier
-        )
+        if (isDesktopMode) {
+            DesktopLayout(
+                userOnboardingNavHostController = userOnboardingNavHostController,
+                modifier = modifier
+            )
+        } else {
+            MobileAndTabletLayout(
+                userOnboardingNavHostController = userOnboardingNavHostController,
+                modifier = modifier
+            )
+        }
     }
 }
 
@@ -105,6 +114,14 @@ private fun DesktopLayout(
             )
         }
     }
+}
+
+@Composable
+private fun MobileAndTabletLayout(
+    userOnboardingNavHostController: NavHostController,
+    modifier: Modifier = Modifier
+) {
+    UserOnboardingNavigationHost(userOnboardingNavHostController = userOnboardingNavHostController, modifier = modifier)
 }
 
 @Composable
