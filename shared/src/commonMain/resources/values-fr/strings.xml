@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
+    <string name="user_onboarding_desktop_layout_heading">Yay! Nous sommes heureux de vous voir !</string>
     <string name="language_page_greetings">Bienvenue à\nKoobies !</string>
     <string name="language_page_message">Cher utilisateur de Kotlin, nous sommes ravis de vous voir ici. Commençons par sélectionner votre langue préférée pour utiliser l’application. Vous pouvez la modifier à tout moment plus tard dans les paramètres de l’application.</string>
     <string name="continue_button_label">Continuer</string>

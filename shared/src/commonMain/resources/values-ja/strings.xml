@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
+    <string name="user_onboarding_desktop_layout_heading">やった！お会いできて嬉しいです！</string>
     <string name="language_page_greetings">ようこそ\nKoobiesへ！</string>
     <string name="language_page_message">親愛なるKotlinユーザーの皆さん、ここにお越しいただきありがとうございます。まずは、アプリを使用するためにお好みの言語を選択しましょう。後でアプリの設定からいつでも変更できます。</string>
     <string name="continue_button_label">続行</string>
