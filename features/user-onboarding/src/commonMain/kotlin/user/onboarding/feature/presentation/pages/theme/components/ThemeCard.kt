@@ -33,14 +33,6 @@ internal fun ThemeCard(
     modifier: Modifier = Modifier
 ) {
     val commonModifier = Modifier.fillMaxWidth()
-    val backgroundModifier = modifier
-        .background(color = Theme.colorScheme.backgroundColor)
-        .clickable(
-            onClick = onClick,
-            interactionSource = remember { MutableInteractionSource() },
-            indication = ripple()
-        )
-        .padding(vertical = 12.dp, horizontal = 8.dp)
 
     val radioButtonColors = RadioButtonDefaults.colors(
         selectedColor = Theme.colorScheme.primaryColor,
@@ -53,7 +45,7 @@ internal fun ThemeCard(
     val secondaryFontColor = Theme.colorScheme.secondaryFontColor
     val messageTextStyle = Theme.typography.bodyMediumMedium.copy(color = secondaryFontColor)
 
-    Row(verticalAlignment = Alignment.CenterVertically, modifier = backgroundModifier) {
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier) {
         RadioButton(selected = theme.isSelected, colors = radioButtonColors, onClick = onClick)
         Spacer(modifier = Modifier.width(8.dp))
         Column(modifier = Modifier.fillMaxWidth()) {
