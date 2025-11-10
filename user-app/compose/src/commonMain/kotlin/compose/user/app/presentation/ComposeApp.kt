@@ -33,6 +33,7 @@ fun ComposeApp() {
                     userOnboardingNavHostController = userOnboardingNavHostController,
                     modifier = Modifier.fillMaxSize()
                 )
+                // Navigation Bar Mask
                 Box(modifier = navigationBarMaskModifier(backgroundColor = backgroundColor))
             }
         }
