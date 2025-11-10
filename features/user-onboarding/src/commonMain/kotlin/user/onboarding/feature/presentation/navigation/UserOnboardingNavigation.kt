@@ -9,23 +9,30 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import compose.design.system.api.Theme
 import compose.shared.app.resources.Res
+import compose.shared.app.resources.user_onboarding_desktop_layout_heading
+import compose.shared.app.resources.user_onboarding_desktop_layout_message
 import compose.shared.app.resources.welcome_illustration
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import user.onboarding.feature.presentation.extensions.desktopLayoutIllustrationContainerModifier
 import user.onboarding.feature.presentation.extensions.desktopLayoutNavigationContainerModifier
+import user.onboarding.feature.presentation.extensions.desktopLayoutTextContainerModifier
 import user.onboarding.feature.presentation.extensions.languagePageEnterTransitionAnimation
 import user.onboarding.feature.presentation.extensions.languagePageExitTransitionAnimation
 import user.onboarding.feature.presentation.extensions.userOnboardingNavigationCardModifier
@@ -53,6 +60,10 @@ private fun DesktopLayout(
 ) {
     val backgroundColor = Theme.colorScheme.backgroundColor
     val secondaryColor = Theme.colorScheme.secondaryColor
+    val primaryFontColor = Theme.colorScheme.primaryFontColor
+    val secondaryFontColor = Theme.colorScheme.secondaryFontColor
+
+    val commonWidthModifier = Modifier.fillMaxWidth()
 
     Row(modifier = modifier) {
         // Illustration container
@@ -66,6 +77,25 @@ private fun DesktopLayout(
                 contentDescription = null,
                 modifier = Modifier.height(480.dp)
             )
+            Spacer(modifier = Modifier.height(80.dp))
+            // Text container
+            Column(modifier = desktopLayoutTextContainerModifier()) {
+                Text(
+                    text = stringResource(resource = Res.string.user_onboarding_desktop_layout_heading),
+                    color = primaryFontColor,
+                    textAlign = TextAlign.Center,
+                    style = Theme.typography.headlineLargeBold,
+                    modifier = commonWidthModifier
+                )
+                Spacer(modifier = Modifier.height(20.dp))
+                Text(
+                    text = stringResource(resource = Res.string.user_onboarding_desktop_layout_message),
+                    color = secondaryFontColor,
+                    textAlign = TextAlign.Center,
+                    style = Theme.typography.bodyMediumMedium,
+                    modifier = commonWidthModifier
+                )
+            }
         }
         // Navigation container
         Box(modifier = desktopLayoutNavigationContainerModifier(backgroundColor = secondaryColor)) {
