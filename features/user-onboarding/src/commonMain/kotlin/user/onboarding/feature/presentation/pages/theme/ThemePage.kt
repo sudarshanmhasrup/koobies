@@ -18,10 +18,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.window.core.layout.WindowSizeClass.Companion.HEIGHT_DP_MEDIUM_LOWER_BOUND
 import androidx.window.core.layout.WindowSizeClass.Companion.WIDTH_DP_MEDIUM_LOWER_BOUND
+import compose.design.system.api.Theme
 import compose.design.system.components.RoundButton
 import compose.shared.app.presentation.theme.KoobiesAppTheme
 import compose.shared.app.resources.Res
-import compose.shared.app.resources.continue_button_label
 import compose.shared.app.resources.dark_theme_type_message
 import compose.shared.app.resources.dark_theme_type_name
 import compose.shared.app.resources.done_button_label
@@ -37,6 +37,7 @@ import org.koin.compose.viewmodel.koinViewModel
 import user.onboarding.feature.domain.model.theme.ThemeType
 import user.onboarding.feature.presentation.extensions.continueButtonBackgroundModifier
 import user.onboarding.feature.presentation.extensions.headingAndMessageModifier
+import user.onboarding.feature.presentation.extensions.listCardModifier
 import user.onboarding.feature.presentation.model.theme.AppThemeUi
 import user.onboarding.feature.presentation.navigation.LocalUserOnboardingNavHostController
 import user.onboarding.feature.presentation.navigation.UserOnboardingRoute
@@ -127,11 +128,17 @@ private fun LanguageList(modifier: Modifier = Modifier) {
     val localizedThemes = localizedThemes(themes = supportedAppThemes)
     themePageViewModel.onUpdateSupportedAppThemes(supportedAppThemes = localizedThemes)
 
+    val backgroundColor = Theme.colorScheme.backgroundColor
+
     LazyColumn(modifier = modifier.padding(vertical = 20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         items(items = supportedAppThemes) { theme ->
             ThemeCard(
                 theme = theme,
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.listCardModifier(
+                    backgroundColor = backgroundColor, onClick = {
+                        themePageViewModel.onUpdateSelectedAppTheme(theme = theme.appTheme)
+                    }
+                ),
                 onClick = {
                     themePageViewModel.onUpdateSelectedAppTheme(theme = theme.appTheme)
                 }
