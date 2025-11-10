@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowSizeClass.Companion.HEIGHT_DP_MEDIUM_LOWER_BOUND
 import androidx.window.core.layout.WindowSizeClass.Companion.WIDTH_DP_MEDIUM_LOWER_BOUND
+import compose.design.system.api.Theme
 import compose.design.system.components.RoundButton
 import compose.shared.app.presentation.theme.KoobiesAppTheme
 import compose.shared.app.resources.Res
@@ -28,6 +29,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import user.onboarding.feature.presentation.extensions.continueButtonBackgroundModifier
 import user.onboarding.feature.presentation.extensions.greetingsAndMessageModifier
+import user.onboarding.feature.presentation.extensions.listCardModifier
 import user.onboarding.feature.presentation.navigation.LocalUserOnboardingNavHostController
 import user.onboarding.feature.presentation.navigation.UserOnboardingRoute
 import user.onboarding.feature.presentation.pages.language.components.GreetingsAndMessage
@@ -94,11 +96,19 @@ private fun LanguageList(modifier: Modifier = Modifier) {
     val uiState = languagePageViewModel.uiState.collectAsState()
     val supportedAppLanguages = uiState.value.supportedAppLanguages
 
+    val backgroundColor = Theme.colorScheme.backgroundColor
+
     LazyColumn(modifier = modifier.padding(top = 20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         items(items = supportedAppLanguages) { language ->
             LanguageCard(
                 language = language,
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.listCardModifier(
+                    backgroundColor = backgroundColor,
+                    onClick = {
+                        languagePageViewModel.onLanguageSelected(language = language.appLanguage)
+                    }
+                ),
+                // Click listener for RadioButton
                 onClick = {
                     languagePageViewModel.onLanguageSelected(language = language.appLanguage)
                 }
