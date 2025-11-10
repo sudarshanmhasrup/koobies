@@ -38,9 +38,9 @@ fun main() {
                 private val lifecycleRegistry = LifecycleRegistry(this)
 
                 init {
-                    lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
-                    lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
-                    lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_RESUME)
+                    lifecycleRegistry.handleLifecycleEvent(event = Lifecycle.Event.ON_CREATE)
+                    lifecycleRegistry.handleLifecycleEvent(event = Lifecycle.Event.ON_START)
+                    lifecycleRegistry.handleLifecycleEvent(event = Lifecycle.Event.ON_RESUME)
                 }
 
                 override val lifecycle: Lifecycle
