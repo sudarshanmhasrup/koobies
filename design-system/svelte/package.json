@@ -1,0 +1,8 @@
+{
+    "name": "design-system-svelte",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "author": "Sudarshan Mhasrup",
+    "description": "Design system for Koobies written in Svelte."
+}
