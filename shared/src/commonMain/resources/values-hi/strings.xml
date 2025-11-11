@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="user_onboarding_desktop_layout_heading">Yay! हमें आपको देखकर खुशी हुई!</string>
+    <string name="user_onboarding_desktop_layout_message">कूबीज़ में आपका स्वागत है: एक कोटलिन डेवलपर के रूप में सीखने, बनाने और बढ़ने के लिए आपका रचनात्मक स्थान! इंटरैक्टिव पाठों में गोता लगाएँ, वास्तविक दुनिया की परियोजनाओं का पता लगाएँ, और अपने विचारों को वास्तविकता में बदलने के अनंत अवसर अनलॉक करें। आइए इस रोमांचक यात्रा को एक साथ शुरू करें!</string>
     <string name="language_page_greetings">Koobies में \nआपका स्वागत है!</string>
     <string name="language_page_message">प्रिय Kotlin उपयोगकर्ता, हमें खुशी है कि आप यहाँ हैं। चलिए ऐप का उपयोग करने के लिए अपनी पसंदीदा भाषा चुनकर शुरुआत करते हैं। आप इसे बाद में कभी भी ऐप की सेटिंग्स से बदल सकते हैं।</string>
     <string name="continue_button_label">जारी रखें</string>

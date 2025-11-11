@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="user_onboarding_desktop_layout_heading">耶！我们很高兴见到你！</string>
+    <string name="user_onboarding_desktop_layout_message">欢迎来到 Koobies：您作为 Kotlin 开发人员学习、构建和成长的创意空间！ 投入互动课程，探索真实世界的项目，并开启无限机会，将您的想法变为现实。 让我们一起开始这个激动人心的旅程吧！</string>
     <string name="language_page_greetings">欢迎来到\nKoobies！</string>
     <string name="language_page_message">亲爱的 Kotlin 用户，我们很高兴见到您。让我们先选择您喜欢的语言来使用此应用。您可以稍后随时在应用设置中更改。</string>
     <string name="continue_button_label">继续</string>

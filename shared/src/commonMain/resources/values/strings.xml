@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="user_onboarding_desktop_layout_heading">Yay! We're happy to see you!</string>
+    <string name="user_onboarding_desktop_layout_message">Welcome to Koobies: your creative space to learn, build, and grow as a Kotlin developer! Dive into interactive lessons, explore real-world projects, and unlock endless opportunities to shape your ideas into reality. Let’s start this exciting journey together!</string>
     <string name="language_page_greetings">Welcome to \nKoobies!</string>
     <string name="language_page_message">Dear Kotlin user, we're happy to see you here. Let's start by selecting your preferred language to use the app. You can change it anytime later from the app’s settings.</string>
     <string name="continue_button_label">Continue</string>
