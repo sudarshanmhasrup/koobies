@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
@@ -52,7 +52,7 @@ internal fun ThemePage(modifier: Modifier = Modifier) {
             !windowSizeClass.isHeightAtLeastBreakpoint(HEIGHT_DP_MEDIUM_LOWER_BOUND)
 
     if (isLandscapeMode) {
-        Row(modifier = modifier.statusBarsPadding()) {
+        Row(modifier = modifier.safeContentPadding()) {
             val layoutModifier = Modifier
                 .weight(1f)
                 .align(alignment = Alignment.CenterVertically)
@@ -147,7 +147,6 @@ private fun LanguageList(modifier: Modifier = Modifier) {
         }
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable
