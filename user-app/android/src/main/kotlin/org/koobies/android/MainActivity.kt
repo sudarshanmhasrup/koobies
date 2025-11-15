@@ -1,6 +1,5 @@
 package org.koobies.android
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
@@ -10,8 +9,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import compose.shared.app.presentation.splash.SplashScreenManager
 import compose.user.app.AndroidApp
-import org.koin.core.context.loadKoinModules
-import org.koin.dsl.module
 
 /**
  * Main Activity for the Android app.
@@ -27,13 +24,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidApp()
         }
-
-        // Load Koin module for this Activity
-        loadKoinModules(
-            module {
-                single<Activity> { this@MainActivity }
-            }
-        )
 
         // Wait until SplashScreenManager says UI is ready
         val content: View = findViewById(android.R.id.content)
