@@ -39,8 +39,8 @@ setOf(
     "android",
     "desktop",
     "compose" // Umbrella module
-).forEach { userAppModule ->
-    include(":user-app:$userAppModule")
+).forEach { module ->
+    include(":user-app:$module")
 }
 
 // Shared modules used across all client platforms
