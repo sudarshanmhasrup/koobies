@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
@@ -23,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.window.core.layout.WindowSizeClass
+import androidx.window.core.layout.WindowWidthSizeClass
 import compose.design.system.api.Theme
 import compose.shared.app.resources.Res
 import compose.shared.app.resources.user_onboarding_desktop_layout_heading
@@ -43,9 +46,13 @@ import user.onboarding.feature.presentation.pages.theme.ThemePage
 @Composable
 fun UserOnboardingNavigation(
     userOnboardingNavHostController: NavHostController,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    windowSizeClass: WindowSizeClass = currentWindowAdaptiveInfo().windowSizeClass
 ) {
-    val isDesktopMode = false
+    val windowWidth = windowSizeClass.windowWidthSizeClass
+    val windowHeight = windowSizeClass.windowHeightSizeClass
+
+    val isDesktopMode = true
 
     Box(modifier = modifier) {
         if (isDesktopMode) {
