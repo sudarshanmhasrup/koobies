@@ -1,8 +1,10 @@
 [versions]
 # Library and plugin versions
+agp = "9.2.1"
 
 [libraries]
 
 [bundles]
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
