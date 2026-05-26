@@ -1,8 +1,27 @@
 [versions]
 # Library and plugin versions
+kotlin = "2.3.21"
+agp = "9.2.1"
+activity = "1.13.0"
+
+# user-app:android module's configuration information
+userApp-android-group = "org.koobies.app"
+userApp-android-version = "1.0.0"
+
+# user-app:android module's android app package information
+userApp-android-namespace = "org.koobies.app"
+userApp-android-compileSdk = "37"
+userApp-android-applicationId = "org.koobies.app"
+userApp-android-minSdk = "24"
+userApp-android-targetSdk = "37"
+userApp-android-versionCode = "1"
+userApp-android-versionName = "1.0.0"
 
 [libraries]
+activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 
 [bundles]
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
