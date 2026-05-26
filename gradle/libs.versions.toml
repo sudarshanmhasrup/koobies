@@ -3,6 +3,10 @@
 kotlin = "2.3.21"
 agp = "9.2.1"
 
+# user-app:android module's configuration information
+userApp-android-group = "org.koobies.app"
+userApp-android-version = "1.0.0"
+
 [libraries]
 
 [bundles]
