@@ -27,4 +27,8 @@ android {
     }
 }
 
+dependencies {
+    implementation(libs.activity)
+}
+
 layout.buildDirectory.set(file("$rootDir/.build/user-app/android"))
