@@ -30,6 +30,7 @@ android {
 dependencies {
     implementation(libs.splash.screen)
     implementation(libs.activity)
+    implementation(projects.composeApp)
 }
 
 layout.buildDirectory.set(file("$rootDir/.build/user-app/android"))
