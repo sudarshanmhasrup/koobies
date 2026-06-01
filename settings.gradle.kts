@@ -38,3 +38,8 @@ val userAppModules = setOf("android")
 userAppModules.forEach { module ->
     include(":user-app:$module")
 }
+
+val individualModules = setOf(":compose-app")
+individualModules.forEach { module ->
+    include(":$module")
+}
