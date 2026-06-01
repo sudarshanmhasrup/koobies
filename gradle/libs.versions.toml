@@ -4,6 +4,7 @@ kotlin = "2.3.21"
 agp = "9.2.1"
 activity = "1.13.0"
 splashScreen = "1.2.0"
+composeMultiplatform = "1.11.0"
 
 # user-app:android module's configuration information
 userApp-android-group = "org.koobies.app"
@@ -18,12 +19,25 @@ userApp-android-targetSdk = "37"
 userApp-android-versionCode = "1"
 userApp-android-versionName = "1.0.0"
 
+# compose-app module's configuration information
+composeApp-group = "org.koobies.app.compose"
+composeApp-version = "1.0.0"
+
+# compose-app module's android library package information
+composeApp-androidLibrary-namespace = "org.koobies.app.compose"
+composeApp-androidLibrary-compileSdk = "37"
+composeApp-androidLibrary-minSdk = "24"
+
 [libraries]
 activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+compose-multiplatform-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 
 [bundles]
 
 [plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
