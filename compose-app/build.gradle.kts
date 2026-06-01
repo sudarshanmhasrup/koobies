@@ -14,6 +14,12 @@ kotlin {
         compileSdk = libs.versions.composeApp.androidLibrary.compileSdk.get().toInt()
         minSdk = libs.versions.composeApp.androidLibrary.minSdk.get().toInt()
     }
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(libs.compose.multiplatform.ui)
+        }
+    }
 }
 
 layout.buildDirectory.set(file("$rootDir/.build/compose-app"))
