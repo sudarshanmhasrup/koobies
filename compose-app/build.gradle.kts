@@ -8,5 +8,12 @@ plugins {
 group = libs.versions.composeApp.group.get()
 version = libs.versions.composeApp.version.get()
 
+kotlin {
+    android {
+        namespace = libs.versions.composeApp.androidLibrary.namespace.get()
+        compileSdk = libs.versions.composeApp.androidLibrary.compileSdk.get().toInt()
+        minSdk = libs.versions.composeApp.androidLibrary.minSdk.get().toInt()
+    }
+}
 
 layout.buildDirectory.set(file("$rootDir/.build/compose-app"))
