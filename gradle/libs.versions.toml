@@ -23,6 +23,11 @@ userApp-android-versionName = "1.0.0"
 composeApp-group = "org.koobies.app.compose"
 composeApp-version = "1.0.0"
 
+# compose-app module's android library package information
+composeApp-androidLibrary-namespace = "org.koobies.app.compose"
+composeApp-androidLibrary-compileSdk = "37"
+composeApp-androidLibrary-minSdk = "24"
+
 [libraries]
 activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
