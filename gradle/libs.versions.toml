@@ -42,6 +42,7 @@ composeApp-androidLibrary-minSdk = "24"
 activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
 splashify = { module = "io.github.sudarshanmhasrup.splashify:splashify", version.ref = "splashify" }
+compose-multiplatform-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-multiplatform-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 
 [bundles]
