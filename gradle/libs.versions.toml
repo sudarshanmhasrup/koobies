@@ -24,6 +24,10 @@ userApp-desktop-group = "org.koobies.app"
 userApp-desktop-version = "1.0.0"
 userApp-desktop-mainClass = "org.koobies.app.MainKt"
 
+# user-app:desktop module's distribution information
+userApp-desktop-distributionPackageName = "org.koobies.app"
+userApp-desktop-distributionPackageVersion = "1.0.0"
+
 # compose-app module's configuration information
 composeApp-group = "org.koobies.app.compose"
 composeApp-version = "1.0.0"
