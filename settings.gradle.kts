@@ -34,7 +34,7 @@ dependencyResolutionManagement {
     }
 }
 
-val userAppModules = setOf("android")
+val userAppModules = setOf("android", "desktop")
 userAppModules.forEach { module ->
     include(":user-app:$module")
 }
