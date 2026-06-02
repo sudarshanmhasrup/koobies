@@ -4,6 +4,7 @@ kotlin = "2.3.21"
 agp = "9.2.1"
 activity = "1.13.0"
 splashScreen = "1.2.0"
+splashify = "1.0.0-alpha1"
 composeMultiplatform = "1.11.0"
 
 # user-app:android module's configuration information
@@ -40,6 +41,7 @@ composeApp-androidLibrary-minSdk = "24"
 [libraries]
 activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+splashify = { module = "io.github.sudarshanmhasrup.splashify:splashify", version.ref = "splashify" }
 compose-multiplatform-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 
 [bundles]
