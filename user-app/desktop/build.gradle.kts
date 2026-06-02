@@ -27,13 +27,22 @@ kotlin {
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = libs.versions.userApp.desktop.mainClass.get()
-        nativeDistributions {
-            targetFormats = setOf(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = libs.versions.userApp.desktop.distributionPackageName.get()
-            packageVersion = libs.versions.userApp.desktop.distributionPackageVersion.get()
+compose {
+    resources {
+        customDirectory(
+            sourceSetName = "desktopMain",
+            directoryProvider = provider { layout.projectDirectory.dir("src/desktopMain/resources") }
+        )
+    }
+
+    desktop {
+        application {
+            mainClass = libs.versions.userApp.desktop.mainClass.get()
+            nativeDistributions {
+                targetFormats = setOf(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+                packageName = libs.versions.userApp.desktop.distributionPackageName.get()
+                packageVersion = libs.versions.userApp.desktop.distributionPackageVersion.get()
+            }
         }
     }
 }
