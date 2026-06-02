@@ -7,6 +7,10 @@ An open-source platform built with Kotlin Multiplatform that helps Kotlin develo
 
 [![Kotlin](https://img.shields.io/badge/kotlin-2.3.21-blue.svg?logo=kotlin&logoColor=original)](http://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-1.11.0-4285F4?style=flat&logo=jetpackcompose&logoColor=original)](https://www.jetbrains.com/compose-multiplatform/)
+[![Android](https://img.shields.io/badge/Android-3DDC84.svg?style=flat&logo=android&logoColor=white)](https://developer.android.com/)
+[![iOS](https://img.shields.io/badge/iOS-000000.svg?style=flat&logo=apple&logoColor=white)](https://developer.apple.com/ios/)
+[![Desktop](https://img.shields.io/badge/Desktop-5C2D91.svg?style=flat&logo=linux&logoColor=white)](https://www.jetbrains.com/compose-multiplatform/)
+[![Web](https://img.shields.io/badge/Web-F7DF1E.svg?style=flat&logo=javascript&logoColor=black)](https://kotlinlang.org/docs/wasm-overview.html)
 
 </div>
 
