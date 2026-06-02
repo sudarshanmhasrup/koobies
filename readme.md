@@ -15,11 +15,11 @@ An open-source platform built with Kotlin Multiplatform that helps Kotlin develo
 > [!IMPORTANT]
 > Star us to show your support and love for Koobies ⭐️
 
-It all started with my love and passion for `Kotlin` and my willingness to do something better for the `Kotlin`
-community. `Koobies` is a job and internship platform built with `Kotlin Multiplatform` that helps Kotlin developers
-find their dream internship or job related to `Kotlin`. We all know that when it comes to finding a job in your
-favourite technology, it is hard, and `Koobies` makes it easy for those who love `Kotlin`.
+It all started with my love and passion for Kotlin and my willingness to do something better for the Kotlin community.
+`Koobies` is a job and internship platform built with Kotlin Multiplatform that helps Kotlin developers find their dream
+internship or job related to Kotlin. We all know that when it comes to finding a job in your favourite technology, it is
+hard, and Koobies makes it easy for those who love Kotlin.
 
-This project also works as a great demonstration of `Kotlin Multiplatform`. It is a technology that enables sharing code
-across `Android`, `iOS`, `Desktop`, `Web`, and many more platforms. So, if you're new to `Kotlin Multiplatform`, then
-you can learn a lot from this repository.
+This project also works as a great demonstration of Kotlin Multiplatform. It is a technology that enables sharing code
+across Android, iOS, desktop, web, and many more platforms. So, if you're new to Kotlin Multiplatform, then you can
+learn a lot from this repository.
