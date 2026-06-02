@@ -10,7 +10,7 @@ An open-source platform built with Kotlin Multiplatform that helps Kotlin develo
 
 </div>
 
-### 💜 About Koobies
+### About Koobies 💜
 
 > [!IMPORTANT]
 > Star us to show your support and love for Koobies ⭐️
