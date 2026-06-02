@@ -29,6 +29,8 @@ kotlin {
 
 compose {
     resources {
+        packageOfResClass = "org.koobies.app.desktop.resources"
+
         customDirectory(
             sourceSetName = "desktopMain",
             directoryProvider = provider { layout.projectDirectory.dir("src/desktopMain/resources") }
