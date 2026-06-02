@@ -20,18 +20,34 @@ kotlin {
     sourceSets {
         val desktopMain by getting
         desktopMain.dependencies {
+            implementation(libs.splashify)
             implementation(compose.desktop.currentOs)
+        }
+
+        commonMain.dependencies {
+            implementation(libs.bundles.compose.multiplatform)
         }
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = libs.versions.userApp.desktop.mainClass.get()
-        nativeDistributions {
-            targetFormats = setOf(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = libs.versions.userApp.desktop.distributionPackageName.get()
-            packageVersion = libs.versions.userApp.desktop.distributionPackageVersion.get()
+compose {
+    resources {
+        packageOfResClass = "org.koobies.app.desktop.resources"
+
+        customDirectory(
+            sourceSetName = "desktopMain",
+            directoryProvider = provider { layout.projectDirectory.dir("src/desktopMain/resources") }
+        )
+    }
+
+    desktop {
+        application {
+            mainClass = libs.versions.userApp.desktop.mainClass.get()
+            nativeDistributions {
+                targetFormats = setOf(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+                packageName = libs.versions.userApp.desktop.distributionPackageName.get()
+                packageVersion = libs.versions.userApp.desktop.distributionPackageVersion.get()
+            }
         }
     }
 }
