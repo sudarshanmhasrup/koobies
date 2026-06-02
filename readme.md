@@ -13,7 +13,7 @@ An open-source platform built with Kotlin Multiplatform that helps Kotlin develo
 ### About Koobies 💜
 
 > [!IMPORTANT]
-> Star us to show your support and love for Koobies ⭐️
+> Star this repository to show your love and support. ⭐️
 
 It all started with my love and passion for Kotlin and my willingness to do something better for the Kotlin community.
 `Koobies` is a job and internship platform built with Kotlin Multiplatform that helps Kotlin developers find their dream
