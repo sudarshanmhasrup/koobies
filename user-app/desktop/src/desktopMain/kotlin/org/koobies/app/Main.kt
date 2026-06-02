@@ -1,11 +1,12 @@
 package org.koobies.app
 
-import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import io.github.sudarshanmhasrup.splashify.SplashifyApp
+import org.koobies.app.splash.SplashScreen
 
 fun main() {
     application {
-        Window(onCloseRequest = ::exitApplication) {
+        SplashifyApp(splashScreen = ::SplashScreen) {
 
         }
     }
