@@ -20,6 +20,7 @@ kotlin {
     sourceSets {
         val desktopMain by getting
         desktopMain.dependencies {
+            implementation(libs.splashify)
             implementation(compose.desktop.currentOs)
         }
     }
