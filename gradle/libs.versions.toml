@@ -46,6 +46,7 @@ compose-multiplatform-resources = { module = "org.jetbrains.compose.components:c
 compose-multiplatform-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 
 [bundles]
+compose-multiplatform = ["compose-multiplatform-resources", "compose-multiplatform-ui"]
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
