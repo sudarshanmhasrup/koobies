@@ -15,6 +15,13 @@ kotlin {
             jvmTarget = JvmTarget.JVM_11
         }
     }
+
+    sourceSets {
+        val desktopMain by getting
+        desktopMain.dependencies {
+            implementation(compose.desktop.currentOs)
+        }
+    }
 }
 
 layout.buildDirectory.set(file("$rootDir/.build/user-app/desktop"))
