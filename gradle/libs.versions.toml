@@ -19,6 +19,11 @@ userApp-android-targetSdk = "37"
 userApp-android-versionCode = "1"
 userApp-android-versionName = "1.0.0"
 
+# user-app:desktop module's configuration information
+userApp-desktop-group = "org.koobies.app"
+userApp-desktop-version = "1.0.0"
+userApp-desktop-mainClass = "org.koobies.app.MainKt"
+
 # compose-app module's configuration information
 composeApp-group = "org.koobies.app.compose"
 composeApp-version = "1.0.0"
