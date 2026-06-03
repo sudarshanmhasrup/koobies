@@ -39,7 +39,7 @@ userAppModules.forEach { module ->
     include(":user-app:$module")
 }
 
-val individualModules = setOf(":compose-app")
+val individualModules = setOf(":compose-app", "design-system:compose")
 individualModules.forEach { module ->
     include(":$module")
 }
