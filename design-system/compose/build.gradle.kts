@@ -5,4 +5,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
+group = libs.versions.designSystem.compose.group.get()
+version = libs.versions.designSystem.compose.version.get()
+
 layout.buildDirectory.set(file("$rootDir/.build/compose-app"))
