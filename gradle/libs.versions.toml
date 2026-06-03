@@ -38,6 +38,10 @@ composeApp-androidLibrary-namespace = "org.koobies.app.compose"
 composeApp-androidLibrary-compileSdk = "37"
 composeApp-androidLibrary-minSdk = "24"
 
+# design-system:compose module's configuration information
+designSystem-compose-group = "org.koobies.app.design.system"
+designSystem-compose-version = "1.0.0"
+
 [libraries]
 activity = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
